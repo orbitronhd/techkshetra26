@@ -24,12 +24,29 @@ html,
 body,
 #root {
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
+  background-color: transparent;
 }
 
 body {
-  background: var(--color-surface-bg, #141218);
   color: var(--color-text-primary, #F7F7F7);
   font-family: var(--font-family-primary);
   overflow-x: hidden;
+  cursor: none;
+}
+
+@media (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+}
+
+a, button, [role="button"], input, select, textarea {
+  cursor: none;
+}
+
+@media (pointer: coarse) {
+  a, button, [role="button"], input, select, textarea {
+    cursor: auto;
+  }
 }

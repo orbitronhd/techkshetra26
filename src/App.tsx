@@ -4,6 +4,8 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { Navigation } from './components/Navigation.tsx'
 import { HomePage } from './components/HomePage.tsx'
 import { EventsPage } from './components/EventsPage.tsx'
+import { LiquidBackground } from './components/LiquidBackground.tsx'
+import { FluidCursor } from './components/FluidCursor.tsx'
 import styles from './App.module.css'
 
 function ScrollToTop(): React.JSX.Element | null {
@@ -30,6 +32,8 @@ function ScrollToTop(): React.JSX.Element | null {
 function App(): React.JSX.Element {
   return (
     <div className={styles.root}>
+      <LiquidBackground />
+      <FluidCursor />
       <Navigation />
       <ScrollToTop />
       <Routes>

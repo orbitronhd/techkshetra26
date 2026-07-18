@@ -2,5 +2,5 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: var(--color-surface-bg, #141218);
+    background: transparent;
 }
