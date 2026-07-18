@@ -8,9 +8,7 @@ export function Gallery(): React.JSX.Element {
       <p className={styles.subheading}>Moments from Techkshetra</p>
       <div style={{ marginTop: '2rem' }}>
         <p>
-          Relive the highlights from past editions of Techkshetra. From
-          electrifying competitions to memorable gatherings, every moment
-          tells a story.
+          Old Tk'24 photos/videos/content... Use some effect for showcasing like cards or smth
         </p>
 
         <div className={styles.placeholderSection}>

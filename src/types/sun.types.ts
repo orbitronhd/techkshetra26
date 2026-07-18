@@ -12,11 +12,11 @@ export type NavItem = {
 }
 
 export const NAV_ITEMS_LEFT: readonly NavItem[] = [
+  { id: 'about', label: 'About', path: '/#about' },
   { id: 'events', label: 'Events', path: '/events' },
-  { id: 'gallery', label: 'Gallery', path: '/#gallery' },
 ] as const
 
 export const NAV_ITEMS_RIGHT: readonly NavItem[] = [
-  { id: 'about', label: 'About', path: '/#about' },
+  { id: 'gallery', label: 'Gallery', path: '/#gallery' },
   { id: 'contact', label: 'Contact Us', path: '/#contact' },
 ] as const

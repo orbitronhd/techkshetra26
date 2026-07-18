@@ -8,10 +8,7 @@ export function About(): React.JSX.Element {
       <p className={styles.subheading}>Our story and mission</p>
       <div style={{ marginTop: '2rem' }}>
         <p>
-          Techkshetra was born from a vision to create a platform where
-          technology enthusiasts could connect, compete, and collaborate.
-          Year after year, it has grown into one of the most anticipated
-          tech fests in the region.
+          Talk about TK being the event which happens every once in 2 years thing and add some of the genesis theme stuff along with it, use AI idk
         </p>
 
         <div className={styles.placeholderSection}>
@@ -35,8 +32,8 @@ export function About(): React.JSX.Element {
         <div className={styles.placeholderSection}>
           <h2 className={styles.placeholderHeading}>About RSET</h2>
           <p>
-            Rajagiri School of Engineering &amp; Technology (RSET) is a premier 
-            educational institution offering excellence in engineering education 
+            Rajagiri School of Engineering &amp; Technology (RSET) is a premier
+            educational institution offering excellence in engineering education
             and research.
           </p>
         </div>
