@@ -25,6 +25,7 @@
 }
 
 .navLink {
+  font-family: var(--font-family-heading);
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -43,11 +44,11 @@
 }
 
 .navLinkActive {
-  color: #ff6a1a;
+  color: var(--color-primary);
 }
 
 .navLink:focus-visible {
-  outline: 2px solid #ff6a1a;
+  outline: 2px solid var(--color-primary);
   outline-offset: 4px;
   border-radius: 2px;
 }
@@ -57,12 +58,13 @@
 }
 
 .logoButton {
+  font-family: var(--font-family-heading);
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: #ff6a1a;
+  color: var(--color-primary);
   background: none;
-  border: 2px solid #ff6a1a;
+  border: 2px solid var(--color-primary);
   border-radius: 6px;
   padding: 0.4rem 0.9rem;
   cursor: pointer;
@@ -70,11 +72,11 @@
 }
 
 .logoButton:hover {
-  background: #ff6a1a;
-  color: #00000f;
+  background: var(--color-primary);
+  color: var(--color-surface-bg);
 }
 
 .logoButton:focus-visible {
-  outline: 2px solid #ff6a1a;
+  outline: 2px solid var(--color-primary);
   outline-offset: 4px;
 }

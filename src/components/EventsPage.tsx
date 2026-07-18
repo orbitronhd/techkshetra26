@@ -1,25 +1,16 @@
 import type React from 'react'
-import { MoonPageLayout } from './MoonPageLayout.tsx'
 import { Footer } from './Footer.tsx'
 import styles from './css/Page.module.css'
 
-/**
- * Behavior: Events page with Moon scroll narrative.
- * - Title state: events heading centered in viewport.
- * - Content state: event category overview.
- * - Footer state: footer component.
- */
 export function EventsPage(): React.JSX.Element {
   return (
-    <MoonPageLayout
-      rotation={20}
-      title={
-        <>
-          <h1 className={styles.heading}>Events</h1>
-          <p className={styles.subheading}>Technical competitions and workshops</p>
-        </>
-      }
-      content={
+    <div>
+      <section style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '2rem' }}>
+        <h1 className={styles.heading}>Events</h1>
+        <p className={styles.subheading}>Technical competitions and workshops</p>
+      </section>
+      
+      <section style={{ padding: '4rem 2rem' }}>
         <div className={styles.contentBody}>
           <p>
             Explore a wide range of events spanning coding, robotics, design,
@@ -75,9 +66,12 @@ export function EventsPage(): React.JSX.Element {
             </div>
           </div>
         </div>
-      }
-      footer={<Footer />}
-    />
+      </section>
+      
+      <div id="contact">
+        <Footer />
+      </div>
+    </div>
   )
 }
 
