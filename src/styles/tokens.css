@@ -5,22 +5,21 @@
 
 :root {
 
-  /* --- Backgrounds --- */
-  --color-background-primary: #040C24;    /* Space Blue */
-  --color-background-depth: #160F29;      /* Deep Purple */
+  /* --- Backgrounds & Surfaces --- */
+  --color-surface-bg: #141218;
+  --color-surface-container: #28007B;
 
-  /* --- Text --- */
-  --color-text-primary: #F8F8F8;          /* Off-White */
+  /* --- Text & On-Surfaces --- */
+  --color-text-primary: #F7F7F7;
 
   /* --- Interactive & Accents --- */
-  --color-accent-pink: #F1277A;           /* Neon Pink */
-  --color-accent-orange: #FF6A33;         /* Bright Orange */
-
-  /* --- Midtones --- */
-  --color-midtone-purple: #622A87;        /* Vibrant Purple */
+  --color-primary: #BF58FF;
+  --color-secondary: #F877D4;
+  --color-surface-variant: #6243A0;
 
   /* --- Font Families --- */
-  --font-family-primary: 'Noto Serif';
+  --font-family-primary: 'Noto Serif', serif;
+  --font-family-heading: 'Milker Regular', 'Milker', sans-serif;
 
   /* --- Font Sizes (Modular Scale — ratio 1.25) --- */
   --font-size-sm: 0.8rem;       /* 12.8px */
