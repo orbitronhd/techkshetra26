@@ -31,6 +31,7 @@ body,
 body {
   color: var(--color-text-primary, #F7F7F7);
   font-family: var(--font-family-primary);
+  font-size: 1.15rem;
   overflow-x: hidden;
   cursor: none;
 }

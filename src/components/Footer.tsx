@@ -3,6 +3,7 @@ import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import jubileeLogo from '../assets/Jubilee.png'
 import rsetLogo from '../assets/RSET.png'
+import tk26LogoWhite from '../assets/TK26-logo-white.png'
 import styles from './css/Footer.module.css'
 
 export function Footer(): React.JSX.Element {
@@ -29,10 +30,11 @@ export function Footer(): React.JSX.Element {
         <div className={styles.columnLeft}>
           <div className={styles.logoGroup}>
             <div className={styles.mainLogoWrapper}>
-              <div className={styles.techkshetraText}>
-                <span className={styles.tkText}>Techkshetra</span>
-                <span className={styles.yearText}>&apos;26</span>
-              </div>
+              <img
+                src={tk26LogoWhite}
+                alt="Techkshetra '26 Logo"
+                style={{ width: '100%', maxWidth: '250px', height: 'auto', display: 'block', margin: '0 auto 1rem 0' }}
+              />
             </div>
 
             <div className={styles.subLogos}>
@@ -118,8 +120,8 @@ export function Footer(): React.JSX.Element {
 
       {/* Developer credits */}
       <div className={styles.footerBottom}>
-        <p className={styles.creditsText}>Developed with ❤️ by the Techkshetra website team</p>
-        <p className={styles.copyrightText}>© 2026 All Rights Reserved</p>
+        <p className={styles.creditsText}>Developed with ❤️ by the Trollage Community Inc.</p>
+        <p className={styles.copyrightText}>© 2026 ABSOLUTELY No Rights Reserved</p>
       </div>
     </footer>
   )

@@ -7,7 +7,7 @@ export function FluidCursor(): React.JSX.Element | null {
   const ringRef = useRef<HTMLDivElement>(null)
 
   const [isActive, setIsActive] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
 
   // Spring physics variables
   const mouse = useRef({ x: window.innerWidth / 2, y: window.innerHeight / 2 })
@@ -26,9 +26,10 @@ export function FluidCursor(): React.JSX.Element | null {
       mouse.current.y = e.clientY
       if (!isVisible) setIsVisible(true)
 
-      // Move the dot instantly
+      // Move the dot instantly via left/top to avoid transform CSS conflicts
       if (dotRef.current) {
-        dotRef.current.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`
+        dotRef.current.style.left = `${e.clientX}px`
+        dotRef.current.style.top = `${e.clientY}px`
       }
     }
 
@@ -61,7 +62,8 @@ export function FluidCursor(): React.JSX.Element | null {
       ringPos.current.y += (mouse.current.y - ringPos.current.y) * speed
 
       if (ringRef.current) {
-        ringRef.current.style.transform = `translate(calc(${ringPos.current.x}px - 50%), calc(${ringPos.current.y}px - 50%))`
+        ringRef.current.style.left = `${ringPos.current.x}px`
+        ringRef.current.style.top = `${ringPos.current.y}px`
       }
 
       animationFrameId = requestAnimationFrame(render)
@@ -87,10 +89,12 @@ export function FluidCursor(): React.JSX.Element | null {
       <div 
         ref={ringRef} 
         className={`${styles.cursorRing} ${isActive ? styles.cursorRingActive : ''}`} 
+        style={{ left: `${window.innerWidth / 2}px`, top: `${window.innerHeight / 2}px` }}
       />
       <div 
         ref={dotRef} 
         className={`${styles.cursorDot} ${isActive ? styles.cursorDotActive : ''}`} 
+        style={{ left: `${window.innerWidth / 2}px`, top: `${window.innerHeight / 2}px` }}
       />
     </div>
   )
