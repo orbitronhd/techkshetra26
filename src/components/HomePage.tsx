@@ -1,6 +1,7 @@
 import type React from 'react'
 import { Footer } from './Footer.tsx'
 import { About } from './About.tsx'
+import { Events } from './Events.tsx'
 import { Gallery } from './Gallery.tsx'
 import { HeroGlitch } from './HeroGlitch.tsx'
 import { Countdown } from './Countdown.tsx'
@@ -29,6 +30,7 @@ export function HomePage(): React.JSX.Element {
       </section>
 
       <About />
+      <Events />
       <Gallery />
 
       <div id="contact">

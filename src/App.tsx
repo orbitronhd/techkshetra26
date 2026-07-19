@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { Navigation } from './components/Navigation.tsx'
 import { HomePage } from './components/HomePage.tsx'
-import { EventsPage } from './components/EventsPage.tsx'
 import { LiquidBackground } from './components/LiquidBackground.tsx'
 import { FluidCursor } from './components/FluidCursor.tsx'
 import { InitialLoader } from './components/InitialLoader.tsx'
@@ -40,7 +39,6 @@ function App(): React.JSX.Element {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/events" element={<EventsPage />} />
       </Routes>
     </div>
   )
