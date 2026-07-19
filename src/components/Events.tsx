@@ -41,7 +41,6 @@ export function Events(): React.JSX.Element {
     <section id="events" style={{ padding: '4rem 0' }}>
       <div className={styles.contentBody} style={{ padding: '0 2rem' }}>
         <h2 className={styles.heading}>Events</h2>
-        <p className={styles.subheading}>Technical competitions and workshops</p>
       </div>
 
       <div style={{ marginTop: '3rem', width: '100%', padding: '0 1rem', display: 'flex', justifyContent: 'center' }}>

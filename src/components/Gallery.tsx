@@ -5,7 +5,6 @@ export function Gallery(): React.JSX.Element {
   return (
     <section id="gallery" className={styles.contentBody} style={{ padding: '4rem 2rem' }}>
       <h2 className={styles.heading}>Gallery</h2>
-      <p className={styles.subheading}>Moments from Techkshetra</p>
       <div style={{ marginTop: '2rem' }}>
         <p>
           Old Tk'24 photos/videos/content... Use some effect for showcasing like cards or smth
