@@ -6,8 +6,8 @@ export function Gallery(): React.JSX.Element {
     <section id="gallery" className={styles.contentBody} style={{ padding: '4rem 2rem' }}>
       <h2 className={styles.heading}>Gallery</h2>
       <div style={{ marginTop: '2rem' }}>
-        <p>
-          Old Tk'24 photos/videos/content... Use some effect for showcasing like cards or smth
+        <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
+          Relive the greatest moments from our past editions. Witness the passion, the creativity, and the undeniable energy of Techkshetra through our visual archives.
         </p>
 
         <div className={styles.placeholderSection}>

@@ -7,8 +7,8 @@ export function About(): React.JSX.Element {
       <h2 className={styles.heading}>About</h2>
       <p className={styles.subheading}>Our story and mission</p>
       <div style={{ marginTop: '2rem' }}>
-        <p>
-          Talk about TK being the event which happens every once in 2 years thing and add some of the genesis theme stuff along with it, use AI idk
+        <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
+          Welcome to Techkshetra '26, the flagship biennial technical fest of Rajagiri School of Engineering & Technology. This year, under the theme of GENESIS, we embark on a journey of creation, innovation, and technological rebirth.
         </p>
 
         <div className={styles.placeholderSection}>
@@ -31,10 +31,8 @@ export function About(): React.JSX.Element {
 
         <div className={styles.placeholderSection}>
           <h2 className={styles.placeholderHeading}>About RSET</h2>
-          <p>
-            Rajagiri School of Engineering &amp; Technology (RSET) is a premier
-            educational institution offering excellence in engineering education
-            and research.
+          <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
+            Rajagiri School of Engineering & Technology (RSET) is a premier educational institution offering excellence in engineering education and research. We cultivate the next generation of engineers and visionaries.
           </p>
         </div>
       </div>
