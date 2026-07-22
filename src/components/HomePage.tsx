@@ -1,6 +1,7 @@
 import type React from 'react'
 import { Footer } from './Footer.tsx'
 import { About } from './About.tsx'
+import { Tshirts } from './Tshirts.tsx'
 import { Events } from './Events.tsx'
 import { Gallery } from './Gallery.tsx'
 import { HeroGlitch } from './HeroGlitch.tsx'
@@ -29,10 +30,11 @@ export function HomePage(): React.JSX.Element {
       </section>
 
       <About />
+      <Tshirts />
       <Events />
       <Gallery />
 
-      <div id="contact">
+      <div>
         <Footer />
       </div>
     </div>
