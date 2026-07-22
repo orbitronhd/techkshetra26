@@ -5,7 +5,6 @@ export function About(): React.JSX.Element {
   return (
     <section id="about" className={styles.contentBody} style={{ padding: '4rem 2rem' }}>
       <h2 className={styles.heading}>About</h2>
-      <p className={styles.subheading}>Our story and mission</p>
       <div style={{ marginTop: '2rem' }}>
 
         <div className={styles.placeholderSection}>
