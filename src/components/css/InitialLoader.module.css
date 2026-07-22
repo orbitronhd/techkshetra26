@@ -1,0 +1,52 @@
+.loaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-surface-bg);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Use an exponential easing curve so it sucks into the cursor powerfully */
+  transition: clip-path 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.loaderContainer.closing {
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border: 3px solid transparent;
+  border-top-color: var(--color-primary);
+  border-right-color: var(--color-secondary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.loaderContainer.closing .circle {
+  width: 8px;
+  height: 8px;
+  border-width: 0px;
+  background-color: white;
+  animation: none;
+  /* Retain transform so it stays centered on its coordinates */
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

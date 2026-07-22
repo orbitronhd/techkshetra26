@@ -63,17 +63,19 @@
 }
 
 .tkText {
+  font-family: var(--font-family-heading);
   font-size: 1.5rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--color-text-primary);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 .yearText {
+  font-family: var(--font-family-heading);
   font-size: 2.5rem;
   font-weight: 900;
-  background: linear-gradient(135deg, #ff3b3b, #ff8a00);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: -0.25rem;
@@ -149,12 +151,13 @@
 }
 
 .columnHeading {
+  font-family: var(--font-family-heading);
   font-size: 1.25rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 0.5rem;
-  color: #ffffff;
+  color: var(--color-text-primary);
 }
 
 .navLinks {
@@ -181,12 +184,12 @@
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #ff3b3b;
+  background-color: var(--color-primary);
   transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .navLink:hover {
-  color: #ff3b3b;
+  color: var(--color-primary);
 }
 
 .navLink:hover::after {
@@ -236,7 +239,7 @@
 .inputField:focus,
 .textAreaField:focus {
   outline: none;
-  border-color: rgba(255, 59, 59, 0.5);
+  border-color: var(--color-primary);
   background: rgba(255, 255, 255, 0.06);
 }
 
@@ -244,7 +247,7 @@
   position: absolute;
   inset: -1px;
   border-radius: 0.5rem;
-  background: linear-gradient(to right, rgba(255, 59, 59, 0.5), rgba(255, 138, 0, 0.5));
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
   opacity: 0;
   z-index: -1;
   transition: opacity 0.3s ease;
@@ -259,8 +262,9 @@
 .submitButton {
   position: relative;
   background: transparent;
-  border: 1px solid #ff3b3b;
-  color: #ff3b3b;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-family: var(--font-family-heading);
   font-weight: 700;
   padding: 0.875rem 1.5rem;
   border-radius: 0.5rem;
@@ -284,16 +288,16 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ff3b3b;
+  background: var(--color-primary);
   transform: translateX(-101%);
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   z-index: 1;
 }
 
 .submitButton:hover {
-  color: #ffffff;
-  border-color: #ff3b3b;
-  box-shadow: 0 0 15px rgba(255, 59, 59, 0.3);
+  color: var(--color-surface-bg);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 15px var(--color-primary);
 }
 
 .submitButton:hover::before {

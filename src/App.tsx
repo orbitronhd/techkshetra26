@@ -1,33 +1,30 @@
-/**
- * Behavior: Root application layout.
- * - Navigation fixed at top (z-index 10)
- * - Moon background renders per-page via MoonPageLayout (z-index 0)
- * - Route-based pages render via React Router
- * - Each page uses MoonPageLayout for scroll-driven Moon positioning
- */
-
 import type React from 'react'
 import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { Navigation } from './components/Navigation.tsx'
-import { MoonBackground } from './components/MoonBackground.tsx'
 import { HomePage } from './components/HomePage.tsx'
-import { EventsPage } from './components/EventsPage.tsx'
-import { GalleryPage } from './components/GalleryPage.tsx'
-import { AboutPage } from './components/AboutPage.tsx'
-import { ContactPage } from './components/ContactPage.tsx'
+import { LiquidBackground } from './components/LiquidBackground.tsx'
+import { FluidCursor } from './components/FluidCursor.tsx'
+import { InitialLoader } from './components/InitialLoader.tsx'
 import styles from './App.module.css'
 
-/**
- * Behavior: Scrolls to top smoothly on route change.
- * Runs before the new page content renders to allow Moon to rotate and page to scroll as a unified transition.
- */
 function ScrollToTop(): React.JSX.Element | null {
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [pathname])
+    if (hash) {
+      const id = hash.replace('#', '')
+      // Small timeout to ensure DOM is ready after navigation
+      setTimeout(() => {
+        const element = document.getElementById(id)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 0)
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }, [pathname, hash])
 
   return null
 }
@@ -35,15 +32,13 @@ function ScrollToTop(): React.JSX.Element | null {
 function App(): React.JSX.Element {
   return (
     <div className={styles.root}>
-      <MoonBackground />
+      <InitialLoader />
+      <LiquidBackground />
+      <FluidCursor />
       <Navigation />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/events" element={<EventsPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </div>
   )

@@ -37,26 +37,29 @@ export function Navigation(): React.JSX.Element {
   }
 
   return (
-    <header className={styles.header}>
-      <nav className={styles.navLeft} aria-label="Primary navigation left">
-        <NavList items={NAV_ITEMS_LEFT} />
-      </nav>
+    <>
+      <div className={styles.blurGradient} aria-hidden="true" />
+      <header className={styles.header}>
+        <nav className={styles.navLeft} aria-label="Primary navigation left">
+          <NavList items={NAV_ITEMS_LEFT} />
+        </nav>
 
-      <div className={styles.logoWrapper}>
-        <button
-          className={styles.logoButton}
-          type="button"
-          onClick={handleHomeClick}
-          aria-label="Techkshetra 26 — go to home"
-        >
-          TK&apos;26
-        </button>
-      </div>
+        <div className={styles.logoWrapper}>
+          <button
+            className={styles.logoButton}
+            type="button"
+            onClick={handleHomeClick}
+            aria-label="Techkshetra 26 — go to home"
+          >
+            TK&apos;26
+          </button>
+        </div>
 
-      <nav className={styles.navRight} aria-label="Primary navigation right">
-        <NavList items={NAV_ITEMS_RIGHT} />
-      </nav>
-    </header>
+        <nav className={styles.navRight} aria-label="Primary navigation right">
+          <NavList items={NAV_ITEMS_RIGHT} />
+        </nav>
+      </header>
+    </>
   )
 }
 

@@ -4,18 +4,21 @@
  */
 
 .heading {
+    font-family: var(--font-family-heading);
     font-size: clamp(2rem, 6vw, 4rem);
     font-weight: 700;
     letter-spacing: 0.05em;
-    color: #fff;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
-    text-shadow: 0 0 40px rgba(255, 120, 30, 0.4);
+    line-height: 1.2;
 }
 
 .subheading {
     margin-top: 1rem;
     font-size: clamp(0.9rem, 2vw, 1.2rem);
-    color: rgba(255, 255, 255, 0.55);
+    color: var(--color-secondary);
     letter-spacing: 0.06em;
     text-align: center;
 }
@@ -42,16 +45,17 @@
 .placeholderSection {
     margin-top: 3rem;
     padding: 2rem;
-    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border: 1px dashed var(--color-surface-variant);
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--color-surface-container);
     text-align: center;
 }
 
 .placeholderHeading {
+    font-family: var(--font-family-heading);
     font-size: 1.5rem;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--color-text-primary);
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -72,8 +76,9 @@
 }
 
 .placeholderCard h3 {
+    font-family: var(--font-family-heading);
     font-size: 1.1rem;
-    color: #ff3b3b;
+    color: var(--color-primary);
     margin-bottom: 0.5rem;
 }
 

@@ -1,3 +1,13 @@
+@import './styles/tokens.css';
+
+@font-face {
+  font-family: 'Milker Regular';
+  src: url('/fonts/milker-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -14,12 +24,30 @@ html,
 body,
 #root {
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
+  background-color: transparent;
 }
 
 body {
-  background: #00000f;
-  color: #fff;
-  font-family: 'Noto Serif';
+  color: var(--color-text-primary, #F7F7F7);
+  font-family: var(--font-family-primary);
+  font-size: 1.15rem;
   overflow-x: hidden;
+  cursor: none;
+}
+
+@media (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+}
+
+a, button, [role="button"], input, select, textarea {
+  cursor: none;
+}
+
+@media (pointer: coarse) {
+  a, button, [role="button"], input, select, textarea {
+    cursor: auto;
+  }
 }
