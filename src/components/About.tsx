@@ -7,9 +7,6 @@ export function About(): React.JSX.Element {
       <h2 className={styles.heading}>About</h2>
       <p className={styles.subheading}>Our story and mission</p>
       <div style={{ marginTop: '2rem' }}>
-        <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-          Welcome to Techkshetra '26, the flagship biennial technical fest of Rajagiri School of Engineering & Technology. This year, under the theme of GENESIS, we embark on a journey of creation, innovation, and technological rebirth.
-        </p>
 
         <div className={styles.placeholderSection}>
           <h2 className={styles.placeholderHeading}>Fest Statistics</h2>

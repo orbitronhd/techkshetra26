@@ -1,6 +1,6 @@
 import type React from 'react'
 import { useEffect, useState, useRef } from 'react'
-import logoStyle from '../assets/TK26-logo-style.png'
+import logoStyle from '../assets/techkshetra_logo.png'
 import logoGenesis from '../assets/TK26-genesis.png'
 import styles from './css/HeroGlitch.module.css'
 
@@ -67,7 +67,8 @@ export function HeroGlitch(): React.JSX.Element {
             className={`${styles.imageLayer} ${isGlitching ? styles.glitchEffect : ''}`}
             style={{ 
               opacity: 1 - progress,
-              filter: `hue-rotate(${glitchIntensity * 90}deg) blur(${glitchIntensity * 2}px)`
+              filter: `hue-rotate(${glitchIntensity * 90}deg) blur(${glitchIntensity * 2}px)`,
+              transform: 'scale(1.3)'
             }} 
           />
           {isGlitching && (
@@ -77,7 +78,7 @@ export function HeroGlitch(): React.JSX.Element {
               className={`${styles.imageLayer} ${styles.glitchEffect}`}
               style={{ 
                 opacity: (1 - progress) * glitchIntensity * 0.7,
-                transform: `translate(${Math.random() * 15 * glitchIntensity}px, ${Math.random() * -15 * glitchIntensity}px)`,
+                transform: `translate(${Math.random() * 15 * glitchIntensity}px, ${Math.random() * -15 * glitchIntensity}px) scale(1.3)`,
                 filter: 'brightness(1.5) contrast(2) hue-rotate(-90deg)',
                 mixBlendMode: 'screen',
                 animationDuration: '0.1s' // Faster glitch for offset layer
