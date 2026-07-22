@@ -65,10 +65,9 @@ export function Footer(): React.JSX.Element {
           <h3 className={styles.columnHeading}>Quick Links</h3>
           <nav className={styles.navLinks}>
             <Link to="/" className={styles.navLink}>Home</Link>
-            <Link to="/events" className={styles.navLink}>Events</Link>
-            <Link to="/gallery" className={styles.navLink}>Gallery</Link>
-            <Link to="/about" className={styles.navLink}>About</Link>
-            <Link to="/contact" className={styles.navLink}>Contact</Link>
+            <Link to="/#events" className={styles.navLink}>Events</Link>
+            <Link to="/#gallery" className={styles.navLink}>Gallery</Link>
+            <Link to="/#about" className={styles.navLink}>About</Link>
           </nav>
         </div>
 
