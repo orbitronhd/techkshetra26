@@ -72,25 +72,30 @@
 }
 
 .logoButton {
-  font-family: var(--font-family-heading);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: none;
-  border: 2px solid var(--color-primary);
-  border-radius: 6px;
-  padding: 0.4rem 0.9rem;
+  border: none;
+  padding: 0;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .logoButton:hover {
-  background: var(--color-primary);
-  color: var(--color-surface-bg);
+  transform: scale(1.08);
+  filter: brightness(1.15);
 }
 
 .logoButton:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.logoImage {
+  height: 72px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }

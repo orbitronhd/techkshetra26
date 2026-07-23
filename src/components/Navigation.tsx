@@ -2,6 +2,7 @@ import type React from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { NAV_ITEMS_LEFT, NAV_ITEMS_RIGHT } from '../types/sun.types.ts'
 import type { NavItem } from '../types/sun.types.ts'
+import tk26Logo from '../assets/TK26_Logo-512px.png'
 import styles from './css/Navigation.module.css'
 
 function NavList({
@@ -51,7 +52,11 @@ export function Navigation(): React.JSX.Element {
             onClick={handleHomeClick}
             aria-label="Techkshetra 26 — go to home"
           >
-            TK&apos;26
+            <img
+              src={tk26Logo}
+              alt="Techkshetra 26"
+              className={styles.logoImage}
+            />
           </button>
         </div>
 
