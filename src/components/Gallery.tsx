@@ -2,9 +2,23 @@ import type React from 'react'
 import pageStyles from './css/Page.module.css'
 import styles from './css/Gallery.module.css'
 
+import img1 from '../assets/gallery/1.webp'
+import img2 from '../assets/gallery/2.webp'
+import img3 from '../assets/gallery/3.webp'
+import img4 from '../assets/gallery/4.webp'
+import img5 from '../assets/gallery/5.webp'
+import img6 from '../assets/gallery/6.webp'
+import img7 from '../assets/gallery/7.webp'
+import img8 from '../assets/gallery/8.webp'
+import img9 from '../assets/gallery/9.webp'
+import img10 from '../assets/gallery/10.webp'
+import img11 from '../assets/gallery/11.webp'
+import img12 from '../assets/gallery/12.webp'
+import img13 from '../assets/gallery/13.webp'
+import img14 from '../assets/gallery/14.webp'
+
 /**
- * Gallery image data sourced from /public/TK24/.
- * 14 images (1.webp – 14.webp), split across two carousel strips.
+ * Gallery image data sourced from src/assets/gallery/.
  */
 interface GalleryImage {
   readonly id: string
@@ -12,16 +26,24 @@ interface GalleryImage {
   readonly alt: string
 }
 
-const GALLERY_IMAGES: readonly GalleryImage[] = Array.from({ length: 14 }, (_, i) => ({
-  id: `tk24-${i + 1}`,
-  src: `/TK24/${i + 1}.webp`,
-  alt: `Techkshetra '24 highlight ${i + 1}`,
-}))
+const GALLERY_IMAGES: readonly GalleryImage[] = [
+  { id: 'tk24-1', src: img1, alt: "Techkshetra '24 highlight 1" },
+  { id: 'tk24-2', src: img2, alt: "Techkshetra '24 highlight 2" },
+  { id: 'tk24-3', src: img3, alt: "Techkshetra '24 highlight 3" },
+  { id: 'tk24-4', src: img4, alt: "Techkshetra '24 highlight 4" },
+  { id: 'tk24-5', src: img5, alt: "Techkshetra '24 highlight 5" },
+  { id: 'tk24-6', src: img6, alt: "Techkshetra '24 highlight 6" },
+  { id: 'tk24-7', src: img7, alt: "Techkshetra '24 highlight 7" },
+  { id: 'tk24-8', src: img8, alt: "Techkshetra '24 highlight 8" },
+  { id: 'tk24-9', src: img9, alt: "Techkshetra '24 highlight 9" },
+  { id: 'tk24-10', src: img10, alt: "Techkshetra '24 highlight 10" },
+  { id: 'tk24-11', src: img11, alt: "Techkshetra '24 highlight 11" },
+  { id: 'tk24-12', src: img12, alt: "Techkshetra '24 highlight 12" },
+  { id: 'tk24-13', src: img13, alt: "Techkshetra '24 highlight 13" },
+  { id: 'tk24-14', src: img14, alt: "Techkshetra '24 highlight 14" },
+]
 
 
-/**
- * A single gallery card with overlapping + tilt handled by CSS nth-child rules.
- */
 function GalleryCard({
   image,
 }: {
@@ -41,11 +63,6 @@ function GalleryCard({
   )
 }
 
-/**
- * Gallery section with:
- * 1. Two auto-scrolling carousel strips of overlapping, tilted photo cards
- * 2. Aftermovie video player (Google Drive embed, silent autoplay)
- */
 export function Gallery(): React.JSX.Element {
   // Split images across two strips: 7 each
   const strip1 = GALLERY_IMAGES.slice(0, 7)
@@ -54,7 +71,6 @@ export function Gallery(): React.JSX.Element {
   return (
     <section id="gallery" className={styles.gallerySection}>
       <h2 className={pageStyles.heading}>Gallery</h2>
-      <p className={styles.gallerySubtitle}>Moments from Techkshetra '24</p>
 
       {/* --- Carousel Strips --- */}
       <div className={styles.stripsWrapper}>
