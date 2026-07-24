@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  pointer-events: none; /* Let clicks pass through if needed */
+  pointer-events: none;
 }
 
 .outgoing {

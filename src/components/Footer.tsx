@@ -1,27 +1,27 @@
-import type React from 'react'
-import { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
-import jubileeLogo from '../assets/Jubilee.png'
-import rsetLogo from '../assets/RSET.png'
-import tk26LogoWhite from '../assets/TK26-logo-white.png'
-import styles from './css/Footer.module.css'
+import type React from "react";
+import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import jubileeLogo from "../assets/Jubilee.png";
+import rsetLogo from "../assets/RSET.png";
+import tk26LogoWhite from "../assets/TK26-logo-white.png";
+import styles from "./css/Footer.module.css";
 
 export function Footer(): React.JSX.Element {
-  const form = useRef<HTMLFormElement>(null)
-  const [statusMessage, setStatusMessage] = useState('')
+  const form = useRef<HTMLFormElement>(null);
+  const [statusMessage, setStatusMessage] = useState("");
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setStatusMessage('Sending...')
+    e.preventDefault();
+    setStatusMessage("Sending...");
 
     // Placeholder logic for demonstration
-    console.log('Form submitted. Uncomment emailjs logic to send emails.')
-    setStatusMessage('Feedback sent successfully!')
+    console.log("Form submitted. Uncomment emailjs logic to send emails.");
+    setStatusMessage("Feedback sent successfully!");
     if (form.current) {
-      form.current.reset()
+      form.current.reset();
     }
-    setTimeout(() => setStatusMessage(''), 3000)
-  }
+    setTimeout(() => setStatusMessage(""), 3000);
+  };
 
   return (
     <footer className={styles.footerContainer}>
@@ -33,18 +33,29 @@ export function Footer(): React.JSX.Element {
               <img
                 src={tk26LogoWhite}
                 alt="Techkshetra '26 Logo"
-                style={{ width: '100%', maxWidth: '250px', height: 'auto', display: 'block', margin: '0 auto 1rem 0' }}
+                style={{
+                  width: "100%",
+                  maxWidth: "250px",
+                  height: "auto",
+                  display: "block",
+                  margin: "0 auto 1rem 0",
+                }}
               />
             </div>
 
             <div className={styles.subLogos}>
-              <img src={jubileeLogo} alt="Jubilee Logo" className={styles.subLogo} />
+              <img
+                src={jubileeLogo}
+                alt="Jubilee Logo"
+                className={styles.subLogo}
+              />
               <img src={rsetLogo} alt="RSET Logo" className={styles.subLogo} />
             </div>
           </div>
 
           <p className={styles.addressText}>
-            Rajagiri School of Engineering &amp; Technology<br />
+            Rajagiri School of Engineering &amp; Technology
+            <br />
             Kochi, Kerala 682039
           </p>
 
@@ -60,18 +71,26 @@ export function Footer(): React.JSX.Element {
           </div>
         </div>
 
-        {/* Middle Column for Quick Links */}
+        {}
         <div className={styles.columnMiddle}>
           <h3 className={styles.columnHeading}>Quick Links</h3>
           <nav className={styles.navLinks}>
-            <Link to="/" className={styles.navLink}>Home</Link>
-            <Link to="/#events" className={styles.navLink}>Events</Link>
-            <Link to="/#gallery" className={styles.navLink}>Gallery</Link>
-            <Link to="/#about" className={styles.navLink}>About</Link>
+            <Link to="/" className={styles.navLink}>
+              Home
+            </Link>
+            <Link to="/#events" className={styles.navLink}>
+              Events
+            </Link>
+            <Link to="/#gallery" className={styles.navLink}>
+              Gallery
+            </Link>
+            <Link to="/#about" className={styles.navLink}>
+              About
+            </Link>
           </nav>
         </div>
 
-        {/* Right Column: Contact Form */}
+        {}
         <div className={styles.columnRight}>
           <h3 className={styles.columnHeading}>Contact</h3>
           <form ref={form} onSubmit={sendEmail} className={styles.contactForm}>
@@ -112,15 +131,19 @@ export function Footer(): React.JSX.Element {
               <span className={styles.buttonText}>Send Feedback</span>
               <div className={styles.buttonGlow}></div>
             </button>
-            {statusMessage && <p className={styles.statusMessage}>{statusMessage}</p>}
+            {statusMessage && (
+              <p className={styles.statusMessage}>{statusMessage}</p>
+            )}
           </form>
         </div>
       </div>
 
       <div className={styles.footerBottom}>
-        <p className={styles.creditsText}>Developed with ❤️ and tokens by the TK'26 website team</p>
+        <p className={styles.creditsText}>
+          Developed with ❤️ and tokens by the TK'26 website team
+        </p>
         <p className={styles.copyrightText}>© 2026 All Rights Reserved</p>
       </div>
     </footer>
-  )
+  );
 }

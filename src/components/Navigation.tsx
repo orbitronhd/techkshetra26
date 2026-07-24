@@ -1,14 +1,14 @@
-import type React from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
-import { NAV_ITEMS_LEFT, NAV_ITEMS_RIGHT } from '../types/sun.types.ts'
-import type { NavItem } from '../types/sun.types.ts'
-import tk26Logo from '../assets/TK26_Logo-512px.png'
-import styles from './css/Navigation.module.css'
+import type React from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { NAV_ITEMS_LEFT, NAV_ITEMS_RIGHT } from "../types/sun.types.ts";
+import type { NavItem } from "../types/sun.types.ts";
+import tk26Logo from "../assets/TK26_Logo-512px.png";
+import styles from "./css/Navigation.module.css";
 
 function NavList({
   items,
 }: {
-  readonly items: readonly NavItem[]
+  readonly items: readonly NavItem[];
 }): React.JSX.Element {
   return (
     <ul className={styles.navList}>
@@ -27,14 +27,14 @@ function NavList({
         </li>
       ))}
     </ul>
-  )
+  );
 }
 
 export function Navigation(): React.JSX.Element {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   function handleHomeClick(): void {
-    void navigate('/')
+    void navigate("/");
   }
 
   return (
@@ -65,7 +65,7 @@ export function Navigation(): React.JSX.Element {
         </nav>
       </header>
     </>
-  )
+  );
 }
 
-export default Navigation
+export default Navigation;

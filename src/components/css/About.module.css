@@ -1,7 +1,3 @@
-/* 
- * About Section Styles — Techkshetra'26
- */
-
 .aboutSection {
   padding: var(--space-16) var(--space-4);
   max-width: 1000px;
@@ -11,7 +7,6 @@
   gap: var(--space-16);
 }
 
-/* --- Shared Content Block --- */
 .contentBlock {
   display: flex;
   align-items: center;
@@ -22,7 +17,6 @@
   flex-direction: row-reverse;
 }
 
-/* --- Image Container --- */
 .imageWrapper {
   flex-shrink: 0;
   width: 300px;
@@ -35,21 +29,17 @@
   width: 100%;
   height: auto;
   object-fit: contain;
-  /* Removed glass border/shadow as requested */
 }
 
-/* Specific styling for the TK logo to ensure it looks good */
 .tkLogo {
   max-width: 250px;
   filter: drop-shadow(0 0 15px rgba(191, 88, 255, 0.2));
 }
 
-/* Specific styling for the Jubilee image */
 .jubileeImage {
   border-radius: var(--radius-md);
 }
 
-/* --- Text Container --- */
 .textWrapper {
   flex: 1;
   display: flex;
@@ -62,7 +52,11 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   letter-spacing: 0.05em;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.2;
@@ -76,7 +70,6 @@
   margin: 0;
 }
 
-/* --- Responsive --- */
 @media (max-width: 768px) {
   .aboutSection {
     padding: var(--space-12) var(--space-4);

@@ -9,7 +9,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Use an exponential easing curve so it sucks into the cursor powerfully */
   transition: clip-path 0.5s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
@@ -38,7 +37,6 @@
   border-width: 0px;
   background-color: white;
   animation: none;
-  /* Retain transform so it stays centered on its coordinates */
   transform: translate(-50%, -50%) rotate(0deg);
 }
 

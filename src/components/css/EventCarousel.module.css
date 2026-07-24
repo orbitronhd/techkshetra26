@@ -28,7 +28,6 @@
   transform-style: preserve-3d;
 }
 
-/* Base card positioning and states for coverflow */
 .cardActive {
   transform: translateX(0) scale(1.15) translateZ(0);
   z-index: 10;
@@ -73,7 +72,6 @@
   pointer-events: none;
 }
 
-/* Flip Container inner logic */
 .cardInner {
   position: relative;
   width: 100%;
@@ -86,7 +84,6 @@
   transform: rotateY(180deg);
 }
 
-/* Card Faces */
 .cardFace {
   position: absolute;
   top: 0;
@@ -96,8 +93,7 @@
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   border-radius: 20px;
-  
-  /* Glassmorphism */
+
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -106,8 +102,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  
-  /* Anti-aliasing / line bug fixes */
+
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   outline: 1px solid transparent;
@@ -115,11 +110,12 @@
 }
 
 .cardActive .cardFace {
-  box-shadow: 0 0 30px rgba(191, 88, 255, 0.3), inset 0 0 20px rgba(248, 119, 212, 0.15);
+  box-shadow:
+    0 0 30px rgba(191, 88, 255, 0.3),
+    inset 0 0 20px rgba(248, 119, 212, 0.15);
   border-color: rgba(255, 255, 255, 0.25);
 }
 
-/* Front Face */
 .cardFront {
   z-index: 2;
   transform: rotateY(0deg) translateZ(1px);
@@ -128,7 +124,11 @@
 .imagePlaceholder {
   flex: 1;
   width: 100%;
-  background: linear-gradient(135deg, rgba(191, 88, 255, 0.1), rgba(248, 119, 212, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(191, 88, 255, 0.1),
+    rgba(248, 119, 212, 0.1)
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,10 +166,9 @@
   opacity: 0.8;
 }
 
-/* Back Face */
 .cardBack {
   transform: rotateY(180deg) translateZ(1px);
-  background: rgba(20, 18, 24, 0.6); /* Transparent back */
+  background: rgba(20, 18, 24, 0.6);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -192,7 +191,6 @@
   margin-bottom: 2rem;
 }
 
-/* Buttons */
 .navButton {
   position: absolute;
   top: 50%;
@@ -245,7 +243,11 @@
 }
 
 .actionButton {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
   border: none;
   color: #fff;
   padding: 0.6rem 1.8rem;
@@ -270,11 +272,11 @@
     width: 260px;
     height: 360px;
   }
-  
+
   .cardPrev {
     transform: translateX(-50%) scale(0.85) translateZ(-50px);
   }
-  
+
   .cardNext {
     transform: translateX(50%) scale(0.85) translateZ(-50px);
   }
