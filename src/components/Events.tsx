@@ -146,7 +146,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
 
 export function Events(): React.JSX.Element {
   return (
-    <section id="events" style={{ padding: "4rem 0" }}>
+    <section id="events" style={{ padding: "4rem 0", contentVisibility: "auto", containIntrinsicSize: "800px" }}>
       <div className={styles.contentBody} style={{ padding: "0 2rem" }}>
         <h2 className={styles.heading}>Events</h2>
       </div>

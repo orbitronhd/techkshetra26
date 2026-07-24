@@ -1,6 +1,6 @@
 import type React from "react";
 import { useEffect, useState } from "react";
-import styles from "./css/Page.module.css";
+
 
 export function Countdown(): React.JSX.Element {
   const [timeLeft, setTimeLeft] = useState({

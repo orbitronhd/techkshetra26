@@ -1,13 +1,14 @@
-import type React from "react";
-import { Footer } from "./Footer.tsx";
-import { About } from "./About.tsx";
-import { Tshirts } from "./Tshirts.tsx";
-import { Events } from "./Events.tsx";
-import { Gallery } from "./Gallery.tsx";
+import React, { Suspense } from "react";
 import { HeroGlitch } from "./HeroGlitch.tsx";
 import { Countdown } from "./Countdown.tsx";
 import { FloatingBottomBar } from "./FloatingBottomBar.tsx";
 import styles from "./css/Page.module.css";
+
+const About = React.lazy(() => import("./About.tsx").then((m) => ({ default: m.About })));
+const Tshirts = React.lazy(() => import("./Tshirts.tsx").then((m) => ({ default: m.Tshirts })));
+const Events = React.lazy(() => import("./Events.tsx").then((m) => ({ default: m.Events })));
+const Gallery = React.lazy(() => import("./Gallery.tsx").then((m) => ({ default: m.Gallery })));
+const Footer = React.lazy(() => import("./Footer.tsx").then((m) => ({ default: m.Footer })));
 
 export function HomePage(): React.JSX.Element {
   return (
@@ -19,12 +20,16 @@ export function HomePage(): React.JSX.Element {
         </div>
       </section>
 
-      <About />
-      <Tshirts />
-      <Events />
-      <Gallery />
+      <Suspense fallback={null}>
+        <About />
+        <Tshirts />
+        <Events />
+        <Gallery />
+      </Suspense>
       <FloatingBottomBar />
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }
