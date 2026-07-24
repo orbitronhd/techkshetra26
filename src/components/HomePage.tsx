@@ -6,6 +6,7 @@ import { Events } from "./Events.tsx";
 import { Gallery } from "./Gallery.tsx";
 import { HeroGlitch } from "./HeroGlitch.tsx";
 import { Countdown } from "./Countdown.tsx";
+import { FloatingBottomBar } from "./FloatingBottomBar.tsx";
 import styles from "./css/Page.module.css";
 
 export function HomePage(): React.JSX.Element {
@@ -22,6 +23,7 @@ export function HomePage(): React.JSX.Element {
       <Tshirts />
       <Events />
       <Gallery />
+      <FloatingBottomBar />
       <Footer />
     </div>
   );

@@ -24,7 +24,7 @@ export function Footer(): React.JSX.Element {
   };
 
   return (
-    <footer className={styles.footerContainer}>
+    <footer id="footer" className={styles.footerContainer}>
       <div className={styles.footerContent}>
         {/* Left Column: Logos, Address & Map */}
         <div className={styles.columnLeft}>
