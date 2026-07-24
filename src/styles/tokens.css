@@ -1,74 +1,54 @@
-/* ============================================= */
-/* TECHKSHETRA'26 DESIGN TOKENS                  */
-/* Single source of truth for all design values  */
-/* ============================================= */
-
 :root {
-
-  /* --- Backgrounds & Surfaces --- */
   --color-surface-bg: #141218;
-  --color-surface-container: #28007B;
+  --color-surface-container: #28007b;
 
-  /* --- Text & On-Surfaces --- */
-  --color-text-primary: #F7F7F7;
+  --color-text-primary: #f7f7f7;
 
-  /* --- Interactive & Accents --- */
-  --color-primary: #BF58FF;
-  --color-secondary: #F877D4;
-  --color-surface-variant: #6243A0;
+  --color-primary: #bf58ff;
+  --color-secondary: #f877d4;
+  --color-surface-variant: #6243a0;
 
-  /* --- Font Families --- */
-  --font-family-primary: 'Noto Serif', serif;
-  --font-family-heading: 'Milker Regular', 'Milker', sans-serif;
+  --font-family-primary: "Noto Serif", serif;
+  --font-family-heading: "Milker Regular", "Milker", sans-serif;
 
-  /* --- Font Sizes (Modular Scale — ratio 1.25) --- */
-  --font-size-sm: 0.8rem;       /* 12.8px */
-  --font-size-base: 1rem;       /* 16px */
-  --font-size-md: 1.25rem;      /* 20px */
-  --font-size-lg: 1.563rem;     /* 25px */
-  --font-size-xl: 1.953rem;     /* 31.25px */
-  --font-size-2xl: 2.441rem;    /* 39px */
-  --font-size-3xl: 3.052rem;    /* 48.8px */
-
-  /* --- Font Weights --- */
+  --font-size-sm: 0.8rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.25rem;
+  --font-size-lg: 1.563rem;
+  --font-size-xl: 1.953rem;
+  --font-size-2xl: 2.441rem;
+  --font-size-3xl: 3.052rem;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  /* --- Line Heights --- */
   --line-height-tight: 1.2;
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
 
-  /* --- Letter Spacing --- */
   --letter-spacing-tight: -0.02em;
   --letter-spacing-normal: 0em;
   --letter-spacing-wide: 0.05em;
   --letter-spacing-wider: 0.1em;
   --letter-spacing-widest: 0.2em;
 
-  /* --- Spacing (4px base unit) --- */
-  --space-1: 0.25rem;    /* 4px */
-  --space-2: 0.5rem;     /* 8px */
-  --space-3: 0.75rem;    /* 12px */
-  --space-4: 1rem;       /* 16px */
-  --space-5: 1.25rem;    /* 20px */
-  --space-6: 1.5rem;     /* 24px */
-  --space-8: 2rem;       /* 32px */
-  --space-10: 2.5rem;    /* 40px */
-  --space-12: 3rem;      /* 48px */
-  --space-16: 4rem;      /* 64px */
-
-  /* --- Border Radius --- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 1rem;
   --radius-pill: 9999px;
 
-  /* --- Transitions --- */
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
   --transition-slow: 400ms ease;
-
 }

@@ -1,8 +1,8 @@
-@import './styles/tokens.css';
+@import "./styles/tokens.css";
 
 @font-face {
-  font-family: 'Milker Regular';
-  src: url('/fonts/milker-regular.otf') format('opentype');
+  font-family: "Milker Regular";
+  src: url("/fonts/milker-regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -29,7 +29,7 @@ body,
 }
 
 body {
-  color: var(--color-text-primary, #F7F7F7);
+  color: var(--color-text-primary, #f7f7f7);
   font-family: var(--font-family-primary);
   font-size: 1.15rem;
   overflow-x: hidden;
@@ -42,12 +42,22 @@ body {
   }
 }
 
-a, button, [role="button"], input, select, textarea {
+a,
+button,
+[role="button"],
+input,
+select,
+textarea {
   cursor: none;
 }
 
 @media (pointer: coarse) {
-  a, button, [role="button"], input, select, textarea {
+  a,
+  button,
+  [role="button"],
+  input,
+  select,
+  textarea {
     cursor: auto;
   }
 }
