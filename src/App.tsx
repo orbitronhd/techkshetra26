@@ -1,32 +1,32 @@
-import type React from 'react'
-import { useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
-import { Navigation } from './components/Navigation.tsx'
-import { HomePage } from './components/HomePage.tsx'
-import { LiquidBackground } from './components/LiquidBackground.tsx'
-import { FluidCursor } from './components/FluidCursor.tsx'
-import { InitialLoader } from './components/InitialLoader.tsx'
-import styles from './App.module.css'
+import type React from "react";
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { Navigation } from "./components/Navigation.tsx";
+import { HomePage } from "./components/HomePage.tsx";
+import { LiquidBackground } from "./components/LiquidBackground.tsx";
+import { FluidCursor } from "./components/FluidCursor.tsx";
+import { InitialLoader } from "./components/InitialLoader.tsx";
+import styles from "./App.module.css";
 
 function ScrollToTop(): React.JSX.Element | null {
-  const { pathname, hash } = useLocation()
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
     if (hash) {
-      const id = hash.replace('#', '')
+      const id = hash.replace("#", "");
       // Small timeout to ensure DOM is ready after navigation
       setTimeout(() => {
-        const element = document.getElementById(id)
+        const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' })
+          element.scrollIntoView({ behavior: "smooth" });
         }
-      }, 0)
+      }, 0);
     } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }, [pathname, hash])
+  }, [pathname, hash]);
 
-  return null
+  return null;
 }
 
 function App(): React.JSX.Element {
@@ -41,7 +41,7 @@ function App(): React.JSX.Element {
         <Route path="/" element={<HomePage />} />
       </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

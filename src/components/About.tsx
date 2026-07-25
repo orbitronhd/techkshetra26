@@ -1,37 +1,54 @@
-import type React from 'react'
-import styles from './css/Page.module.css'
+import type React from "react";
+import styles from "./css/About.module.css";
+import logoImage from "../assets/TK26_Logo-512px.png";
+import jubileeImage from "../assets/Jubilee.png";
 
 export function About(): React.JSX.Element {
   return (
-    <section id="about" className={styles.contentBody} style={{ padding: '4rem 2rem' }}>
-      <h2 className={styles.heading}>About</h2>
-      <div style={{ marginTop: '2rem' }}>
-
-        <div className={styles.placeholderSection}>
-          <h2 className={styles.placeholderHeading}>Fest Statistics</h2>
-          <div className={styles.placeholderGrid}>
-            <div className={styles.placeholderCard}>
-              <h3>Expected Footfall</h3>
-              <p>6000+ Attendees</p>
-            </div>
-            <div className={styles.placeholderCard}>
-              <h3>Total Reach</h3>
-              <p>15.4K+ Accounts</p>
-            </div>
-            <div className={styles.placeholderCard}>
-              <h3>Interactions</h3>
-              <p>28K+ Engagements</p>
-            </div>
-          </div>
+    <section id="about" className={styles.aboutSection}>
+      {}
+      <div className={styles.contentBlock}>
+        <div className={styles.imageWrapper}>
+          <img
+            src={logoImage}
+            alt="Techkshetra'26 Logo"
+            className={`${styles.image} ${styles.tkLogo}`}
+          />
         </div>
-
-        <div className={styles.placeholderSection}>
-          <h2 className={styles.placeholderHeading}>About RSET</h2>
-          <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-            Rajagiri School of Engineering & Technology (RSET) is a premier educational institution offering excellence in engineering education and research. We cultivate the next generation of engineers and visionaries.
+        <div className={styles.textWrapper}>
+          <h2 className={styles.heading}>About Techkshetra</h2>
+          <p className={styles.textContent}>
+            The biennial technical festival of Rajagiri School of Engineering
+            and Technology, Kakkanad, Kerala is a treasure trove of a wide range
+            of events that ring together students of all fields for a day like
+            no other. With a wide variety of events that encompass every
+            wavelength and aspect of a student, participants get a chance to
+            witness and be part of something extraordinary. Not to mention, the
+            cultural programs that make up a large part of the event.
           </p>
         </div>
       </div>
+
+      {}
+      <div className={styles.contentBlock}>
+        <div className={styles.textWrapper}>
+          <h2 className={styles.heading}>Our College</h2>
+          <p className={styles.textContent}>
+            Rajagiri School of Engineering & Technology (RSET), located in the
+            vibrant city of Kochi, is an institution dedicated to excellence in
+            technical education and research. We are committed to fostering a
+            new generation of engineers and innovators equipped with the skills
+            and ethical values to make a significant impact on the world.
+          </p>
+        </div>
+        <div className={styles.imageWrapper}>
+          <img
+            src={jubileeImage}
+            alt="Rajagiri Jubilee"
+            className={`${styles.image} ${styles.jubileeImage}`}
+          />
+        </div>
+      </div>
     </section>
-  )
+  );
 }

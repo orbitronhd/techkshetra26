@@ -26,7 +26,6 @@
   pointer-events: none;
 }
 
-
 .navList {
   display: flex;
   align-items: center;
@@ -79,7 +78,9 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
 }
 
 .logoButton:hover {
