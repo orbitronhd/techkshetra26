@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { Navigation } from "./components/Navigation.tsx";
 import { HomePage } from "./components/HomePage.tsx";
-import { LiquidBackground } from "./components/LiquidBackground.tsx";
 import { FluidCursor } from "./components/FluidCursor.tsx";
 import { InitialLoader } from "./components/InitialLoader.tsx";
 import styles from "./App.module.css";
@@ -33,7 +32,6 @@ function App(): React.JSX.Element {
   return (
     <div className={styles.root}>
       <InitialLoader />
-      <LiquidBackground />
       <FluidCursor />
       <Navigation />
       <ScrollToTop />
