@@ -91,6 +91,7 @@ export function HeroGlitch(): React.JSX.Element {
             style={{
               opacity: progress,
               filter: `hue-rotate(${glitchIntensity * -90}deg) blur(${glitchIntensity * 2}px)`,
+              transform: "scale(1.3)",
             }}
           />
           {isGlitching && (
@@ -100,7 +101,7 @@ export function HeroGlitch(): React.JSX.Element {
               className={`${styles.imageLayer} ${styles.glitchEffect}`}
               style={{
                 opacity: progress * glitchIntensity * 0.7,
-                transform: `translate(${Math.random() * -15 * glitchIntensity}px, ${Math.random() * 15 * glitchIntensity}px)`,
+                transform: `translate(${Math.random() * -15 * glitchIntensity}px, ${Math.random() * 15 * glitchIntensity}px) scale(1.3)`,
                 filter: "brightness(1.5) contrast(2) hue-rotate(90deg)",
                 mixBlendMode: "screen",
                 animationDuration: "0.15s",
