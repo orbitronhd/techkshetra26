@@ -1,6 +1,6 @@
 import type React from "react";
 import { useEffect, useState } from "react";
-import angelImage from "./Tshirt Elements (4).png";
+import angelImage from "../assets/Tshirt Elements (4).png";
 import styles from "./css/HeroGlitch.module.css";
 
 export function HeroGlitch(): React.JSX.Element {
