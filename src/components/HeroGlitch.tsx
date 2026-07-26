@@ -45,6 +45,7 @@ export function HeroGlitch(): React.JSX.Element {
           src={angelImage} 
           alt="Angel" 
           className={styles.angelImage} 
+          onClick={() => document.body.classList.toggle("theme-negative")}
         />
       </div>
     </div>

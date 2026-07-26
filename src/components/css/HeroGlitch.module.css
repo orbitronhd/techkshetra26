@@ -70,4 +70,12 @@
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+  pointer-events: auto; /* Allow clicks since parent is pointer-events: none */
+  cursor: pointer;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.angelImage:hover {
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+  transform: scale(1.02);
 }

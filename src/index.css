@@ -35,6 +35,17 @@ body {
   font-size: 1.15rem;
   overflow-x: hidden;
   cursor: none;
+  transition: filter 3s ease, background-color 3s ease;
+}
+
+body.theme-negative {
+  filter: invert(1) hue-rotate(180deg);
+  background-color: var(--color-surface-bg);
+}
+
+body.theme-negative img:not([class*="logo"]),
+body.theme-negative video {
+  filter: invert(1) hue-rotate(180deg);
 }
 
 @media (pointer: coarse) {
