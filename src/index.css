@@ -21,6 +21,18 @@ html {
   scroll-behavior: smooth;
 }
 
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 html,
 body,
 #root {
@@ -43,7 +55,7 @@ body.theme-negative {
   background-color: var(--color-surface-bg);
 }
 
-body.theme-negative img:not([class*="logo"]),
+body.theme-negative img:not(footer img),
 body.theme-negative video {
   filter: invert(1) hue-rotate(180deg);
 }

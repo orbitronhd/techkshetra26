@@ -28,13 +28,18 @@ export function Tshirts(): React.JSX.Element {
           <h2 className={cardStyles.tshirtHeading}>OFFICIAL MERCHANDISE</h2>
         </div>
 
-        <img src={tshirtImage} alt="Techkshetra '26 T-Shirt" className={cardStyles.hoveringImage} style={{ marginTop: "-2rem" }} />
+        <img
+          src={tshirtImage}
+          alt="Techkshetra '26 T-Shirt"
+          className={cardStyles.hoveringImage}
+          style={{ marginTop: "-3rem", marginBottom: "-4rem" }}
+        />
         
         <button 
           type="button" 
           className={cardStyles.actionButton}
           disabled
-          style={{ marginTop: "2rem" }}
+          style={{ marginTop: "0" }}
         >
           PRE-ORDER SOON
         </button>

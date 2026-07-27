@@ -58,6 +58,9 @@
   width: 100%;
   text-align: center;
   white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .subtitle {
@@ -88,6 +91,9 @@
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
   pointer-events: auto; /* Allow clicks since parent is pointer-events: none */
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
