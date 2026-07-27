@@ -84,3 +84,25 @@ h3 { font-size: 3.2rem; }
 h4 { font-size: 2.6rem; }
 h5 { font-size: 2.2rem; }
 h6 { font-size: 1.8rem; }
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2.2rem; }
+  h3 { font-size: 1.8rem; }
+  h4 { font-size: 1.5rem; }
+  h5 { font-size: 1.3rem; }
+  h6 { font-size: 1.1rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.3rem; }
+  h5 { font-size: 1.15rem; }
+  h6 { font-size: 1rem; }
+}

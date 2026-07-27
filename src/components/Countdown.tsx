@@ -55,19 +55,18 @@ export function Countdown(): React.JSX.Element {
     >
       <h2
         style={{
-          fontSize: "min(3vw, 2rem)",
+          fontSize: "clamp(0.9rem, 3vw, 2rem)",
           fontWeight: "normal",
           marginBottom: "1rem",
           color: "var(--color-on-surface)",
           lineHeight: 1.1,
-          whiteSpace: "nowrap",
         }}
       >
         A new dawn begins in...
       </h2>
       <div
         style={{
-          fontSize: "min(14vw, 12rem)",
+          fontSize: "clamp(1.8rem, 9vw, 12rem)",
           lineHeight: 1.1,
           background:
             "linear-gradient(135deg, var(--color-primary), var(--color-secondary))",
