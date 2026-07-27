@@ -168,7 +168,7 @@ export function EventCarousel({
                               <polyline points="12 6 12 12 16 14"></polyline>
                             </svg>
                           </span>
-                          <span className={styles.venueTimeText}>{event.time || "TBA"}</span>
+                          <span className={styles.venueTimeText}>TBH</span>
                         </div>
                       </div>
                       <div className={styles.logoBox}>{event.organizer || "ORG"}</div>
@@ -176,7 +176,6 @@ export function EventCarousel({
 
                     <div className={`${styles.expandedSection} ${isExpanded ? styles.showExpanded : ""}`}>
                       <h3 className={styles.expandedCategory}>{event.category}</h3>
-                      <p className={styles.expandedText}>{event.description}</p>
                       {event.prizePool && event.prizePool !== "Nil" && event.prizePool !== "nil" && event.prizePool !== "NA" && event.prizePool !== "NA." && (
                         <div className={styles.prizePoolSection}>
                           <span className={styles.prizePoolLabel}>Prize Pool:</span>

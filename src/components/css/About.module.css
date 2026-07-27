@@ -19,7 +19,7 @@
 
 .imageWrapper {
   flex-shrink: 0;
-  width: 300px;
+  width: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,8 +36,18 @@
   filter: drop-shadow(0 0 15px rgba(191, 88, 255, 0.2));
 }
 
-.jubileeImage {
-  border-radius: var(--radius-md);
+.collegeImage {
+  border-radius: 9999px; /* Creates the capsule/pill shape */
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 40px rgba(191, 88, 255, 0.1);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.collegeImage:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9), 0 0 50px rgba(191, 88, 255, 0.2);
 }
 
 .textWrapper {
