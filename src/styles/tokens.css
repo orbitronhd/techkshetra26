@@ -8,8 +8,8 @@
   --color-secondary: #f877d4;
   --color-surface-variant: #6243a0;
 
-  --font-family-primary: "Roboto", sans-serif;
-  --font-family-heading: "Milker Regular", "Roboto", sans-serif;
+  --font-family-primary: "Stack Sans Text", "Roboto", sans-serif;
+  --font-family-heading: "Milker Regular", "Stack Sans Text", "Roboto", sans-serif;
 
   --font-size-sm: 0.8rem;
   --font-size-base: 1rem;

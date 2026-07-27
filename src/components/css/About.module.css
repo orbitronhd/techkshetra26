@@ -89,6 +89,13 @@
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.85);
   margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  word-break: normal;
+  overflow-wrap: break-word;
+  text-align-last: left;
 }
 
 @media (max-width: 768px) {

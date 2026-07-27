@@ -81,7 +81,8 @@
 }
 
 .angelImage {
-  height: 110vh; /* Make it large enough to overlap the text */
+  height: 85vh;
+  max-width: 80vw;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
@@ -102,7 +103,8 @@
   }
 
   .angelImage {
-    height: 75vh;
+    height: 65vh;
+    max-width: 85vw;
   }
 }
 
@@ -113,7 +115,9 @@
   }
 
   .angelImage {
-    height: 65vh;
+    height: auto;
+    width: 85vw;
+    max-height: 55vh;
   }
 
   .subtitle {
