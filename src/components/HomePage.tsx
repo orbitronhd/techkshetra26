@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import { HeroGlitch } from "./HeroGlitch.tsx";
 import { Countdown } from "./Countdown.tsx";
-import styles from "./css/Page.module.css";
 
 const About = React.lazy(() => import("./About.tsx").then((m) => ({ default: m.About })));
 const Tshirts = React.lazy(() => import("./Tshirts.tsx").then((m) => ({ default: m.Tshirts })));
@@ -13,10 +12,8 @@ export function HomePage(): React.JSX.Element {
   return (
     <div>
       <HeroGlitch />
-      <section style={{ padding: "4rem 2rem" }}>
-        <div className={styles.contentBody}>
-          <Countdown />
-        </div>
+      <section style={{ width: "100%", padding: "2rem 0", overflow: "hidden" }}>
+        <Countdown />
       </section>
 
       <Suspense fallback={null}>

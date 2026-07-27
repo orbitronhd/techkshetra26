@@ -1,7 +1,7 @@
 import type React from "react";
 import styles from "./css/About.module.css";
-import logoImage from "../assets/TK26_Logo-512px.png";
-import collegeImage from "../assets/College.png";
+import logoImage from "../assets/TK26-icon.png";
+import collegeImage from "../assets/RSET-photo.png";
 
 export function About(): React.JSX.Element {
   return (
