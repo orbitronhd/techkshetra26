@@ -9,6 +9,7 @@ export interface CarouselEvent {
   description: string;
   organizer: string;
   prizePool: string;
+  registrationFee?: string;
   imageUrl?: string;
   venue?: string;
   time?: string;
@@ -130,7 +131,13 @@ export function EventCarousel({
                 <div className={`${styles.cardFace} ${styles.cardFront}`}>
                   <div className={styles.cardBackground}>
                     {event.imageUrl ? (
-                      <img src={event.imageUrl} alt={event.title} />
+                      <img 
+                        src={event.imageUrl} 
+                        alt={event.title}
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                        }}
+                      />
                     ) : (
                       <div className={styles.imagePlaceholderFallback}></div>
                     )}
@@ -182,6 +189,14 @@ export function EventCarousel({
                           <span className={styles.prizePoolValue}>{event.prizePool}</span>
                         </div>
                       )}
+                      
+                      {event.registrationFee && (
+                        <div className={styles.prizePoolSection}>
+                          <span className={styles.prizePoolLabel}>Reg Fee:</span>
+                          <span className={styles.prizePoolValue}>{event.registrationFee}</span>
+                        </div>
+                      )}
+
                       <button type="button" className={styles.actionButton}>
                         Register
                       </button>

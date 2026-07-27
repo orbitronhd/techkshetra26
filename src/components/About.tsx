@@ -41,7 +41,7 @@ export function About(): React.JSX.Element {
             and ethical values to make a significant impact on the world.
           </p>
         </div>
-        <div className={styles.imageWrapper}>
+        <div className={styles.collegeImageWrapper}>
           <img
             src={collegeImage}
             alt="Our College"

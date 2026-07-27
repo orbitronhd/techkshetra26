@@ -33,10 +33,10 @@ export function Tshirts(): React.JSX.Element {
         <button 
           type="button" 
           className={cardStyles.actionButton}
-          onClick={() => setShowWidget(true)}
+          disabled
           style={{ marginTop: "2rem" }}
         >
-          Pre-order Now
+          PRE-ORDER SOON
         </button>
       </div>
 

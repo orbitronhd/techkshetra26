@@ -2,214 +2,277 @@ import type React from "react";
 import styles from "./css/Page.module.css";
 import { EventCarousel } from "./EventCarousel.tsx";
 import type { CarouselEvent } from "./EventCarousel.tsx";
+import defaultEventImage from "../assets/techkshetra_logo.png";
+
+// Import event images
+import imgAdaptathon from "../assets/events/ADAPTATHON.png";
+import imgEnduro from "../assets/events/ATV Build&Race.png";
+import imgBotforge from "../assets/events/botforge.jpg";
+import imgCrushingDepths from "../assets/events/Crushing Depths CTF.jpeg";
+import imgDronix from "../assets/events/DRONIX.jpg";
+import imgGhostProtocol from "../assets/events/Ghost_Protocol.png";
+import imgHelloFriday from "../assets/events/Hello Friday.jpg";
+import imgLightsLensAction from "../assets/events/LightLensAction.jpg";
+import imgMercedesWorkshop from "../assets/events/mercedes workshop.jpeg";
+import imgMetroRethink from "../assets/events/Metro Rethink.png";
+import imgProjectBlackbox from "../assets/events/Payload_Electronauts.png";
+import imgPostItUp from "../assets/events/Post it up poster.jpg";
+import imgRextech from "../assets/events/Rextech.png";
+import imgScenius from "../assets/events/Scenious 4.0 .png";
 
 const ACTUAL_EVENTS: CarouselEvent[] = [
   {
     id: "ev-1",
     title: "REVIVE NIGHT",
     category: "Hackathon",
-    description: "All teams are given problem statements.",
-    prizePool: "15,000",
+    description: "TBD",
+    prizePool: "₹15000/-",
     organizer: "IEDC",
-    time: "15 hrs"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-2",
     title: "Adaptathon",
     category: "Hackathon",
-    description: "Teams are given a core prompt to adapt and build upon within unknown constraints.",
-    prizePool: "20,000",
+    description: "TBD",
+    prizePool: "₹10000/-",
     organizer: "ITRAX",
-    time: "12 hours"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgAdaptathon
   },
   {
     id: "ev-3",
-    title: "Enduro Edge",
+    title: "ENDURO",
     category: "Workshop",
-    description: "A motorsport workshop.",
-    prizePool: "TBA",
+    description: "TBD",
+    prizePool: "Nil",
     organizer: "REAL MECHANICA",
-    time: "2 hr"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgEnduro
   },
   {
     id: "ev-4",
-    title: "ATV: Build & Race - RaceCraft RC",
+    title: "RaceCraft RC",
     category: "Competition",
-    description: "RaceCraft RC is a team-based engineering challenge.",
-    prizePool: "16,000",
-    organizer: "Spartans House",
-    time: "2.5 hours"
+    description: "TBD",
+    prizePool: "₹8000/-",
+    organizer: "Spartans",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-5",
     title: "Scenius 4.0",
     category: "Series of Rounds",
-    description: "Scenius 4.0 is a four-round technical challenge.",
+    description: "TBD",
     prizePool: "10,000/-",
     organizer: "Nirmana",
-    time: "9am-3pm"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgScenius
   },
   {
     id: "ev-6",
     title: "The Ghost Protocol",
     category: "Series of Rounds",
-    description: "The Ghost Protocol is a team-based puzzle event including ciphers and riddles.",
-    prizePool: "3000 Rupees",
+    description: "TBD",
+    prizePool: "₹3000/-",
     organizer: "NDLI RSET",
-    time: "2 hours"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgGhostProtocol
   },
   {
     id: "ev-7",
     title: "Traceback",
     category: "Competition",
-    description: "TRACEBACK is a narrative-driven digital forensics event.",
+    description: "TBD",
     prizePool: "₹3500/-",
     organizer: "CSI-SB RSET",
-    time: "4 Hours"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-8",
-    title: "Canva workshop (Pre-event)",
+    title: "POST IT UP!",
     category: "Workshop",
-    description: "A 2-hour beginner-friendly Canva workshop (Post it up!).",
+    description: "TBD",
     prizePool: "Nil",
-    organizer: "Jesus Youth RSET Media",
-    time: "2 hours"
+    organizer: "Jesus Youth RSET",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgPostItUp
   },
   {
     id: "ev-9",
     title: "BOTFORGE",
     category: "Ideathon",
-    description: "Botforge kicks off during Techkshetra. Participants will tackle 2 to 3 curated challenges.",
-    prizePool: "9,500",
+    description: "TBD",
+    prizePool: "₹5000/-",
     organizer: "IEEE RAS x NSS",
-    time: "4 hrs"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgBotforge
   },
   {
     id: "ev-10",
     title: "Circuit Safari",
     category: "Competition",
-    description: "This technical event is a 3-round electronics challenge.",
-    prizePool: "₹1600",
+    description: "TBD",
+    prizePool: "₹1600/-",
     organizer: "IEEE SPS SB RSET",
-    time: "2hrs"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-11",
     title: "Circuit Quest",
     category: "Debugging Event",
-    description: "Circuit Quest is an exciting technical treasure hunt.",
-    prizePool: "2k",
+    description: "TBD",
+    prizePool: "₹2000/-",
     organizer: "Apptronics",
-    time: "2hr"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-12",
-    title: "AMONG US 2.0",
+    title: "AMONG US 3.0",
     category: "Treasure Hunt",
-    description: "Among Us 3.0 is a technology-driven reasoning and cybersecurity experience.",
-    prizePool: "3,500",
+    description: "TBD",
+    prizePool: "₹3,500/-",
     organizer: "IEEE CS RSET SBC",
-    time: "Half Day"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-13",
-    title: "REXTECH GAMELAB",
+    title: "REXTECH GAMEWORKSHOP",
     category: "Workshop",
-    description: "The 4-hour workshop is designed for beginners in game development.",
+    description: "TBD",
     prizePool: "Nil",
     organizer: "Vikings",
-    time: "4hr"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgRextech
   },
   {
     id: "ev-14",
     title: "Project Shahi Dossier",
     category: "Technical Treasure Hunt",
-    description: "The event opens with a 90-minute investigation in the Mughal court.",
-    prizePool: "20,000",
-    organizer: "Mughals House",
-    time: "4 to 5 hrs"
+    description: "TBD",
+    prizePool: "₹10,000/-",
+    organizer: "Mughals",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-15",
     title: "Metro Rethink",
     category: "Problem Solving Challenge",
-    description: "This event will be conducted focusing on urban problem solving.",
-    prizePool: "6k",
-    organizer: "Rajputs House",
-    time: "3hrs"
+    description: "TBD",
+    prizePool: "₹6000/-",
+    organizer: "Rajputs",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgMetroRethink
   },
   {
     id: "ev-16",
     title: "Lights Lens Action",
     category: "Cinematography Masterclass",
-    description: "Lights • Lens • Action is a 3-hour immersive cinematography masterclass.",
+    description: "TBD",
     prizePool: "Nil",
     organizer: "ARYANS",
-    time: "2:30-3:00 hrs"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgLightsLensAction
   },
   {
     id: "ev-17",
-    title: "CTF",
+    title: "CRUSHING DEPTHS",
     category: "CTF",
-    description: "Cyberblitz CTF: Crushing Depths is an intense cybersecurity challenge.",
-    prizePool: "10,000",
+    description: "TBD",
+    prizePool: "₹10,000/-",
     organizer: "CyberBlitz",
-    time: "8 hrs"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgCrushingDepths
   },
   {
     id: "ev-18",
-    title: "PAYLOAD",
+    title: "PROJECT BLACKBOX",
     category: "Hackathon",
-    description: "Project BlackBox: A closed-book, no-internet hardware challenge.",
-    prizePool: "15k",
+    description: "TBD",
+    prizePool: "₹15000/-",
     organizer: "Electronauts",
-    time: "12 - 14Hrs"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgProjectBlackbox
   },
   {
     id: "ev-19",
-    title: "DroniX",
+    title: "DRONIX",
     category: "Workshop",
-    description: "DRONIX is a drone workshop covering basics to advanced drone concepts.",
+    description: "TBD",
     prizePool: "NA",
-    organizer: "Eluxtra X IEEE RAS",
-    time: "3 to 4 hours"
+    organizer: "Eluxtra x IEEE RAS",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgDronix
   },
   {
     id: "ev-20",
     title: "Hello Friday: Build your own Jarvis",
     category: "Workshop",
-    description: "3 hour hands on Conversational AI workshop.",
+    description: "TBD",
     prizePool: "Nil",
     organizer: "Articon",
-    time: "3 hrs"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgHelloFriday
   },
   {
     id: "ev-21",
     title: "Mercedes Workshop",
     category: "Workshop",
-    description: "A 3 hour interactive session exploring Mercedes engineering.",
+    description: "TBD",
     prizePool: "Nil",
-    organizer: "Apptronics in association with SAE",
-    time: "3hrs max"
+    organizer: "Apptronics x SAE",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgMercedesWorkshop
   },
   {
     id: "ev-22",
-    title: "Capital clash",
+    title: "CAPITAL CLASH",
     category: "Business Event",
-    description: "Capital Clash is a fast-paced business event.",
-    prizePool: "6000",
+    description: "TBD",
+    prizePool: "₹3000/-",
     organizer: "GenSys",
-    time: "4 hrs"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-23",
     title: "Standards exhibition",
     category: "Exhibition and awareness",
-    description: "Technical exhibition on Standards.",
+    description: "TBD",
     prizePool: "Nil",
     organizer: "BIS CIRCUIT BRANCH",
-    time: "3hr"
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   }
 ];
 

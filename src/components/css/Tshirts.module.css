@@ -51,9 +51,16 @@
   cursor: pointer;
 }
 
-.actionButton:hover {
+.actionButton:hover:not(:disabled) {
   box-shadow: 0 0 20px rgba(248, 119, 212, 0.6);
   transform: translateY(-3px);
+}
+
+.actionButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: rgba(191, 88, 255, 0.3);
+  box-shadow: none;
 }
 
 @media (max-width: 768px) {

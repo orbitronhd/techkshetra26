@@ -56,7 +56,7 @@ export function Countdown(): React.JSX.Element {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2026-08-05T07:00:00+05:30").getTime();
+    const targetDate = new Date("2026-08-05T00:00:00+05:30").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -64,6 +64,12 @@ export function Countdown(): React.JSX.Element {
 
       if (distance < 0) {
         clearInterval(interval);
+        setTimeLeft({
+          days: "00",
+          hours: "00",
+          minutes: "00",
+          seconds: "00",
+        });
         return;
       }
 
