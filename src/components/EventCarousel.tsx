@@ -6,8 +6,12 @@ export interface CarouselEvent {
   id: string;
   title: string;
   category: string;
-  details: string;
+  description: string;
+  organizer: string;
+  prizePool: string;
   imageUrl?: string;
+  venue?: string;
+  time?: string;
 }
 
 interface EventCarouselProps {
@@ -147,12 +151,38 @@ export function EventCarousel({
 
 
                     <div className={styles.cardBottom}>
-                      <div className={styles.logoBox}>ORG</div>
+                      <div className={styles.venueTimeSection}>
+                        <div className={styles.venueTimeRow}>
+                          <span className={styles.icon}>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                              <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                          </span>
+                          <span className={styles.venueTimeText}>{event.venue || "TBA"}</span>
+                        </div>
+                        <div className={styles.venueTimeRow}>
+                          <span className={styles.icon}>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <circle cx="12" cy="12" r="10"></circle>
+                              <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                          </span>
+                          <span className={styles.venueTimeText}>{event.time || "TBA"}</span>
+                        </div>
+                      </div>
+                      <div className={styles.logoBox}>{event.organizer || "ORG"}</div>
                     </div>
 
                     <div className={`${styles.expandedSection} ${isExpanded ? styles.showExpanded : ""}`}>
                       <h3 className={styles.expandedCategory}>{event.category}</h3>
-                      <p className={styles.expandedText}>{event.details}</p>
+                      <p className={styles.expandedText}>{event.description}</p>
+                      {event.prizePool && event.prizePool !== "Nil" && event.prizePool !== "nil" && event.prizePool !== "NA" && event.prizePool !== "NA." && (
+                        <div className={styles.prizePoolSection}>
+                          <span className={styles.prizePoolLabel}>Prize Pool:</span>
+                          <span className={styles.prizePoolValue}>{event.prizePool}</span>
+                        </div>
+                      )}
                       <button type="button" className={styles.actionButton}>
                         Register
                       </button>
