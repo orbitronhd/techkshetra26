@@ -2,7 +2,7 @@ import type React from "react";
 import styles from "./css/Page.module.css";
 import { EventCarousel } from "./EventCarousel.tsx";
 import type { CarouselEvent } from "./EventCarousel.tsx";
-import defaultEventImage from "../assets/techkshetra_logo.png";
+import defaultEventImage from "../assets/TK26-logo-color.png";
 
 // Import event images
 import imgAdaptathon from "../assets/events/ADAPTATHON.png";

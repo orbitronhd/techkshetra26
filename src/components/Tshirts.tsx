@@ -2,7 +2,7 @@ import type React from "react";
 import { useState } from "react";
 import styles from "./css/Page.module.css";
 import cardStyles from "./css/Tshirts.module.css";
-import tshirtImage from "../assets/shirt.png";
+import tshirtImage from "../assets/TK26-shirt.png";
 
 export function Tshirts(): React.JSX.Element {
   const [isFlipped, setIsFlipped] = useState(false);
