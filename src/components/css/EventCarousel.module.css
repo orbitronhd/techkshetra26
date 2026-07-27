@@ -480,5 +480,10 @@
     height: 36px;
     font-size: 0.9rem;
   }
+
+  .isExpanded {
+    width: 92vw;
+    height: 520px;
+  }
 }
 

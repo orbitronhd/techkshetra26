@@ -102,4 +102,8 @@
     width: 100%;
     max-width: 250px;
   }
+
+  .collegeImage {
+    height: 400px;
+  }
 }
