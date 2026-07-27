@@ -59,9 +59,12 @@
 
 .heading {
   font-family: var(--font-family-heading);
-  font-size: clamp(3.5rem, 8vw, 5rem);
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-size: clamp(1rem, 4.8vw, 6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  transform: scaleY(1.3);
+  transform-origin: left bottom;
+  letter-spacing: 0.02em;
   background: linear-gradient(
     135deg,
     var(--color-primary),
@@ -70,8 +73,9 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 1.2;
+  line-height: 1;
   margin: 0;
+  margin-bottom: 1rem;
 }
 
 .textContent {
