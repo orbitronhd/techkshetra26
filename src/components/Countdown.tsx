@@ -11,11 +11,11 @@ function DigitBlock({ digit }: { digit: string }) {
         alignItems: "center",
         background: "rgba(191, 88, 255, 0.05)",
         border: "2px solid rgba(191, 88, 255, 0.3)",
-        borderRadius: "14px",
-        padding: "0.15em 0.25em",
-        margin: "0 0.06em",
+        borderRadius: "0.2em",
+        padding: "0.08em 0.12em",
+        margin: "0 0.03em",
         boxShadow: "0 8px 22px rgba(0,0,0,0.45)",
-        minWidth: "1.1em",
+        minWidth: "0.8em",
       }}
     >
       <span
@@ -36,7 +36,7 @@ function Separator() {
   return (
     <span
       style={{
-        margin: "0 0.2em",
+        margin: "0 0.1em",
         color: "rgba(191, 88, 255, 0.6)",
         transform: "translateY(-0.1em)",
         display: "inline-block",
@@ -95,13 +95,16 @@ export function Countdown(): React.JSX.Element {
     <div
       style={{
         width: "100%",
-        margin: "4rem auto",
+        maxWidth: "100vw",
+        margin: "0 auto",
         textAlign: "center",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         fontFamily: "var(--font-family-heading)",
+        overflow: "hidden",
+        padding: "0",
       }}
     >
       <h2
@@ -119,7 +122,7 @@ export function Countdown(): React.JSX.Element {
       </h2>
       <div
         style={{
-          fontSize: "clamp(2.5rem, 8vw, 8.5rem)",
+          fontSize: "clamp(1.2rem, 6.4vw, 6.5rem)",
           lineHeight: 1.1,
           display: "flex",
           alignItems: "center",
@@ -127,6 +130,9 @@ export function Countdown(): React.JSX.Element {
           fontVariantNumeric: "tabular-nums",
           whiteSpace: "nowrap",
           fontWeight: 900,
+          width: "100%",
+          maxWidth: "96vw",
+          margin: "0 auto",
         }}
       >
         {timeLeft.days.split("").map((d, i) => (
