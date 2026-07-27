@@ -2,8 +2,7 @@ import emailjs from "@emailjs/browser";
 import type React from "react";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import jubileeLogo from "../assets/Jubilee.png";
-import rsetLogo from "../assets/RSET.png";
+import rsetJubileeLogo from "../assets/RSET-jubilee-bw.png";
 import tk26LogoWhite from "../assets/TK26-logo-white.png";
 import styles from "./css/Footer.module.css";
 
@@ -60,11 +59,10 @@ export function Footer(): React.JSX.Element {
 
             <div className={styles.subLogos}>
               <img
-                src={jubileeLogo}
-                alt="Jubilee Logo"
+                src={rsetJubileeLogo}
+                alt="RSET Jubilee Logo"
                 className={styles.subLogo}
               />
-              <img src={rsetLogo} alt="RSET Logo" className={`${styles.subLogo} ${styles.rsetSubLogo}`} />
             </div>
           </div>
 
