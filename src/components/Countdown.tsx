@@ -55,7 +55,7 @@ export function Countdown(): React.JSX.Element {
     >
       <h2
         style={{
-          fontSize: "min(5vw, 4rem)",
+          fontSize: "min(3vw, 2rem)",
           fontWeight: "normal",
           marginBottom: "1rem",
           color: "var(--color-on-surface)",
@@ -67,7 +67,7 @@ export function Countdown(): React.JSX.Element {
       </h2>
       <div
         style={{
-          fontSize: "min(7vw, 6rem)",
+          fontSize: "min(14vw, 12rem)",
           lineHeight: 1.1,
           background:
             "linear-gradient(135deg, var(--color-primary), var(--color-secondary))",

@@ -1,114 +1,52 @@
 import type React from "react";
-import { useEffect, useState, useRef } from "react";
-import logoStyle from "../assets/techkshetra_logo.png";
-import logoGenesis from "../assets/TK26-genesis.png";
+import { useEffect, useState } from "react";
+import angelImage from "../assets/Tshirt Elements (4).png";
 import styles from "./css/HeroGlitch.module.css";
 
 export function HeroGlitch(): React.JSX.Element {
-  const [hasCrossed, setHasCrossed] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const progressRef = useRef(0);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    progressRef.current = progress;
-  }, [progress]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const threshold = 50;
-      setHasCrossed(window.scrollY > threshold);
+    const handleMouseMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth) * 2 - 1;
+      const y = (e.clientY / window.innerHeight) * 2 - 1;
+      setMousePosition({ x, y });
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  useEffect(() => {
-    let start = performance.now();
-    const initialProgress = progressRef.current;
-    const targetProgress = hasCrossed ? 1 : 0;
-    const duration = 600;
-
-    if (initialProgress === targetProgress) return;
-
-    let animationFrameId: number;
-
-    const animate = (time: number) => {
-      const elapsed = time - start;
-      const t = Math.min(elapsed / duration, 1);
-
-      const current = initialProgress + (targetProgress - initialProgress) * t;
-      setProgress(current);
-
-      if (t < 1) {
-        animationFrameId = requestAnimationFrame(animate);
-      }
-    };
-
-    animationFrameId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [hasCrossed]);
-
-  const glitchIntensity = 1 - Math.abs((progress - 0.5) * 2);
-  const isGlitching = glitchIntensity > 0.05;
+  const textX = mousePosition.x * 20;
+  const textY = mousePosition.y * 20;
+  
+  const fgX = mousePosition.x * -40;
+  const fgY = mousePosition.y * -40;
 
   return (
-    <div className={styles.scrollWrapper}>
-      <div className={styles.stickyContainer}>
-        <div className={styles.imageWrapper}>
-          {}
-          <img
-            src={logoStyle}
-            alt="Techkshetra 26 Logo"
-            className={`${styles.imageLayer} ${isGlitching ? styles.glitchEffect : ""}`}
-            style={{
-              opacity: 1 - progress,
-              filter: `hue-rotate(${glitchIntensity * 90}deg) blur(${glitchIntensity * 2}px)`,
-              transform: "scale(1.3)",
-            }}
-          />
-          {isGlitching && (
-            <img
-              src={logoStyle}
-              alt=""
-              className={`${styles.imageLayer} ${styles.glitchEffect}`}
-              style={{
-                opacity: (1 - progress) * glitchIntensity * 0.7,
-                transform: `translate(${Math.random() * 15 * glitchIntensity}px, ${Math.random() * -15 * glitchIntensity}px) scale(1.3)`,
-                filter: "brightness(1.5) contrast(2) hue-rotate(-90deg)",
-                mixBlendMode: "screen",
-                animationDuration: "0.1s", // Faster glitch for offset layer
-              }}
-            />
-          )}
+    <div className={styles.heroContainer}>
+      {/* Background layer */}
+      <div className={styles.backgroundLayer}></div>
+      
+      {/* Text layer */}
+      <div 
+        className={styles.textLayer}
+        style={{ transform: `translate(${textX}px, ${textY}px)` }}
+      >
+        <h1 className={styles.massiveText}>TECHKSHETRA</h1>
+      </div>
 
-          {/* Genesis Logo (Fades in) */}
-          <img
-            src={logoGenesis}
-            alt="Techkshetra 26 Genesis"
-            className={`${styles.imageLayer} ${isGlitching ? styles.glitchEffect : ""}`}
-            style={{
-              opacity: progress,
-              filter: `hue-rotate(${glitchIntensity * -90}deg) blur(${glitchIntensity * 2}px)`,
-              transform: "scale(1.3)",
-            }}
-          />
-          {isGlitching && (
-            <img
-              src={logoGenesis}
-              alt=""
-              className={`${styles.imageLayer} ${styles.glitchEffect}`}
-              style={{
-                opacity: progress * glitchIntensity * 0.7,
-                transform: `translate(${Math.random() * -15 * glitchIntensity}px, ${Math.random() * 15 * glitchIntensity}px) scale(1.3)`,
-                filter: "brightness(1.5) contrast(2) hue-rotate(90deg)",
-                mixBlendMode: "screen",
-                animationDuration: "0.15s",
-              }}
-            />
-          )}
-        </div>
+      {/* Foreground image layer */}
+      <div 
+        className={styles.foregroundLayer}
+        style={{ transform: `translate(${fgX}px, ${fgY}px)` }}
+      >
+        <img 
+          src={angelImage} 
+          alt="Angel" 
+          className={styles.angelImage} 
+          onClick={() => document.body.classList.toggle("theme-negative")}
+        />
       </div>
     </div>
   );
