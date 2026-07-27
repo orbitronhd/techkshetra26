@@ -1,4 +1,5 @@
 import type React from "react";
+import { useState, useMemo } from "react";
 import styles from "./css/Page.module.css";
 import { EventCarousel } from "./EventCarousel.tsx";
 import type { CarouselEvent } from "./EventCarousel.tsx";
@@ -28,9 +29,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Teams analyze a given failed startup case, diagnose why it failed, and build an MVP (Minimum Viable Product) addressing that failure",
     prizePool: "₹15000/-",
     organizer: "IEDC",
-    time: "TBD",
+    time: "4/8/26 to 5/8/26",
     registrationFee: "₹249/-",
-    imageUrl: defaultEventImage
+    imageUrl: defaultEventImage,
+    date: "2026-08-04"
   },
   {
     id: "ev-2",
@@ -39,9 +41,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Teams get handed a live codebase every 2 hours and must rapidly decode, adapt, and push it forward before passing it on. It's a 12-hour test of collaboration, adaptability, and code comprehension — not just building, but building together.",
     prizePool: "₹10000/-",
     organizer: "ITRAX",
-    time: "TBD",
+    time: "4/8/26 to 5/8/26",
     registrationFee: "₹150/-",
-    imageUrl: imgAdaptathon
+    imageUrl: imgAdaptathon,
+    date: "2026-08-04"
   },
   {
     id: "ev-3",
@@ -50,9 +53,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "A motorsport workshop",
     prizePool: "Nil",
     organizer: "REAL MECHANICA",
-    time: "TBD",
+    time: "31/7/26",
     registrationFee: "₹400/-",
-    imageUrl: imgEnduro
+    imageUrl: imgEnduro,
+    date: "2026-07-31"
   },
   {
     id: "ev-4",
@@ -61,9 +65,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Team-based engineering competition where 4-member teams design and build RC race cars per given specs, then compete on a multi-terrain obstacle track testing speed, stability, and durability",
     prizePool: "₹8000/-",
     organizer: "Spartans",
-    time: "TBD",
+    time: "5/8/26",
     registrationFee: "₹500/- (Per Team of 4)",
-    imageUrl: defaultEventImage
+    imageUrl: defaultEventImage,
+    date: "2026-08-05"
   },
   {
     id: "ev-5",
@@ -72,9 +77,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Four-round technical competition held in association with the Bureau of Indian Standards (BIS), featuring a standards quiz, standard creation challenge, technical treasure hunt, and bridge-building competition.",
     prizePool: "10,000/-",
     organizer: "Nirmana",
-    time: "TBD",
+    time: "5/8/26",
     registrationFee: "₹100/-",
-    imageUrl: imgScenius
+    imageUrl: imgScenius,
+    date: "2026-08-05"
   },
   {
     id: "ev-6",
@@ -83,9 +89,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Team-based, story-driven puzzle event where participants solve a sequence of interconnected clues to progress through a mission narrative toward a final challenge. Puzzles span cryptography (Atbash, Caesar cipher, and similar techniques), C programming tasks, and logic circuit-based challenges",
     prizePool: "₹3000/-",
     organizer: "NDLI RSET",
-    time: "TBD",
+    time: "5/8/26",
     registrationFee: "₹150/-",
-    imageUrl: imgGhostProtocol
+    imageUrl: imgGhostProtocol,
+    date: "2026-08-05"
   },
   {
     id: "ev-7",
@@ -94,9 +101,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "TRACEBACK is a narrative-driven technical escape room by the CSI Student Branch where 2-member teams act as digital forensic analysts, using OSINT, cipher decoding, steganography, and API-based challenges to solve a campus-wide mystery — no coding experience required.",
     prizePool: "₹3500/-",
     organizer: "CSI-SB RSET",
-    time: "TBD",
+    time: "5/8/26",
     registrationFee: "TBD",
-    imageUrl: defaultEventImage
+    imageUrl: defaultEventImage,
+    date: "2026-08-05"
   },
   {
     id: "ev-8",
@@ -105,9 +113,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "TBD",
     prizePool: "Nil",
     organizer: "Jesus Youth RSET",
-    time: "TBD",
+    time: "3/8/26",
     registrationFee: "NIL",
-    imageUrl: imgPostItUp
+    imageUrl: imgPostItUp,
+    date: "2026-08-03"
   },
   {
     id: "ev-9",
@@ -116,9 +125,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "BotForge is a ideathon focused on technology-driven social impact, where teams tackle curated problem statements and pitch conceptual solutions to a judging panel.",
     prizePool: "₹5000/-",
     organizer: "IEEE RAS x NSS",
-    time: "TBD",
+    time: "5/8/26",
     registrationFee: "₹150/-",
-    imageUrl: imgBotforge
+    imageUrl: imgBotforge,
+    date: "2026-08-05"
   },
   {
     id: "ev-10",
@@ -127,9 +137,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "This is a 3-round elimination technical competition for teams of 3, testing Electronics and Engineering knowledge through a technical crossword, K-map problem solving and a final circuit-building round using Boolean laws.",
     prizePool: "₹1600/-",
     organizer: "IEEE SPS SB RSET",
-    time: "TBD",
+    time: "4/8/26",
     registrationFee: "₹180/-",
-    imageUrl: defaultEventImage
+    imageUrl: defaultEventImage,
+    date: "2026-08-04"
   },
   {
     id: "ev-11",
@@ -138,9 +149,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Technical treasure hunt for teams of 2-4 members, testing electronics and instrumentation knowledge through challenge stations covering circuit debugging, component identification, logic puzzles, sensor recognition, and binary/hex decoding.",
     prizePool: "₹2000/-",
     organizer: "Apptronics",
-    time: "TBD",
+    time: "4/8/26",
     registrationFee: "₹300/-",
-    imageUrl: defaultEventImage
+    imageUrl: defaultEventImage,
+    date: "2026-08-04"
   },
   {
     id: "ev-12",
@@ -149,9 +161,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Among Us-inspired campus challenge combining coding, cybersecurity, debugging, and QR-based missions, where teams earn Crew Points while secret Impostor Teams mislead others until an Emergency Meeting vote reveals them.",
     prizePool: "₹3,500/-",
     organizer: "IEEE CS RSET SBC",
-    time: "TBD",
+    time: "5/8/26",
     registrationFee: "₹120/-",
-    imageUrl: defaultEventImage
+    imageUrl: defaultEventImage,
+    date: "2026-08-05"
   },
   {
     id: "ev-13",
@@ -160,9 +173,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "4-hour beginner-friendly workshop in collaboration with Rextech Studios, Infopark Kochi, covering the game development industry, career paths, and a hands-on Unity session where participants build a simple 2D game using C# scripting, physics, and collision detection.",
     prizePool: "Nil",
     organizer: "Vikings",
-    time: "TBD",
+    time: "5/8/26",
     registrationFee: "TBD",
-    imageUrl: imgRextech
+    imageUrl: imgRextech,
+    date: "2026-08-05"
   },
   {
     id: "ev-14",
@@ -171,9 +185,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "TBD",
     prizePool: "₹10,000/-",
     organizer: "Mughals",
-    time: "TBD",
+    time: "5/8/26",
     registrationFee: "TBD",
-    imageUrl: defaultEventImage
+    imageUrl: defaultEventImage,
+    date: "2026-08-05"
   },
   {
     id: "ev-15",
@@ -182,9 +197,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "TBD",
     prizePool: "₹6000/-",
     organizer: "Rajputs",
-    time: "TBD",
+    time: "5/8/26",
     registrationFee: "TBD",
-    imageUrl: imgMetroRethink
+    imageUrl: imgMetroRethink,
+    date: "2026-08-05"
   },
   {
     id: "ev-16",
@@ -193,9 +209,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "TBD",
     prizePool: "Nil",
     organizer: "ARYANS",
-    time: "TBD",
+    time: "5/8/26",
     registrationFee: "TBD",
-    imageUrl: imgLightsLensAction
+    imageUrl: imgLightsLensAction,
+    date: "2026-08-05"
   },
   {
     id: "ev-17",
@@ -204,9 +221,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "TBD",
     prizePool: "₹10,000/-",
     organizer: "CyberBlitz",
-    time: "TBD",
+    time: "5/8/26",
     registrationFee: "TBD",
-    imageUrl: imgCrushingDepths
+    imageUrl: imgCrushingDepths,
+    date: "2026-08-05"
   },
   {
     id: "ev-18",
@@ -215,9 +233,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "TBD",
     prizePool: "₹15000/-",
     organizer: "Electronauts",
-    time: "TBD",
+    time: "4/8/26",
     registrationFee: "TBD",
-    imageUrl: imgProjectBlackbox
+    imageUrl: imgProjectBlackbox,
+    date: "2026-08-04"
   },
   {
     id: "ev-19",
@@ -226,9 +245,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "TBD",
     prizePool: "NA",
     organizer: "Eluxtra x IEEE RAS",
-    time: "TBD",
+    time: "5/8/26",
     registrationFee: "TBD",
-    imageUrl: imgDronix
+    imageUrl: imgDronix,
+    date: "2026-08-05"
   },
   {
     id: "ev-20",
@@ -237,9 +257,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "TBD",
     prizePool: "Nil",
     organizer: "Articon",
-    time: "TBD",
+    time: "5/8/26",
     registrationFee: "TBD",
-    imageUrl: imgHelloFriday
+    imageUrl: imgHelloFriday,
+    date: "2026-08-05"
   },
   {
     id: "ev-21",
@@ -248,9 +269,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "TBD",
     prizePool: "Nil",
     organizer: "Apptronics x SAE",
-    time: "TBD",
+    time: "5/8/26",
     registrationFee: "TBD",
-    imageUrl: imgMercedesWorkshop
+    imageUrl: imgMercedesWorkshop,
+    date: "2026-08-05"
   },
   {
     id: "ev-22",
@@ -259,9 +281,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "TBD",
     prizePool: "₹3000/-",
     organizer: "GenSys",
-    time: "TBD",
+    time: "5/8/26",
     registrationFee: "TBD",
-    imageUrl: defaultEventImage
+    imageUrl: defaultEventImage,
+    date: "2026-08-05"
   },
   {
     id: "ev-23",
@@ -270,17 +293,74 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "TBD",
     prizePool: "Nil",
     organizer: "BIS CIRCUIT BRANCH",
-    time: "TBD",
+    time: "31/7/26",
     registrationFee: "TBD",
-    imageUrl: defaultEventImage
+    imageUrl: defaultEventImage,
+    date: "2026-07-31"
   }
 ];
 
 export function Events(): React.JSX.Element {
+  const [uiFilterType, setUiFilterType] = useState<"All" | "Pre Event" | "Main Event">("All");
+  const [activeFilter, setActiveFilter] = useState<"All" | "Pre Event" | "Main Event">("All");
+  const [isShuffling, setIsShuffling] = useState(false);
+
+  const handleFilterClick = (newFilter: "All" | "Pre Event" | "Main Event") => {
+    if (newFilter === uiFilterType) return;
+    
+    // Start exit animation (shuffle cards into a deck)
+    setIsShuffling(true);
+    setUiFilterType(newFilter); 
+    
+    // Wait for exit animation, swap content, then animate in
+    setTimeout(() => {
+      setActiveFilter(newFilter);
+      setTimeout(() => {
+        setIsShuffling(false);
+      }, 50); // slight delay to ensure React renders the new state first
+    }, 400); // 400ms shuffle out duration
+  };
+
+  const filteredEvents = useMemo(() => ACTUAL_EVENTS.filter(event => {
+    if (activeFilter === "All") return true;
+    
+    let type = event.eventType;
+    if (event.date) {
+      const eventDate = new Date(event.date);
+      const splitDate = new Date("2026-08-05");
+      type = eventDate < splitDate ? "Pre Event" : "Main Event";
+    }
+    
+    return (type || "Main Event") === activeFilter;
+  }), [activeFilter]);
+
   return (
-    <section id="events" style={{ padding: "4rem 0", contentVisibility: "auto", containIntrinsicSize: "800px" }}>
+    <section id="events" className={styles.sectionContainer}>
       <div className={styles.contentBody} style={{ padding: "0 2rem" }}>
         <h2 className={styles.heading}>Events</h2>
+      </div>
+
+      <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}>
+        <div className={styles.pillContainer}>
+          <button 
+            onClick={() => handleFilterClick("All")}
+            className={`${styles.pillButton} ${uiFilterType === "All" ? styles.pillButtonActive : ""}`}
+          >
+            All
+          </button>
+          <button 
+            onClick={() => handleFilterClick("Pre Event")}
+            className={`${styles.pillButton} ${uiFilterType === "Pre Event" ? styles.pillButtonActive : ""}`}
+          >
+            Pre Events
+          </button>
+          <button 
+            onClick={() => handleFilterClick("Main Event")}
+            className={`${styles.pillButton} ${uiFilterType === "Main Event" ? styles.pillButtonActive : ""}`}
+          >
+            Main Events
+          </button>
+        </div>
       </div>
 
       <div
@@ -292,7 +372,7 @@ export function Events(): React.JSX.Element {
           justifyContent: "center",
         }}
       >
-        <EventCarousel events={ACTUAL_EVENTS} />
+        <EventCarousel events={filteredEvents} isShuffling={isShuffling} />
       </div>
     </section>
   );

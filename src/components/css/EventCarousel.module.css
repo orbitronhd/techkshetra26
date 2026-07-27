@@ -87,6 +87,14 @@
   z-index: 20;
 }
 
+.cardShuffling {
+  transform: scale(0.6) translateY(50px) translateZ(-300px) rotateY(180deg) !important;
+  opacity: 0 !important;
+  pointer-events: none;
+  /* Override any long transitions so they shuffle away quickly */
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.3s ease-in !important;
+}
+
 .cardFace {
   position: absolute;
   top: 0;
@@ -442,8 +450,8 @@
   }
 
   .navButton {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     font-size: 1rem;
   }
 }
@@ -482,14 +490,14 @@
   }
 
   .navButton {
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     font-size: 0.9rem;
   }
 
   .isExpanded {
     width: 92vw;
-    height: 520px;
+    height: min(85vh, 520px);
   }
 }
 

@@ -1,5 +1,5 @@
 import type React from "react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import styles from "./css/EventCarousel.module.css";
 
 export interface CarouselEvent {
@@ -13,17 +13,27 @@ export interface CarouselEvent {
   imageUrl?: string;
   venue?: string;
   time?: string;
+  eventType?: "Pre Event" | "Main Event";
+  date?: string;
 }
 
 interface EventCarouselProps {
   events: readonly CarouselEvent[];
+  isShuffling?: boolean;
 }
 
 export function EventCarousel({
   events,
+  isShuffling,
 }: EventCarouselProps): React.JSX.Element {
   const [activeIndex, setActiveIndex] = useState(0);
   const [expandedMap, setExpandedMap] = useState<Record<number, boolean>>({});
+
+  // Reset activeIndex when events array changes
+  useEffect(() => {
+    setActiveIndex(0);
+    setExpandedMap({});
+  }, [events]);
 
   // Touch swipe support
   const touchStartX = useRef<number | null>(null);
@@ -119,7 +129,7 @@ export function EventCarousel({
           return (
             <div
               key={event.id}
-              className={`${styles.cardWrapper} ${cardClass} ${isExpanded ? styles.isExpanded : ""}`}
+              className={`${styles.cardWrapper} ${cardClass} ${isExpanded ? styles.isExpanded : ""} ${isShuffling ? styles.cardShuffling : ""}`}
               onClick={() => handleCardClick(index)}
               role="button"
               tabIndex={0}
