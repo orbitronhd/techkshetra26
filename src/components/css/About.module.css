@@ -1,6 +1,6 @@
 .aboutSection {
   padding: var(--space-16) var(--space-4);
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,15 @@
 
 .imageWrapper {
   flex-shrink: 0;
-  width: 300px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collegeImageWrapper {
+  flex-shrink: 0;
+  width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,12 +40,22 @@
 }
 
 .tkLogo {
-  max-width: 250px;
-  filter: drop-shadow(0 0 15px rgba(191, 88, 255, 0.2));
+  max-width: 350px;
+  filter: drop-shadow(0 0 25px rgba(191, 88, 255, 0.3));
 }
 
-.jubileeImage {
-  border-radius: var(--radius-md);
+.collegeImage {
+  border-radius: 80px 0 80px 0; /* Creates a sharp, geometric shape */
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 40px rgba(191, 88, 255, 0.1);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.collegeImage:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9), 0 0 50px rgba(191, 88, 255, 0.2);
 }
 
 .textWrapper {
@@ -49,9 +67,12 @@
 
 .heading {
   font-family: var(--font-family-heading);
-  font-size: clamp(3.5rem, 8vw, 5rem);
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-size: clamp(1rem, 4.8vw, 6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  transform: scaleY(1.3);
+  transform-origin: left bottom;
+  letter-spacing: 0.02em;
   background: linear-gradient(
     135deg,
     var(--color-primary),
@@ -60,12 +81,13 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 1.2;
+  line-height: 1;
   margin: 0;
+  margin-bottom: 1rem;
 }
 
 .textContent {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.85);
   margin: 0;
@@ -84,8 +106,13 @@
     gap: var(--space-6);
   }
 
-  .imageWrapper {
+  .imageWrapper,
+  .collegeImageWrapper {
     width: 100%;
     max-width: 250px;
+  }
+
+  .collegeImage {
+    height: 400px;
   }
 }

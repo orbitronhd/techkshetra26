@@ -106,3 +106,7 @@ h6 { font-size: 1.8rem; }
   h5 { font-size: 1.15rem; }
   h6 { font-size: 1rem; }
 }
+
+p {
+  text-align: justify;
+}

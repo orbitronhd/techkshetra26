@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import { HeroGlitch } from "./HeroGlitch.tsx";
 import { Countdown } from "./Countdown.tsx";
-import { FloatingBottomBar } from "./FloatingBottomBar.tsx";
 import styles from "./css/Page.module.css";
 
 const About = React.lazy(() => import("./About.tsx").then((m) => ({ default: m.About })));
@@ -26,7 +25,6 @@ export function HomePage(): React.JSX.Element {
         <Events />
         <Gallery />
       </Suspense>
-      <FloatingBottomBar />
       <Suspense fallback={null}>
         <Footer />
       </Suspense>

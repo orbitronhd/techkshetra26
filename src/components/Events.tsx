@@ -2,146 +2,278 @@ import type React from "react";
 import styles from "./css/Page.module.css";
 import { EventCarousel } from "./EventCarousel.tsx";
 import type { CarouselEvent } from "./EventCarousel.tsx";
+import defaultEventImage from "../assets/techkshetra_logo.png";
+
+// Import event images
+import imgAdaptathon from "../assets/events/ADAPTATHON.png";
+import imgEnduro from "../assets/events/ATV Build&Race.png";
+import imgBotforge from "../assets/events/botforge.jpg";
+import imgCrushingDepths from "../assets/events/Crushing Depths CTF.jpeg";
+import imgDronix from "../assets/events/DRONIX.jpg";
+import imgGhostProtocol from "../assets/events/Ghost_Protocol.png";
+import imgHelloFriday from "../assets/events/Hello Friday.jpg";
+import imgLightsLensAction from "../assets/events/LightLensAction.jpg";
+import imgMercedesWorkshop from "../assets/events/mercedes workshop.jpeg";
+import imgMetroRethink from "../assets/events/Metro Rethink.png";
+import imgProjectBlackbox from "../assets/events/Payload_Electronauts.png";
+import imgPostItUp from "../assets/events/Post it up poster.jpg";
+import imgRextech from "../assets/events/Rextech.png";
+import imgScenius from "../assets/events/Scenious 4.0 .png";
 
 const ACTUAL_EVENTS: CarouselEvent[] = [
   {
     id: "ev-1",
     title: "REVIVE NIGHT",
     category: "Hackathon",
-    details: "Organized by IEDC & IIC",
+    description: "TBD",
+    prizePool: "₹15000/-",
+    organizer: "IEDC",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-2",
     title: "Adaptathon",
     category: "Hackathon",
-    details: "Organized by iTrax (IT)",
+    description: "TBD",
+    prizePool: "₹10000/-",
+    organizer: "ITRAX",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgAdaptathon
   },
   {
     id: "ev-3",
-    title: "Enduro Edge",
+    title: "ENDURO",
     category: "Workshop",
-    details: "Organized by Real Mechanica (ME)",
+    description: "TBD",
+    prizePool: "Nil",
+    organizer: "REAL MECHANICA",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgEnduro
   },
   {
     id: "ev-4",
-    title: "ATV: Build & Race - RaceCraft RC",
+    title: "RaceCraft RC",
     category: "Competition",
-    details: "Organized by Spartans House",
+    description: "TBD",
+    prizePool: "₹8000/-",
+    organizer: "Spartans",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-5",
     title: "Scenius 4.0",
     category: "Series of Rounds",
-    details: "Organized by NIRMANA with BIS (CE)",
+    description: "TBD",
+    prizePool: "10,000/-",
+    organizer: "Nirmana",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgScenius
   },
   {
     id: "ev-6",
     title: "The Ghost Protocol",
     category: "Series of Rounds",
-    details: "Organized by NDLI Club",
+    description: "TBD",
+    prizePool: "₹3000/-",
+    organizer: "NDLI RSET",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgGhostProtocol
   },
   {
     id: "ev-7",
     title: "Traceback",
     category: "Competition",
-    details: "Organized by CSI SB",
+    description: "TBD",
+    prizePool: "₹3500/-",
+    organizer: "CSI-SB RSET",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-8",
-    title: "Canva workshop (Pre-event)",
+    title: "POST IT UP!",
     category: "Workshop",
-    details: "Organized by Jesus Youth",
+    description: "TBD",
+    prizePool: "Nil",
+    organizer: "Jesus Youth RSET",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgPostItUp
   },
   {
     id: "ev-9",
     title: "BOTFORGE",
     category: "Ideathon",
-    details: "Organized by IEEE RAS NSS",
+    description: "TBD",
+    prizePool: "₹5000/-",
+    organizer: "IEEE RAS x NSS",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgBotforge
   },
   {
     id: "ev-10",
     title: "Circuit Safari",
     category: "Competition",
-    details: "Organized by IEEE SPS SB",
+    description: "TBD",
+    prizePool: "₹1600/-",
+    organizer: "IEEE SPS SB RSET",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-11",
     title: "Circuit Quest",
     category: "Debugging Event",
-    details: "Organized by Apptronics (AEI)",
+    description: "TBD",
+    prizePool: "₹2000/-",
+    organizer: "Apptronics",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-12",
-    title: "AMONG US 2.0",
+    title: "AMONG US 3.0",
     category: "Treasure Hunt",
-    details: "Organized by IEEE Computer Society",
+    description: "TBD",
+    prizePool: "₹3,500/-",
+    organizer: "IEEE CS RSET SBC",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-13",
-    title: "REXTECH GAMELAB",
+    title: "REXTECH GAMEWORKSHOP",
     category: "Workshop",
-    details: "Organized by Vikings House",
+    description: "TBD",
+    prizePool: "Nil",
+    organizer: "Vikings",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgRextech
   },
   {
     id: "ev-14",
     title: "Project Shahi Dossier",
     category: "Technical Treasure Hunt",
-    details: "Organized by Mughals House",
+    description: "TBD",
+    prizePool: "₹10,000/-",
+    organizer: "Mughals",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-15",
     title: "Metro Rethink",
     category: "Problem Solving Challenge",
-    details: "Organized by Rajputs House",
+    description: "TBD",
+    prizePool: "₹6000/-",
+    organizer: "Rajputs",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgMetroRethink
   },
   {
     id: "ev-16",
     title: "Lights Lens Action",
     category: "Cinematography Masterclass",
-    details: "Organized by Aryans House",
+    description: "TBD",
+    prizePool: "Nil",
+    organizer: "ARYANS",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgLightsLensAction
   },
   {
     id: "ev-17",
-    title: "CTF",
+    title: "CRUSHING DEPTHS",
     category: "CTF",
-    details: "Organized by Cyberblitz (CSE)",
+    description: "TBD",
+    prizePool: "₹10,000/-",
+    organizer: "CyberBlitz",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgCrushingDepths
   },
   {
     id: "ev-18",
-    title: "PAYLOAD",
+    title: "PROJECT BLACKBOX",
     category: "Hackathon",
-    details: "Organized by Electronauts (ECE)",
+    description: "TBD",
+    prizePool: "₹15000/-",
+    organizer: "Electronauts",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgProjectBlackbox
   },
   {
     id: "ev-19",
-    title: "DroniX",
+    title: "DRONIX",
     category: "Workshop",
-    details: "Organized by RAS in association with Eluxtra (EEE)",
+    description: "TBD",
+    prizePool: "NA",
+    organizer: "Eluxtra x IEEE RAS",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgDronix
   },
   {
     id: "ev-20",
     title: "Hello Friday: Build your own Jarvis",
     category: "Workshop",
-    details: "Organized by Articon (AD)",
+    description: "TBD",
+    prizePool: "Nil",
+    organizer: "Articon",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgHelloFriday
   },
   {
     id: "ev-21",
     title: "Mercedes Workshop",
     category: "Workshop",
-    details: "Organized by SAE & Apptronics (ME & AEI)",
+    description: "TBD",
+    prizePool: "Nil",
+    organizer: "Apptronics x SAE",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: imgMercedesWorkshop
   },
   {
     id: "ev-22",
-    title: "Capital clash",
+    title: "CAPITAL CLASH",
     category: "Business Event",
-    details: "Organized by Gensys club (CSBS)",
+    description: "TBD",
+    prizePool: "₹3000/-",
+    organizer: "GenSys",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
   },
   {
     id: "ev-23",
     title: "Standards exhibition",
     category: "Exhibition and awareness",
-    details: "Organized by BIS Circuit branch",
-  },
+    description: "TBD",
+    prizePool: "Nil",
+    organizer: "BIS CIRCUIT BRANCH",
+    time: "TBD",
+    registrationFee: "TBD",
+    imageUrl: defaultEventImage
+  }
 ];
 
 export function Events(): React.JSX.Element {

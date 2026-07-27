@@ -2,6 +2,51 @@ import type React from "react";
 import { useEffect, useState } from "react";
 
 
+function DigitBlock({ digit }: { digit: string }) {
+  return (
+    <span
+      style={{
+        display: "inline-flex",
+        justifyContent: "center",
+        alignItems: "center",
+        background: "rgba(191, 88, 255, 0.05)",
+        border: "2px solid rgba(191, 88, 255, 0.3)",
+        borderRadius: "14px",
+        padding: "0.15em 0.25em",
+        margin: "0 0.06em",
+        boxShadow: "0 8px 22px rgba(0,0,0,0.45)",
+        minWidth: "1.1em",
+      }}
+    >
+      <span
+        style={{
+          background: "linear-gradient(135deg, var(--color-primary), var(--color-secondary))",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+        }}
+      >
+        {digit}
+      </span>
+    </span>
+  );
+}
+
+function Separator() {
+  return (
+    <span
+      style={{
+        margin: "0 0.2em",
+        color: "rgba(191, 88, 255, 0.6)",
+        transform: "translateY(-0.1em)",
+        display: "inline-block",
+      }}
+    >
+      :
+    </span>
+  );
+}
+
 export function Countdown(): React.JSX.Element {
   const [timeLeft, setTimeLeft] = useState({
     days: "00",
@@ -11,7 +56,7 @@ export function Countdown(): React.JSX.Element {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2026-08-05T07:00:00+05:30").getTime();
+    const targetDate = new Date("2026-08-05T00:00:00+05:30").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -19,6 +64,12 @@ export function Countdown(): React.JSX.Element {
 
       if (distance < 0) {
         clearInterval(interval);
+        setTimeLeft({
+          days: "00",
+          hours: "00",
+          minutes: "00",
+          seconds: "00",
+        });
         return;
       }
 
@@ -58,27 +109,41 @@ export function Countdown(): React.JSX.Element {
           fontSize: "clamp(0.9rem, 3vw, 2rem)",
           fontWeight: "normal",
           marginBottom: "1rem",
-          color: "var(--color-on-surface)",
+          color: "rgba(255, 255, 255, 0.8)",
           lineHeight: 1.1,
+          letterSpacing: "0.1em",
+          textTransform: "uppercase",
         }}
       >
         A new dawn begins in...
       </h2>
       <div
         style={{
-          fontSize: "clamp(1.8rem, 9vw, 12rem)",
+          fontSize: "clamp(2.5rem, 8vw, 8.5rem)",
           lineHeight: 1.1,
-          background:
-            "linear-gradient(135deg, var(--color-primary), var(--color-secondary))",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          display: "inline-block",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           fontVariantNumeric: "tabular-nums",
           whiteSpace: "nowrap",
+          fontWeight: 900,
         }}
       >
-        {timeLeft.days} : {timeLeft.hours} : {timeLeft.minutes} :{" "}
-        {timeLeft.seconds}
+        {timeLeft.days.split("").map((d, i) => (
+          <DigitBlock key={`d-${i}`} digit={d} />
+        ))}
+        <Separator />
+        {timeLeft.hours.split("").map((d, i) => (
+          <DigitBlock key={`h-${i}`} digit={d} />
+        ))}
+        <Separator />
+        {timeLeft.minutes.split("").map((d, i) => (
+          <DigitBlock key={`m-${i}`} digit={d} />
+        ))}
+        <Separator />
+        {timeLeft.seconds.split("").map((d, i) => (
+          <DigitBlock key={`s-${i}`} digit={d} />
+        ))}
       </div>
     </div>
   );

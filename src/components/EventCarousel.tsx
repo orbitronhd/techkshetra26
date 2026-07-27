@@ -6,8 +6,13 @@ export interface CarouselEvent {
   id: string;
   title: string;
   category: string;
-  details: string;
+  description: string;
+  organizer: string;
+  prizePool: string;
+  registrationFee?: string;
   imageUrl?: string;
+  venue?: string;
+  time?: string;
 }
 
 interface EventCarouselProps {
@@ -18,7 +23,7 @@ export function EventCarousel({
   events,
 }: EventCarouselProps): React.JSX.Element {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [flippedMap, setFlippedMap] = useState<Record<number, boolean>>({});
+  const [expandedMap, setExpandedMap] = useState<Record<number, boolean>>({});
 
   // Touch swipe support
   const touchStartX = useRef<number | null>(null);
@@ -26,32 +31,24 @@ export function EventCarousel({
 
   const handleNext = () => {
     setActiveIndex((prev) => (prev + 1) % events.length);
-    setFlippedMap({});
+    setExpandedMap({});
   };
 
   const handlePrev = () => {
     setActiveIndex((prev) => (prev - 1 + events.length) % events.length);
-    setFlippedMap({});
+    setExpandedMap({});
   };
 
   const handleCardClick = (index: number) => {
     if (index === activeIndex) {
-      setFlippedMap((prev) => ({
+      setExpandedMap((prev) => ({
         ...prev,
         [index]: !prev[index],
       }));
     } else {
       setActiveIndex(index);
-      setFlippedMap({});
+      setExpandedMap({});
     }
-  };
-
-  const handleFlipClick = (e: React.MouseEvent, index: number) => {
-    e.stopPropagation();
-    setFlippedMap((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
   };
 
   const getCardClass = (index: number) => {
@@ -115,14 +112,14 @@ export function EventCarousel({
 
       <div className={styles.carouselTrack}>
         {events.map((event, index) => {
-          const isFlipped = !!flippedMap[index];
+          const isExpanded = !!expandedMap[index];
           const cardClass = getCardClass(index);
           const isActive = index === activeIndex;
 
           return (
             <div
               key={event.id}
-              className={`${styles.cardWrapper} ${cardClass}`}
+              className={`${styles.cardWrapper} ${cardClass} ${isExpanded ? styles.isExpanded : ""}`}
               onClick={() => handleCardClick(index)}
               role="button"
               tabIndex={0}
@@ -130,61 +127,87 @@ export function EventCarousel({
                 if (e.key === "Enter") handleCardClick(index);
               }}
             >
-              <div
-                className={`${styles.cardInner} ${isFlipped ? styles.isFlipped : ""}`}
-              >
-                {}
+              <div className={styles.cardInner}>
                 <div className={`${styles.cardFace} ${styles.cardFront}`}>
-                  <div className={styles.imagePlaceholder}>
+                  <div className={styles.cardBackground}>
                     {event.imageUrl ? (
-                      <img
-                        src={event.imageUrl}
+                      <img 
+                        src={event.imageUrl} 
                         alt={event.title}
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
                         }}
                       />
                     ) : (
-                      <span className={styles.imageIcon}>✨</span>
+                      <div className={styles.imagePlaceholderFallback}></div>
                     )}
+                    <div className={styles.backgroundOverlay}></div>
                   </div>
-                  <div className={styles.cardTitle}>
-                    {event.title}
-                    {isActive && (
-                      <span className={styles.detailsLabel}>
-                        Click for details
-                      </span>
-                    )}
-                  </div>
-                </div>
 
-                {}
-                <div className={`${styles.cardFace} ${styles.cardBack}`}>
-                  <h3 className={styles.backTitle}>{event.category}</h3>
-                  <p className={styles.backDetails}>{event.details}</p>
+                  <div className={styles.cardContent}>
 
-                  {isActive && (
-                    <div
-                      style={{
-                        display: "flex",
-                        gap: "1rem",
-                        marginTop: "auto",
-                      }}
-                    >
-                      <button
-                        type="button"
-                        className={styles.flipButton}
-                        onClick={(e) => handleFlipClick(e, index)}
-                      >
-                        Back
-                      </button>
+
+                    <div className={styles.cardMainTitle}>
+                      {event.title.split(" ").map((word, i) => (
+                        <span key={i} className={styles.titleWord}>
+                          {word}
+                        </span>
+                      ))}
+                    </div>
+
+
+
+                    <div className={styles.cardBottom}>
+                      <div className={styles.venueTimeSection}>
+                        <div className={styles.venueTimeRow}>
+                          <span className={styles.icon}>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                              <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                          </span>
+                          <span className={styles.venueTimeText}>{event.venue || "TBA"}</span>
+                        </div>
+                        <div className={styles.venueTimeRow}>
+                          <span className={styles.icon}>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <circle cx="12" cy="12" r="10"></circle>
+                              <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                          </span>
+                          <span className={styles.venueTimeText}>TBH</span>
+                        </div>
+                      </div>
+                      <div className={styles.logoBox}>{event.organizer || "ORG"}</div>
+                    </div>
+
+                    <div className={`${styles.expandedSection} ${isExpanded ? styles.showExpanded : ""}`}>
+                      <h3 className={styles.expandedCategory}>{event.category}</h3>
+                      {event.prizePool && event.prizePool !== "Nil" && event.prizePool !== "nil" && event.prizePool !== "NA" && event.prizePool !== "NA." && (
+                        <div className={styles.prizePoolSection}>
+                          <span className={styles.prizePoolLabel}>Prize Pool:</span>
+                          <span className={styles.prizePoolValue}>{event.prizePool}</span>
+                        </div>
+                      )}
+                      
+                      {event.registrationFee && (
+                        <div className={styles.prizePoolSection}>
+                          <span className={styles.prizePoolLabel}>Reg Fee:</span>
+                          <span className={styles.prizePoolValue}>{event.registrationFee}</span>
+                        </div>
+                      )}
+
                       <button type="button" className={styles.actionButton}>
                         Register
                       </button>
                     </div>
-                  )}
+
+                    {isActive && !isExpanded && (
+                      <div className={styles.clickForDetails}>
+                        Click for details
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

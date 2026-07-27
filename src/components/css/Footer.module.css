@@ -333,10 +333,12 @@
 
 .creditsText {
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .copyrightText {
   color: #525252;
+  text-align: center;
 }
 
 @media (max-width: 480px) {

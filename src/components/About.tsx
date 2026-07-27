@@ -1,7 +1,7 @@
 import type React from "react";
 import styles from "./css/About.module.css";
 import logoImage from "../assets/TK26_Logo-512px.png";
-import jubileeImage from "../assets/Jubilee.png";
+import collegeImage from "../assets/College.png";
 
 export function About(): React.JSX.Element {
   return (
@@ -41,11 +41,11 @@ export function About(): React.JSX.Element {
             and ethical values to make a significant impact on the world.
           </p>
         </div>
-        <div className={styles.imageWrapper}>
+        <div className={styles.collegeImageWrapper}>
           <img
-            src={jubileeImage}
-            alt="Rajagiri Jubilee"
-            className={`${styles.image} ${styles.jubileeImage}`}
+            src={collegeImage}
+            alt="Our College"
+            className={`${styles.image} ${styles.collegeImage}`}
           />
         </div>
       </div>
