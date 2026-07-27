@@ -67,11 +67,9 @@
 
 .heading {
   font-family: var(--font-family-heading);
-  font-size: clamp(1rem, 4.8vw, 6rem);
+  font-size: clamp(1.5rem, 5.5vw, 6.5rem);
   font-weight: 900;
   text-transform: uppercase;
-  transform: scaleY(1.3);
-  transform-origin: left bottom;
   letter-spacing: 0.02em;
   background: linear-gradient(
     135deg,

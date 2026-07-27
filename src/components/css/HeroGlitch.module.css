@@ -46,7 +46,7 @@
 
 .massiveText {
   font-family: var(--font-family-heading);
-  font-size: clamp(2rem, 9.5vw, 15rem);
+  font-size: clamp(3rem, 13vw, 18rem);
   font-weight: 900;
   color: var(--color-text-primary);
   letter-spacing: 0.02em;
@@ -54,7 +54,6 @@
   margin: 0;
   text-transform: uppercase;
   text-shadow: 0 20px 40px rgba(0,0,0,0.5);
-  transform: scaleY(1.8);
 }
 
 .subtitle {
@@ -94,9 +93,8 @@
 
 @media (max-width: 768px) {
   .massiveText {
-    font-size: 11vw;
+    font-size: 13vw;
     letter-spacing: 0.02em;
-    transform: scaleY(1.8);
   }
 
   .angelImage {
@@ -106,9 +104,8 @@
 
 @media (max-width: 480px) {
   .massiveText {
-    font-size: 11vw;
+    font-size: 13vw;
     letter-spacing: 0;
-    transform: scaleY(1.8);
   }
 
   .angelImage {
