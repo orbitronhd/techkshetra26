@@ -6,7 +6,7 @@ import collegeImage from "../assets/College.png";
 export function About(): React.JSX.Element {
   return (
     <section id="about" className={styles.aboutSection}>
-      {}
+      { }
       <div className={styles.contentBlock}>
         <div className={styles.imageWrapper}>
           <img
@@ -19,7 +19,7 @@ export function About(): React.JSX.Element {
           <h2 className={styles.heading}>About Techkshetra</h2>
           <p className={styles.textContent}>
             The biennial technical festival of Rajagiri School of Engineering
-            and Technology, Kakkanad, Kerala is a treasure trove of a wide range
+            and Technology, Kakkanad. Kerala is a treasure trove of a wide range
             of events that ring together students of all fields for a day like
             no other. With a wide variety of events that encompass every
             wavelength and aspect of a student, participants get a chance to
@@ -29,7 +29,7 @@ export function About(): React.JSX.Element {
         </div>
       </div>
 
-      {}
+      { }
       <div className={styles.contentBlock}>
         <div className={styles.textWrapper}>
           <h2 className={styles.heading}>Our College</h2>

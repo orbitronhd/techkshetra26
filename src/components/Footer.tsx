@@ -49,7 +49,7 @@ export function Footer(): React.JSX.Element {
                 alt="Jubilee Logo"
                 className={styles.subLogo}
               />
-              <img src={rsetLogo} alt="RSET Logo" className={styles.subLogo} />
+              <img src={rsetLogo} alt="RSET Logo" className={`${styles.subLogo} ${styles.rsetSubLogo}`} />
             </div>
           </div>
 
