@@ -23,13 +23,13 @@ export function FluidCursor(): React.JSX.Element | null {
     let animationFrameId: number;
 
     const handleMouseMove = (e: MouseEvent) => {
-      mouse.current.x = e.clientX;
-      mouse.current.y = e.clientY;
+      mouse.current.x = e.pageX;
+      mouse.current.y = e.pageY;
       if (!isVisible) setIsVisible(true);
 
       if (dotRef.current) {
-        dotRef.current.style.left = `${e.clientX}px`;
-        dotRef.current.style.top = `${e.clientY}px`;
+        dotRef.current.style.left = `${e.pageX}px`;
+        dotRef.current.style.top = `${e.pageY}px`;
       }
     };
 

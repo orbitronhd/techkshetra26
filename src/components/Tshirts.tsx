@@ -2,7 +2,7 @@ import type React from "react";
 import { useState } from "react";
 import styles from "./css/Page.module.css";
 import cardStyles from "./css/Tshirts.module.css";
-import tshirtImage from "../assets/tshirt.png";
+import tshirtImage from "../assets/shirt.png";
 
 export function Tshirts(): React.JSX.Element {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -14,66 +14,30 @@ export function Tshirts(): React.JSX.Element {
       className={styles.contentBody}
       style={{ padding: "4rem 2rem" }}
     >
-      <h2 className={styles.heading}>Tshirts</h2>
       <div
         style={{
           marginTop: "2rem",
           display: "flex",
-          gap: "2rem",
+          flexDirection: "column",
+          gap: 0,
           alignItems: "center",
-          flexWrap: "wrap",
+          justifyContent: "center",
         }}
       >
-        <div style={{ flex: "1 1 320px", display: "flex", justifyContent: "center" }}>
-          <div className={cardStyles.cardContainer}>
-            <div
-              className={`${cardStyles.cardInner} ${isFlipped ? cardStyles.isFlipped : ""}`}
-              onClick={() => setIsFlipped(!isFlipped)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") setIsFlipped(!isFlipped);
-              }}
-            >
-              <div className={`${cardStyles.cardFace} ${cardStyles.cardFront}`}>
-                <div className={cardStyles.imageContainer}>
-                  <img src={tshirtImage} alt="Techkshetra '26 T-Shirt" className={cardStyles.image} />
-                  <span className={cardStyles.detailsLabel}>Click for details</span>
-                </div>
-              </div>
+        <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+          <h2 className={cardStyles.tshirtHeading}>OFFICIAL MERCHANDISE</h2>
+        </div>
 
-              <div className={`${cardStyles.cardFace} ${cardStyles.cardBack}`}>
-                <h3 className={cardStyles.backTitle}>Official Merchandise</h3>
-                <p className={cardStyles.backDetails}>
-                  Grab your official Techkshetra '26 T-Shirts and show your spirit!
-                  <br /><br />
-                  Sizes Available: S, M, L, XL, XXL
-                </p>
-                
-                <button 
-                  type="button" 
-                  className={cardStyles.actionButton}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setShowWidget(true);
-                  }}
-                >
-                  Pre-order Now
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style={{ flex: "1 1 300px" }}>
-          <h3 style={{ fontSize: "1.8rem", marginBottom: "1rem" }}>
-            Official Merchandise
-          </h3>
-          <p style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
-            Grab your official Techkshetra '26 T-Shirts and show your spirit!
-            Stay tuned for the unveiling of our exclusive designs. Available for
-            pre-order soon.
-          </p>
-        </div>
+        <img src={tshirtImage} alt="Techkshetra '26 T-Shirt" className={cardStyles.hoveringImage} style={{ marginTop: "-2rem" }} />
+        
+        <button 
+          type="button" 
+          className={cardStyles.actionButton}
+          onClick={() => setShowWidget(true)}
+          style={{ marginTop: "2rem" }}
+        >
+          Pre-order Now
+        </button>
       </div>
 
       {showWidget && (
