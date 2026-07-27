@@ -1,3 +1,4 @@
+import emailjs from "@emailjs/browser";
 import type React from "react";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
@@ -6,21 +7,35 @@ import rsetLogo from "../assets/RSET.png";
 import tk26LogoWhite from "../assets/TK26-logo-white.png";
 import styles from "./css/Footer.module.css";
 
+const SERVICE_ID = "service_7amjm59";
+const TEMPLATE_ID = "template_8s91pe2";
+const PUBLIC_KEY = "Vumn6JFviRmxd_J_M";
+
 export function Footer(): React.JSX.Element {
   const form = useRef<HTMLFormElement>(null);
   const [statusMessage, setStatusMessage] = useState("");
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!form.current) return;
+
     setStatusMessage("Sending...");
 
-    // Placeholder logic for demonstration
-    console.log("Form submitted. Uncomment emailjs logic to send emails.");
-    setStatusMessage("Feedback sent successfully!");
-    if (form.current) {
+    try {
+      await emailjs.sendForm(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        form.current,
+        PUBLIC_KEY
+      );
+      setStatusMessage("Feedback sent successfully!");
       form.current.reset();
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      setStatusMessage("Failed to send feedback. Please try again.");
+    } finally {
+      setTimeout(() => setStatusMessage(""), 3000);
     }
-    setTimeout(() => setStatusMessage(""), 3000);
   };
 
   return (
@@ -71,7 +86,7 @@ export function Footer(): React.JSX.Element {
           </div>
         </div>
 
-        {}
+        { }
         <div className={styles.columnMiddle}>
           <h3 className={styles.columnHeading}>Quick Links</h3>
           <nav className={styles.navLinks}>
@@ -90,7 +105,7 @@ export function Footer(): React.JSX.Element {
           </nav>
         </div>
 
-        {}
+        { }
         <div className={styles.columnRight}>
           <h3 className={styles.columnHeading}>Contact</h3>
           <form ref={form} onSubmit={sendEmail} className={styles.contactForm}>
