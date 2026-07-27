@@ -338,3 +338,35 @@
 .copyrightText {
   color: #525252;
 }
+
+@media (max-width: 480px) {
+  .footerContainer {
+    padding: 2.5rem 1rem;
+  }
+
+  .tkText {
+    font-size: 2.5rem;
+  }
+
+  .yearText {
+    font-size: 3.5rem;
+  }
+
+  .columnHeading {
+    font-size: 1.8rem;
+  }
+
+  .addressText {
+    font-size: 1.2rem;
+  }
+
+  .navLink {
+    font-size: 1.2rem;
+  }
+
+  .footerBottom {
+    margin-top: 2.5rem;
+    font-size: 1rem;
+  }
+}
+

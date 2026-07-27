@@ -1,5 +1,5 @@
 import type React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./css/EventCarousel.module.css";
 
 export interface CarouselEvent {
@@ -19,6 +19,10 @@ export function EventCarousel({
 }: EventCarouselProps): React.JSX.Element {
   const [activeIndex, setActiveIndex] = useState(0);
   const [flippedMap, setFlippedMap] = useState<Record<number, boolean>>({});
+
+  // Touch swipe support
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
 
   const handleNext = () => {
     setActiveIndex((prev) => (prev + 1) % events.length);
@@ -69,12 +73,37 @@ export function EventCarousel({
     return styles.cardHiddenRight;
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    const deltaY = e.changedTouches[0].clientY - touchStartY.current;
+    // Only trigger swipe if horizontal movement is dominant and exceeds threshold
+    if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > Math.abs(deltaY)) {
+      if (deltaX < 0) {
+        handleNext();
+      } else {
+        handlePrev();
+      }
+    }
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
+
   if (!events || events.length === 0) {
     return <div>No events found.</div>;
   }
 
   return (
-    <div className={styles.carouselContainer}>
+    <div
+      className={styles.carouselContainer}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <button
         type="button"
         className={`${styles.navButton} ${styles.prevButton}`}

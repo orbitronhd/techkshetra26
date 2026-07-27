@@ -9,7 +9,7 @@ export type NavItem = {
 
 export const NAV_ITEMS_LEFT: readonly NavItem[] = [
   { id: "about", label: "About", path: "/#about" },
-  { id: "tshirts", label: "Tshirts", path: "/#tshirts" },
+  { id: "tshirts", label: "Merch", path: "/#tshirts" },
 ] as const;
 
 export const NAV_ITEMS_RIGHT: readonly NavItem[] = [

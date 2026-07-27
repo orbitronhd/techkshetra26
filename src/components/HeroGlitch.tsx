@@ -19,7 +19,7 @@ export function HeroGlitch(): React.JSX.Element {
 
   const textX = mousePosition.x * 20;
   const textY = mousePosition.y * 20;
-  
+
   const fgX = mousePosition.x * -40;
   const fgY = mousePosition.y * -40;
 
@@ -27,9 +27,9 @@ export function HeroGlitch(): React.JSX.Element {
     <div className={styles.heroContainer}>
       {/* Background layer */}
       <div className={styles.backgroundLayer}></div>
-      
+
       {/* Text layer */}
-      <div 
+      <div
         className={styles.textLayer}
         style={{ transform: `translate(${textX}px, ${textY}px)` }}
       >
@@ -37,14 +37,14 @@ export function HeroGlitch(): React.JSX.Element {
       </div>
 
       {/* Foreground image layer */}
-      <div 
+      <div
         className={styles.foregroundLayer}
         style={{ transform: `translate(${fgX}px, ${fgY}px)` }}
       >
-        <img 
-          src={angelImage} 
-          alt="Angel" 
-          className={styles.angelImage} 
+        <img
+          src={angelImage}
+          alt="Angel"
+          className={styles.angelImage}
           onClick={() => document.body.classList.toggle("theme-negative")}
         />
       </div>
