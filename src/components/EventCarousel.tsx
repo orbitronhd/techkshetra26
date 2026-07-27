@@ -18,36 +18,28 @@ export function EventCarousel({
   events,
 }: EventCarouselProps): React.JSX.Element {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [flippedMap, setFlippedMap] = useState<Record<number, boolean>>({});
+  const [expandedMap, setExpandedMap] = useState<Record<number, boolean>>({});
 
   const handleNext = () => {
     setActiveIndex((prev) => (prev + 1) % events.length);
-    setFlippedMap({});
+    setExpandedMap({});
   };
 
   const handlePrev = () => {
     setActiveIndex((prev) => (prev - 1 + events.length) % events.length);
-    setFlippedMap({});
+    setExpandedMap({});
   };
 
   const handleCardClick = (index: number) => {
     if (index === activeIndex) {
-      setFlippedMap((prev) => ({
+      setExpandedMap((prev) => ({
         ...prev,
         [index]: !prev[index],
       }));
     } else {
       setActiveIndex(index);
-      setFlippedMap({});
+      setExpandedMap({});
     }
-  };
-
-  const handleFlipClick = (e: React.MouseEvent, index: number) => {
-    e.stopPropagation();
-    setFlippedMap((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
   };
 
   const getCardClass = (index: number) => {
@@ -86,14 +78,14 @@ export function EventCarousel({
 
       <div className={styles.carouselTrack}>
         {events.map((event, index) => {
-          const isFlipped = !!flippedMap[index];
+          const isExpanded = !!expandedMap[index];
           const cardClass = getCardClass(index);
           const isActive = index === activeIndex;
 
           return (
             <div
               key={event.id}
-              className={`${styles.cardWrapper} ${cardClass}`}
+              className={`${styles.cardWrapper} ${cardClass} ${isExpanded ? styles.isExpanded : ""}`}
               onClick={() => handleCardClick(index)}
               role="button"
               tabIndex={0}
@@ -101,61 +93,48 @@ export function EventCarousel({
                 if (e.key === "Enter") handleCardClick(index);
               }}
             >
-              <div
-                className={`${styles.cardInner} ${isFlipped ? styles.isFlipped : ""}`}
-              >
-                {}
+              <div className={styles.cardInner}>
                 <div className={`${styles.cardFace} ${styles.cardFront}`}>
-                  <div className={styles.imagePlaceholder}>
+                  <div className={styles.cardBackground}>
                     {event.imageUrl ? (
-                      <img
-                        src={event.imageUrl}
-                        alt={event.title}
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}
-                      />
+                      <img src={event.imageUrl} alt={event.title} />
                     ) : (
-                      <span className={styles.imageIcon}>✨</span>
+                      <div className={styles.imagePlaceholderFallback}></div>
                     )}
+                    <div className={styles.backgroundOverlay}></div>
                   </div>
-                  <div className={styles.cardTitle}>
-                    {event.title}
-                    {isActive && (
-                      <span className={styles.detailsLabel}>
-                        Click for details
-                      </span>
-                    )}
-                  </div>
-                </div>
 
-                {}
-                <div className={`${styles.cardFace} ${styles.cardBack}`}>
-                  <h3 className={styles.backTitle}>{event.category}</h3>
-                  <p className={styles.backDetails}>{event.details}</p>
+                  <div className={styles.cardContent}>
 
-                  {isActive && (
-                    <div
-                      style={{
-                        display: "flex",
-                        gap: "1rem",
-                        marginTop: "auto",
-                      }}
-                    >
-                      <button
-                        type="button"
-                        className={styles.flipButton}
-                        onClick={(e) => handleFlipClick(e, index)}
-                      >
-                        Back
-                      </button>
+
+                    <div className={styles.cardMainTitle}>
+                      {event.title.split(" ").map((word, i) => (
+                        <span key={i} className={styles.titleWord}>
+                          {word}
+                        </span>
+                      ))}
+                    </div>
+
+
+
+                    <div className={styles.cardBottom}>
+                      <div className={styles.logoBox}>ORG</div>
+                    </div>
+
+                    <div className={`${styles.expandedSection} ${isExpanded ? styles.showExpanded : ""}`}>
+                      <h3 className={styles.expandedCategory}>{event.category}</h3>
+                      <p className={styles.expandedText}>{event.details}</p>
                       <button type="button" className={styles.actionButton}>
                         Register
                       </button>
                     </div>
-                  )}
+
+                    {isActive && !isExpanded && (
+                      <div className={styles.clickForDetails}>
+                        Click for details
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
