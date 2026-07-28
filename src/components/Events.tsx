@@ -6,26 +6,6 @@ import type { CarouselEvent } from "./EventCarousel.tsx";
 import defaultEventImage from "../assets/TK26-logo-color.webp";
 
 // Import event images
-import imgAdaptathon from "../assets/events/ADAPTATHON.png";
-import imgEnduro from "../assets/events/ATV Build&Race.png";
-import imgBotforge from "../assets/events/botforge.jpg";
-import imgCrushingDepths from "../assets/events/Crushing Depths CTF.jpeg";
-import imgDronix from "../assets/events/DRONIX.jpg";
-import imgGhostProtocol from "../assets/events/Ghost_Protocol.png";
-import imgHelloFriday from "../assets/events/Hello Friday.jpg";
-import imgLightsLensAction from "../assets/events/LightLensAction.jpg";
-import imgMercedesWorkshop from "../assets/events/mercedes workshop.jpeg";
-import imgMetroRethink from "../assets/events/Metro Rethink.png";
-import imgPostItUp from "../assets/events/Post it up poster.jpg";
-import imgRextech from "../assets/events/Rextech.png";
-import imgScenius from "../assets/events/Scenious 4.0 .png";
-import imgCapitalClash from "../assets/events/Capital_Clash.png";
-import imgCircuitSafari from "../assets/events/Circuit safari.png";
-import imgPayload from "../assets/events/Payload.png";
-import imgReviveNight from "../assets/events/ReviveNight.png";
-import imgTraceback from "../assets/events/Traceback.png";
-import imgCircuitQuest from "../assets/events/circuit_quest.png";
-import imgShahiDossier from "../assets/events/shahi dossier.png";
 import imgAdaptathon from "../assets/events/ADAPTATHON.webp";
 import imgEnduro from "../assets/events/ATV Build&Race.webp";
 import imgBotforge from "../assets/events/botforge.webp";
@@ -39,6 +19,13 @@ import imgMetroRethink from "../assets/events/Metro Rethink.webp";
 import imgPostItUp from "../assets/events/Post it up poster.webp";
 import imgRextech from "../assets/events/Rextech.webp";
 import imgScenius from "../assets/events/Scenious 4.0 .webp";
+import imgCapitalClash from "../assets/events/Capital_Clash.webp";
+import imgCircuitSafari from "../assets/events/Circuit safari.webp";
+import imgPayload from "../assets/events/Payload.webp";
+import imgReviveNight from "../assets/events/ReviveNight.webp";
+import imgTraceback from "../assets/events/Traceback.webp";
+import imgCircuitQuest from "../assets/events/circuit_quest.webp";
+import imgShahiDossier from "../assets/events/shahi dossier.webp";
 
 const ACTUAL_EVENTS: CarouselEvent[] = [
   {
