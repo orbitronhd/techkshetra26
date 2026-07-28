@@ -7,7 +7,7 @@ import defaultEventImage from "../assets/TK26-logo-color.webp";
 
 // Import event images
 import imgAdaptathon from "../assets/events/ADAPTATHON.webp";
-import imgEnduro from "../assets/events/ATV Build&Race.webp";
+import imgATV from "../assets/events/ATV Build&Race.webp";
 import imgBotforge from "../assets/events/botforge.webp";
 import imgCrushingDepths from "../assets/events/Crushing Depths CTF.webp";
 import imgDronix from "../assets/events/DRONIX.webp";
@@ -59,10 +59,10 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "A motorsport workshop",
     prizePool: "Nil",
     organizer: "REAL MECHANICA",
-    time: "31/7/26",
+    time: "11:30 AM to 1:30 PM",
     venue: "Chavara Hall",
     registrationFee: "₹400/-",
-    imageUrl: imgEnduro,
+    imageUrl: defaultEventImage,
     date: "2026-07-31",
     registrationLink: "https://konfhub.com/enduro-edge"
   },
@@ -75,7 +75,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "Spartans",
     time: "5/8/26",
     registrationFee: "₹500/- (Per Team of 4)",
-    imageUrl: defaultEventImage,
+    imageUrl: imgATV,
     date: "2026-08-05"
   },
   {
@@ -121,7 +121,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "A 2-hour beginner-friendly Canva workshop by the Jesus Youth RSET Media Team, part of Techkshtra, covering design basics and a hands-on poster-making activity.",
     prizePool: "Nil",
     organizer: "Jesus Youth RSET",
-    time: "3/8/26",
+    time: "4:30 PM to 6:30 PM",
     venue: "Zuse Lab",
     registrationFee: "Free",
     imageUrl: imgPostItUp,
@@ -296,7 +296,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Technical exhibition on Standards Awareness during Techkshethra 2026. The event aims to create awareness among students about the importance of Indian Standards (IS), the ISI mark, and quality certification in engineering and everyday consumer products.",
     prizePool: "Nil",
     organizer: "BIS CIRCUIT BRANCH",
-    time: "31/7/26",
+    time: "11:30 AM to 1:30 PM",
     venue: "BIS corner-Library",
     registrationFee: "Free",
     imageUrl: defaultEventImage,
