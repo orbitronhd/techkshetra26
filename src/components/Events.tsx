@@ -149,7 +149,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "IEEE SPS SB RSET",
     time: "4:30 PM-6:00 PM",
     venue: "Basic Electronics Lab ",
-    registrationFee: "₹180/-",
+    registrationFee: "₹150/-",
     imageUrl: imgCircuitSafari,
     date: "2026-08-04",
     registrationLink: "https://konfhub.com/circuit-safari"
