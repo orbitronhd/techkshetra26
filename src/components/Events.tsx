@@ -26,6 +26,8 @@ import imgReviveNight from "../assets/events/ReviveNight.webp";
 import imgTraceback from "../assets/events/Traceback.webp";
 import imgCircuitQuest from "../assets/events/circuit_quest.webp";
 import imgShahiDossier from "../assets/events/shahi dossier.webp";
+import imgAmongUs from "../assets/events/amongus.webp";
+import imgEnduro from "../assets/events/enduro.webp";
 
 const ACTUAL_EVENTS: CarouselEvent[] = [
   {
@@ -33,7 +35,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     title: "REVIVE NIGHT",
     category: "Hackathon",
     description: "All teams are given problem statements, which consists of failed startups.Participants have to find out why it failed and make an MVP within 12 hours",
-    prizePool: "₹15000/-",
+    prizePool: "₹15,000/-",
     organizer: "IEDC",
     time: "5:00PM-10:00AM",
     venue: "Gallery Hall",
@@ -46,7 +48,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     title: "Adaptathon",
     category: "Hackathon",
     description: "Welcome to the ultimate relay-style hackathon, where teams of 3 to 4 race to develop projects from core prompts, but with a massive twist: every two hours, they must hand off their codebase and inherit a completely unfamiliar project from another team. Their challenge is to quickly decipher the previous group's work, seamlessly add new features, and push their code before the two-hour clock strikes zero again. Instead of evaluating just the final product, dedicated panels continuously score teams based on the actual progress and value they added to the specific code they received. The team that adapts the fastest, collaborates the best, and builds the most effectively across these relentless sprints will claim the ultimate victory!",
-    prizePool: "₹10000/-",
+    prizePool: "₹10,000/-",
     organizer: "ITRAX",
     time: "5:00PM-9:00AM",
     venue: "Kleinrock Lab,Turing Lab,CODD Lab,Shannon Lab",
@@ -59,12 +61,12 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     title: "ENDURO EDGE",
     category: "Workshop",
     description: "A motorsport workshop",
-    prizePool: "Nil",
+    prizePool: "NA",
     organizer: "REAL MECHANICA",
     time: "11:30 AM-1:30 PM",
     venue: "Chavara Hall",
     registrationFee: "₹400/-",
-    imageUrl: defaultEventImage,
+    imageUrl: imgEnduro,
     date: "2026-07-31",
     registrationLink: "https://konfhub.com/enduro-edge"
   },
@@ -73,11 +75,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     title: "ATV:Build & Race-RaceCraft RC",
     category: "Competition",
     description: "RaceCraft RC is a team-based engineering competition where each team of four members designs and builds a Radio Controlled (RC) race car before the event, following the technical specifications provided by the organizers. On the event day, participants will first attend a technical session conducted by experts, covering RC vehicle design, race rules, safety guidelines, and performance optimization. Following the session and technical inspection, teams will compete in multiple challenge rounds on a specially designed track featuring different terrains and obstacles that test the vehicle's speed, stability, maneuverability, and durability. The event aims to provide hands-on experience in engineering design, problem-solving, and teamwork while fostering innovation through competitive racing.",
-    prizePool: "₹8000/-",
+    prizePool: "₹8,000/-",
     organizer: "Spartans",
     time: "1:00PM-3:00PM",
     venue: "PG Tutorial Hall 3",
-    registrationFee: "500",
+    registrationFee: "₹500/-",
     imageUrl: imgATV,
     date: "2026-08-05",
     registrationLink: "https://konfhub.com/atvbuild-race-racecraft-rc"
@@ -100,7 +102,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     title: "The Ghost Protocol",
     category: "Series of Rounds",
     description: "The Ghost Protocol is a team-based puzzle-solving event in which participants work through a sequence of interconnected challenges. The event is designed around a story-based investigation, with each puzzle revealing a clue that leads to the next stage of the mission. Teams must solve the puzzles in succession in order to progress through the storyline and reach the final challenge. The puzzles will include a variety of encryption and decoding techniques such as Atbash cipher, Caesar cipher, and similar cryptographic formats, along with selected coding-based tasks in C along with a logic circuit based puzzles.",
-    prizePool: "₹3000/-",
+    prizePool: "₹3,000/-",
     organizer: "NDLI RSET",
     time: "5/8/26",
     registrationFee: "₹150/-",
@@ -112,7 +114,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     title: "Traceback",
     category: "Competition",
     description: "TRACEBACK is a narrative-driven technical escape room organized by the CSI Student Branch where teams act as digital forensic analysts to solve a campus-wide mystery. The event requires zero prior coding knowledge, making it fully accessible to all engineering branches while introducing real-world technology concepts.",
-    prizePool: "₹3500/-",
+    prizePool: "₹3,500/-",
     organizer: "CSI-SB RSET",
     time: "5/8/26",
     registrationFee: "TBD",
@@ -124,7 +126,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     title: "POST IT UP!",
     category: "Workshop",
     description: "A 2-hour beginner-friendly Canva workshop by the Jesus Youth RSET Media Team, part of Techkshtra, covering design basics and a hands-on poster-making activity.",
-    prizePool: "Nil",
+    prizePool: "NA",
     organizer: "Jesus Youth RSET",
     time: "4:30 PM-6:30 PM",
     venue: "Zuse Lab",
@@ -150,7 +152,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     title: "Circuit Safari",
     category: "Competition",
     description: "Test your engineering skills in this fast-paced, three-round elimination tournament for 15 teams. The competition begins with a 20-minute electronics crossword puzzle, narrowing the field to 10 teams. In the 30-minute second round, competitors tackle complex K-maps, with only the top five advancing. The 30-minute final challenges these elite teams to solve problems using Boolean laws and construct a live working circuit, where the fastest functional build claims the championship.",
-    prizePool: "₹1600/-",
+    prizePool: "₹1,600/-",
     organizer: "IEEE SPS SB RSET",
     time: "4:30 PM-6:00 PM",
     venue: "LCD Lab ",
@@ -164,7 +166,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     title: "Circuit Quest",
     category: "Debugging Event",
     description: "Circuit Quest is an exciting technical treasure hunt designed to test participants' electronics knowledge, problem-solving abilities, and teamwork.",
-    prizePool: "₹2000/-",
+    prizePool: "₹2,000/-",
     organizer: "Apptronics",
     time: "4:30 PM-6:00 PM",
     venue: "VI Lab ",
@@ -178,11 +180,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     title: "AMONG US 3.0",
     category: "Treasure Hunt",
     description: "Among Us 3.0 is a technology-driven campus challenge that combines coding, logical reasoning, cybersecurity, debugging, and QR-based interactive missions into an immersive competitive experience inspired by the popular multiplayer game Among Us.",
-    prizePool: "₹3,500/-",
+    prizePool: "₹4,500/-",
     organizer: "IEEE CS RSET SBC",
     time: "5/8/26",
     registrationFee: "₹120/-",
-    imageUrl: defaultEventImage,
+    imageUrl: imgAmongUs,
     date: "2026-08-05"
   },
   {
@@ -194,7 +196,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "Vikings",
     time: "10:00AM-2:00PM",
     venue: "Signal Processing Lab",
-    registrationFee: "150",
+    registrationFee: "₹150/-",
     imageUrl: imgRextech,
     date: "2026-08-05",
     registrationLink: "https://konfhub.com/rextech-gamelab"
@@ -208,7 +210,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "Mughals",
     time: "9:30AM-2:30PM",
     venue: "Multimedia Hall",
-    registrationFee: "149 / head (Team of 4-5)",
+    registrationFee: "₹149/head",
     imageUrl: imgShahiDossier,
     date: "2026-08-05",
     registrationLink: "https://konfhub.com/project-shahi-dossier"
@@ -222,7 +224,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "Rajputs",
     time: "11:00AM-3:00PM",
     venue: "PG Porch",
-    registrationFee: "600",
+    registrationFee: "₹600/-",
     imageUrl: imgMetroRethink,
     date: "2026-08-05",
     registrationLink: "https://konfhub.com/metro-rethink"
@@ -236,7 +238,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "ARYANS",
     time: "11:00AM-2:00PM",
     venue: "Multimedia Hall",
-    registrationFee: "150",
+    registrationFee: "₹150/-",
     imageUrl: imgLightsLensAction,
     date: "2026-08-05",
     registrationLink: "https://konfhub.com/lights-lens-action"
@@ -249,7 +251,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹10,000/-",
     organizer: "CyberBlitz",
     time: "5/8/26",
-    registrationFee: "TBD",
+    registrationFee: "₹150/head",
     imageUrl: imgCrushingDepths,
     date: "2026-08-05"
   },
@@ -262,7 +264,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "NA",
     organizer: "Eluxtra x IEEE RAS",
     time: "5/8/26",
-    registrationFee: "TBD",
+    registrationFee: "₹150/head",
     imageUrl: imgDronix,
     date: "2026-08-05"
   },
@@ -274,7 +276,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "Nil",
     organizer: "Articon",
     time: "5/8/26",
-    registrationFee: "TBD",
+    registrationFee: "₹200/-",
     imageUrl: imgHelloFriday,
     date: "2026-08-05"
   },
@@ -286,7 +288,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "Nil",
     organizer: "Apptronics x SAE",
     time: "5/8/26",
-    registrationFee: "TBD",
+    registrationFee: "₹200/-",
     imageUrl: imgMercedesWorkshop,
     date: "2026-08-05"
   },
@@ -298,7 +300,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹3000/-",
     organizer: "GenSys",
     time: "5/8/26",
-    registrationFee: "TBD",
+    registrationFee: "₹150/team",
     imageUrl: imgCapitalClash,
     date: "2026-08-05"
   },
@@ -306,11 +308,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-24",
     title: "Payload",
     category: "Competition",
-    description: "TBD",
+    description: "A closed-book, no-internet hardware hackathon. Participants design, build, and digitize a fundamental analog circuit using only the provided textbooks, raw components, and their engineering fundamentals.",
     prizePool: "₹15,000/-",
     organizer: "Electronauts",
     time: "4/8/26-5/8/26",
-    registrationFee: "350 per member",
+    registrationFee: "₹350/head",
     imageUrl: imgPayload,
     date: "2026-08-05"
   }
