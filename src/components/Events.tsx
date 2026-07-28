@@ -24,8 +24,8 @@ import imgCircuitSafari from "../assets/events/Circuit safari.png";
 import imgPayload from "../assets/events/Payload.png";
 import imgReviveNight from "../assets/events/ReviveNight.png";
 import imgTraceback from "../assets/events/Traceback.png";
-import imgCircuitQuest from "../assets/events/circuit_quest.PNG";
-import imgShahiDossier from "../assets/events/shahi dossier.PNG";
+import imgCircuitQuest from "../assets/events/circuit_quest.png";
+import imgShahiDossier from "../assets/events/shahi dossier.png";
 
 const ACTUAL_EVENTS: CarouselEvent[] = [
   {
