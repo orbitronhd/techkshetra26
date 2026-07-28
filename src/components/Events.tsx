@@ -131,7 +131,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     registrationFee: "Free",
     imageUrl: imgPostItUp,
     date: "2026-08-03",
-    registrationLink: "https://konfhub.com/standards-exhibition"
+    registrationLink: "https://konfhub.com/post-it-up"
   },
   {
     id: "ev-9",
@@ -208,7 +208,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "Mughals",
     time: "9:30AM-2:30PM",
     venue: "Multimedia Hall",
-    registrationFee: "596",
+    registrationFee: "149 / head (Team of 4-5)",
     imageUrl: imgShahiDossier,
     date: "2026-08-05",
     registrationLink: "https://konfhub.com/project-shahi-dossier"
@@ -218,9 +218,9 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     title: "Metro Rethink",
     category: "Problem Solving Challenge",
     description: "Teams come up with a problem statement after field study and work on it for the solution. The judges panel will filter out and bring out 3-5 teams for the finale for which the teams will be asked to assemble at an assembly point and a KMRL feeder bus will pick them up and bring them to RSET campus where the bus will be parked and using the bus as background the team will present their presentation of their problems and solutions in front of the judges.",
-    prizePool: "₹6000/-",
+    prizePool: "₹10,000/-",
     organizer: "Rajputs",
-    time: "1:00PM-3:00PM",
+    time: "11:00AM-3:00PM",
     venue: "PG Porch",
     registrationFee: "600",
     imageUrl: imgMetroRethink,
