@@ -37,6 +37,9 @@ html,
 body,
 #root {
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
   min-height: 100vh;
   background-color: var(--color-surface-bg);
 }
@@ -45,19 +48,22 @@ body {
   color: var(--color-text-primary, #f7f7f7);
   font-family: var(--font-family-primary);
   font-size: 1.15rem;
-  overflow-x: hidden;
   cursor: none;
   transition: filter 3s ease, background-color 3s ease;
 }
 
 body.theme-negative {
+  -webkit-filter: invert(1) hue-rotate(180deg);
   filter: invert(1) hue-rotate(180deg);
   background-color: var(--color-surface-bg);
 }
 
 body.theme-negative img:not(footer img),
 body.theme-negative video {
-  filter: invert(1) hue-rotate(180deg);
+  -webkit-filter: invert(1) hue-rotate(180deg) !important;
+  filter: invert(1) hue-rotate(180deg) !important;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 @media (pointer: coarse) {

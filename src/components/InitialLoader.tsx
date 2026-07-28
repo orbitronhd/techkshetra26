@@ -33,8 +33,15 @@ export function InitialLoader(): React.JSX.Element | null {
     return null;
   }
 
-  const leftPos = mousePos ? `${mousePos.x}px` : "50%";
-  const topPos = mousePos ? `${mousePos.y}px` : "50%";
+  const isTouchDevice =
+    "ontouchstart" in window ||
+    navigator.maxTouchPoints > 0 ||
+    window.matchMedia("(pointer: coarse)").matches ||
+    window.matchMedia("(max-width: 768px)").matches ||
+    window.innerWidth <= 768;
+
+  const leftPos = mousePos && !isTouchDevice ? `${mousePos.x}px` : "50%";
+  const topPos = mousePos && !isTouchDevice ? `${mousePos.y}px` : "50%";
 
   const clipPathStyle =
     phase === "closing"

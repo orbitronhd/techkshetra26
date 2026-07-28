@@ -110,13 +110,29 @@
     gap: var(--space-6);
   }
 
+  .heading {
+    text-align: center;
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
+  }
+
+  .textContent {
+    text-align: center;
+    text-justify: auto;
+    text-align-last: center;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0 auto;
+    max-width: 92vw;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
   .imageWrapper,
   .collegeImageWrapper {
     width: 100%;
-    max-width: 250px;
+    max-width: 280px;
   }
 
   .collegeImage {
-    height: 400px;
+    height: 350px;
   }
 }

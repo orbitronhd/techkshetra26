@@ -3,7 +3,7 @@ import { useState, useCallback } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { NAV_ITEMS_LEFT, NAV_ITEMS_RIGHT } from "../types/sun.types.ts";
 import type { NavItem } from "../types/sun.types.ts";
-import tk26Logo from "../assets/TK26-icon-512.png";
+import tk26Logo from "../assets/TK26-icon-512.webp";
 import styles from "./css/Navigation.module.css";
 
 const ALL_NAV_ITEMS: readonly NavItem[] = [...NAV_ITEMS_LEFT, ...NAV_ITEMS_RIGHT];

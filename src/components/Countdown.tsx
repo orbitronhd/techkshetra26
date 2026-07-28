@@ -9,21 +9,22 @@ function DigitBlock({ digit }: { digit: string }) {
         display: "inline-flex",
         justifyContent: "center",
         alignItems: "center",
-        background: "rgba(191, 88, 255, 0.05)",
-        border: "2px solid rgba(191, 88, 255, 0.3)",
-        borderRadius: "0.22em",
-        margin: "0 0.04em",
-        boxShadow: "0 8px 22px rgba(0,0,0,0.45)",
-        width: "1.18em",
-        height: "1.35em",
+        background: "transparent",
+        border: "none",
+        boxShadow: "none",
+        margin: "0 0.01em",
+        width: "0.78em",
+        height: "1.1em",
         lineHeight: 1,
         boxSizing: "border-box",
         flexShrink: 0,
+        fontVariantNumeric: "tabular-nums",
       }}
     >
       <span
         style={{
-          background: "linear-gradient(135deg, var(--color-primary), var(--color-secondary))",
+          background:
+            "linear-gradient(135deg, var(--color-primary), var(--color-secondary))",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           backgroundClip: "text",
@@ -34,7 +35,6 @@ function DigitBlock({ digit }: { digit: string }) {
           height: "100%",
           lineHeight: 1,
           textAlign: "center",
-          transform: "translateY(0.08em)",
         }}
       >
         {digit}
@@ -50,13 +50,12 @@ function Separator() {
         display: "inline-flex",
         justifyContent: "center",
         alignItems: "center",
-        margin: "0 0.08em",
+        margin: "0 0.06em",
         color: "rgba(191, 88, 255, 0.6)",
-        width: "0.45em",
-        height: "1.35em",
+        width: "0.38em",
+        height: "1.1em",
         lineHeight: 1,
         flexShrink: 0,
-        transform: "translateY(0.08em)",
       }}
     >
       :

@@ -32,6 +32,11 @@
   100% { transform: translateY(0); }
 }
 
+:global(body.theme-negative) .hoveringImage {
+  -webkit-filter: invert(1) hue-rotate(180deg) drop-shadow(0 20px 30px rgba(0,0,0,0.5)) !important;
+  filter: invert(1) hue-rotate(180deg) drop-shadow(0 20px 30px rgba(0,0,0,0.5)) !important;
+}
+
 .actionButton {
   background: linear-gradient(
     135deg,
@@ -64,8 +69,12 @@
 
 @media (max-width: 768px) {
   .tshirtHeading {
-    font-size: clamp(1.8rem, 6.5vw, 2.6rem);
+    font-size: clamp(1.4rem, 6.8vw, 2.2rem);
     margin-bottom: 1rem;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 94vw;
+    line-height: 1.2;
   }
 }
 
