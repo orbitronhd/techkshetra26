@@ -111,9 +111,11 @@ export function EventCarousel({
     return <div>No events found.</div>;
   }
 
+  const hasExpandedCard = Object.values(expandedMap).some(Boolean);
+
   return (
     <div
-      className={styles.carouselContainer}
+      className={`${styles.carouselContainer} ${hasExpandedCard ? styles.containerExpanded : ""}`}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >

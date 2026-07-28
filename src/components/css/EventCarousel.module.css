@@ -8,6 +8,11 @@
   justify-content: center;
   align-items: center;
   perspective: 1200px;
+  transition: height 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.containerExpanded {
+  height: 600px;
 }
 
 .carouselTrack {
@@ -130,11 +135,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ff2222;
-  font-size: 1.6rem;
+  font-size: clamp(1.1rem, 6.5vw, 1.6rem);
   font-weight: 900;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-align: center;
   white-space: nowrap;
+  width: 100%;
+  padding: 0 1.2rem;
+  box-sizing: border-box;
   z-index: 20;
   pointer-events: none;
   font-family: var(--font-family-heading, sans-serif);
@@ -596,6 +604,26 @@
     line-height: 1.25;
     max-width: 130px;
   }
+
+  .carouselContainer.containerExpanded {
+    height: 540px;
+  }
+
+  .isExpanded {
+    width: 90vw;
+    max-width: 340px;
+    height: 500px;
+  }
+
+  .isExpanded .cardBack {
+    padding: 1.25rem;
+    overflow-y: auto;
+  }
+
+  .comingSoonOverlay {
+    font-size: clamp(1rem, 5vw, 1.35rem);
+    padding: 0 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -637,14 +665,19 @@
     font-size: 0.9rem;
   }
 
+  .carouselContainer.containerExpanded {
+    height: 510px;
+  }
+
   .isExpanded {
-    width: 94vw;
-    height: min(85vh, 540px);
-    max-width: 440px;
+    width: 92vw;
+    height: 470px;
+    max-width: 320px;
   }
 
   .isExpanded .cardBack {
-    padding: 1.5rem;
+    padding: 1.15rem;
+    overflow-y: auto;
   }
 
   .isExpanded .titleWord {
@@ -654,6 +687,12 @@
   .isExpanded .cardDescription {
     font-size: 1.1rem;
     max-width: none;
+  }
+
+  .comingSoonOverlay {
+    font-size: clamp(0.9rem, 4.5vw, 1.2rem);
+    padding: 0 0.8rem;
+    letter-spacing: 0.15em;
   }
 }
 
