@@ -18,13 +18,11 @@ export function About(): React.JSX.Element {
         <div className={styles.textWrapper}>
           <h2 className={styles.heading}>About Techkshetra</h2>
           <p className={styles.textContent}>
-            The biennial technical festival of Rajagiri School of Engineering
-            and Technology, Kakkanad. Kerala is a treasure trove of a wide range
-            of events that ring together students of all fields for a day like
-            no other. With a wide variety of events that encompass every
-            wavelength and aspect of a student, participants get a chance to
-            witness and be part of something extraordinary. Not to mention, the
-            cultural programs that make up a large part of the event.
+            The biennial technical festival of Rajagiri School of Engineering and Technology (RSET)
+            in Kakkanad, Kerala, is a treasure trove of events that brings together students from all
+            fields for an experience like no other. Featuring a diverse lineup of activities that cater
+            to every interest and talent, participants have the chance to witness and be part of something
+            truly extraordinary.
           </p>
         </div>
       </div>
