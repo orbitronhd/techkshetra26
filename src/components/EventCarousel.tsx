@@ -131,6 +131,7 @@ export function EventCarousel({
           const isExpanded = !!expandedMap[index];
           const cardClass = getCardClass(index);
           const isActive = index === activeIndex;
+          const isComingSoon = !event.date || new Date(event.date) >= new Date("2026-08-05");
 
           return (
             <div
@@ -145,7 +146,7 @@ export function EventCarousel({
             >
               <div className={styles.cardInner}>
                 <div className={`${styles.cardFace} ${styles.cardFront}`}>
-                  <div className={styles.cardBackground}>
+                  <div className={`${styles.cardBackground} ${isComingSoon ? styles.comingSoonBlur : ""}`}>
                     {event.imageUrl ? (
                       <img 
                         src={event.imageUrl} 
@@ -174,7 +175,7 @@ export function EventCarousel({
 
 
 
-                    <div className={styles.cardBottom}>
+                    <div className={`${styles.cardBottom} ${isComingSoon ? styles.comingSoonBlur : ""}`}>
                       <div className={styles.venueTimeSection}>
                         <div className={styles.venueTimeRow}>
                           <span className={styles.icon}>
@@ -211,7 +212,7 @@ export function EventCarousel({
                       <div className={styles.logoBox}>{event.organizer || "ORG"}</div>
                     </div>
 
-                    <div className={`${styles.expandedSection} ${isExpanded ? styles.showExpanded : ""}`}>
+                    <div className={`${styles.expandedSection} ${isExpanded ? styles.showExpanded : ""} ${isComingSoon ? styles.comingSoonBlur : ""}`}>
                       <h3 className={styles.expandedCategory}>{event.category}</h3>
 
                       {event.description && event.description !== "TBD" && (
@@ -277,12 +278,15 @@ export function EventCarousel({
                       )}
                     </div>
 
-                    {isActive && !isExpanded && (
+                    {isActive && !isExpanded && !isComingSoon && (
                       <div className={styles.clickForDetails}>
                         Click for details
                       </div>
                     )}
                   </div>
+                  {isComingSoon && (
+                    <div className={styles.comingSoonOverlay}>COMING SOON</div>
+                  )}
                 </div>
               </div>
             </div>
