@@ -19,6 +19,13 @@ import imgMetroRethink from "../assets/events/Metro Rethink.png";
 import imgPostItUp from "../assets/events/Post it up poster.jpg";
 import imgRextech from "../assets/events/Rextech.png";
 import imgScenius from "../assets/events/Scenious 4.0 .png";
+import imgCapitalClash from "../assets/events/Capital_Clash.png";
+import imgCircuitSafari from "../assets/events/Circuit safari.png";
+import imgPayload from "../assets/events/Payload.png";
+import imgReviveNight from "../assets/events/ReviveNight.png";
+import imgTraceback from "../assets/events/Traceback.png";
+import imgCircuitQuest from "../assets/events/circuit_quest.PNG";
+import imgShahiDossier from "../assets/events/shahi dossier.PNG";
 
 const ACTUAL_EVENTS: CarouselEvent[] = [
   {
@@ -30,7 +37,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "IEDC",
     time: "4/8/26 to 5/8/26",
     registrationFee: "₹249/-",
-    imageUrl: defaultEventImage,
+    imageUrl: imgReviveNight,
     date: "2026-08-05"
   },
   {
@@ -104,7 +111,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "CSI-SB RSET",
     time: "5/8/26",
     registrationFee: "TBD",
-    imageUrl: defaultEventImage,
+    imageUrl: imgTraceback,
     date: "2026-08-05"
   },
   {
@@ -143,7 +150,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     time: "4:30 PM - 6:00 PM",
     venue: "Basic Electronics Lab ",
     registrationFee: "₹180/-",
-    imageUrl: defaultEventImage,
+    imageUrl: imgCircuitSafari,
     date: "2026-08-04",
     registrationLink: "https://konfhub.com/circuit-safari"
   },
@@ -157,7 +164,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     time: "4:30 PM - 6:00 PM",
     venue: "VI Lab ",
     registrationFee: "₹300/-",
-    imageUrl: defaultEventImage,
+    imageUrl: imgCircuitQuest,
     date: "2026-08-04",
     registrationLink: "https://konfhub.com/circuit-quest"
   },
@@ -194,7 +201,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "Mughals",
     time: "5/8/26",
     registrationFee: "TBD",
-    imageUrl: defaultEventImage,
+    imageUrl: imgShahiDossier,
     date: "2026-08-05"
   },
   {
@@ -279,7 +286,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "GenSys",
     time: "5/8/26",
     registrationFee: "TBD",
-    imageUrl: defaultEventImage,
+    imageUrl: imgCapitalClash,
     date: "2026-08-05"
   },
   {
@@ -305,7 +312,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "Electronauts",
     time: "4/8/26-5/8/26",
     registrationFee: "350 per member",
-    imageUrl: defaultEventImage,
+    imageUrl: imgPayload,
     date: "2026-08-05"
   }
 ];
