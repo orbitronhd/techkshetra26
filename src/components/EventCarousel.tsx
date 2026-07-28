@@ -274,16 +274,7 @@ export const EventCarousel: React.FC<EventCarouselProps> = ({
                         </div>
                       )}
 
-                      {event.title === "REXTECH GAMELAB" ? (
-                        <button
-                          type="button"
-                          className={`${styles.actionButton} ${styles.soldOutButton}`}
-                          onClick={(e) => e.stopPropagation()}
-                          disabled
-                        >
-                          SOLD OUT
-                        </button>
-                      ) : event.registrationLink ? (
+                      {event.registrationLink ? (
                         <a 
                           href={event.registrationLink} 
                           target="_blank" 
