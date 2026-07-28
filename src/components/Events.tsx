@@ -3,7 +3,7 @@ import { useState, useMemo } from "react";
 import styles from "./css/Page.module.css";
 import { EventCarousel } from "./EventCarousel.tsx";
 import type { CarouselEvent } from "./EventCarousel.tsx";
-import defaultEventImage from "../assets/TK26-logo-color.webp";
+// import defaultEventImage from "../assets/TK26-logo-color.webp";
 
 // Import event images
 import imgAdaptathon from "../assets/events/ADAPTATHON.webp";
