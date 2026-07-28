@@ -154,6 +154,12 @@
   filter: blur(3px);
 }
 
+.defaultLogoImage {
+  object-fit: contain !important;
+  filter: blur(0px) !important;
+  padding: 2rem;
+}
+
 .imagePlaceholderFallback {
   background: linear-gradient(135deg, #1a1a2e, #16213e);
 }
@@ -169,14 +175,35 @@
 }
 
 .cardContent {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 2;
-  width: 100%;
-  height: 100%;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   text-align: left;
+  overflow-y: auto;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cardContent > * {
+  flex-shrink: 0;
+}
+
+.cardContent::-webkit-scrollbar {
+  width: 4px;
+}
+.cardContent::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+.cardContent::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
 }
 
 .cardHeader {
@@ -313,7 +340,7 @@
 }
 
 .showExpanded {
-  max-height: 300px;
+  max-height: 2000px;
   opacity: 1;
   margin-top: 1.5rem;
 }
@@ -331,6 +358,59 @@
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.5;
   margin: 0;
+}
+
+.descriptionSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.eventDescription {
+  font-family: var(--font-family-primary, sans-serif);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+  margin: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.descCollapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-height: 4.2em;
+}
+
+.descExpanded {
+  display: block;
+  max-height: 1500px;
+}
+
+.readMoreBtn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-top: 0.2rem;
+  transition: all 0.3s ease;
+}
+
+.readMoreBtn:hover {
+  background: rgba(191, 88, 255, 0.2);
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
 }
 
 .prizePoolSection {

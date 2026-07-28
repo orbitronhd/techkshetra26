@@ -16,7 +16,6 @@ import imgHelloFriday from "../assets/events/Hello Friday.jpg";
 import imgLightsLensAction from "../assets/events/LightLensAction.jpg";
 import imgMercedesWorkshop from "../assets/events/mercedes workshop.jpeg";
 import imgMetroRethink from "../assets/events/Metro Rethink.png";
-import imgProjectBlackbox from "../assets/events/Payload_Electronauts.png";
 import imgPostItUp from "../assets/events/Post it up poster.jpg";
 import imgRextech from "../assets/events/Rextech.png";
 import imgScenius from "../assets/events/Scenious 4.0 .png";
@@ -26,25 +25,25 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-1",
     title: "REVIVE NIGHT",
     category: "Hackathon",
-    description: "Teams analyze a given failed startup case, diagnose why it failed, and build an MVP (Minimum Viable Product) addressing that failure",
+    description: "All teams are given problem statements, which consists of failed startups.Participants have to find out why it failed and make an MVP within 12 hours",
     prizePool: "₹15000/-",
     organizer: "IEDC",
     time: "4/8/26 to 5/8/26",
     registrationFee: "₹249/-",
     imageUrl: defaultEventImage,
-    date: "2026-08-04"
+    date: "2026-08-05"
   },
   {
     id: "ev-2",
     title: "Adaptathon",
     category: "Hackathon",
-    description: "Teams get handed a live codebase every 2 hours and must rapidly decode, adapt, and push it forward before passing it on. It's a 12-hour test of collaboration, adaptability, and code comprehension — not just building, but building together.",
+    description: "Welcome to the ultimate relay-style hackathon, where teams of 3 to 4 race to develop projects from core prompts, but with a massive twist: every two hours, they must hand off their codebase and inherit a completely unfamiliar project from another team. Their challenge is to quickly decipher the previous group's work, seamlessly add new features, and push their code before the two-hour clock strikes zero again. Instead of evaluating just the final product, dedicated panels continuously score teams based on the actual progress and value they added to the specific code they received. The team that adapts the fastest, collaborates the best, and builds the most effectively across these relentless sprints will claim the ultimate victory!",
     prizePool: "₹10000/-",
     organizer: "ITRAX",
     time: "4/8/26 to 5/8/26",
     registrationFee: "₹150/-",
     imageUrl: imgAdaptathon,
-    date: "2026-08-04"
+    date: "2026-08-05"
   },
   {
     id: "ev-3",
@@ -54,15 +53,16 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "Nil",
     organizer: "REAL MECHANICA",
     time: "31/7/26",
+    venue: "Chavara Hall",
     registrationFee: "₹400/-",
     imageUrl: imgEnduro,
     date: "2026-07-31"
   },
   {
     id: "ev-4",
-    title: "RaceCraft RC",
+    title: "ATV:Build & Race-RaceCraft RC",
     category: "Competition",
-    description: "Team-based engineering competition where 4-member teams design and build RC race cars per given specs, then compete on a multi-terrain obstacle track testing speed, stability, and durability",
+    description: "RaceCraft RC is a team-based engineering competition where each team of four members designs and builds a Radio Controlled (RC) race car before the event, following the technical specifications provided by the organizers. On the event day, participants will first attend a technical session conducted by experts, covering RC vehicle design, race rules, safety guidelines, and performance optimization. Following the session and technical inspection, teams will compete in multiple challenge rounds on a specially designed track featuring different terrains and obstacles that test the vehicle's speed, stability, maneuverability, and durability. The event aims to provide hands-on experience in engineering design, problem-solving, and teamwork while fostering innovation through competitive racing.",
     prizePool: "₹8000/-",
     organizer: "Spartans",
     time: "5/8/26",
@@ -74,7 +74,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-5",
     title: "Scenius 4.0",
     category: "Series of Rounds",
-    description: "Four-round technical competition held in association with the Bureau of Indian Standards (BIS), featuring a standards quiz, standard creation challenge, technical treasure hunt, and bridge-building competition.",
+    description: "Scenius 4.0 is a four-round technical competition organized in association with the Bureau of Indian Standards (BIS) to promote engineering knowledge, standardization, teamwork, and problem-solving skills. Through a combination of a BIS standards quiz, a standard creation challenge, a technical treasure hunt, and a bridge-building competition, participants are tested on their analytical thinking, creativity, and practical engineering abilities. The event aims to bridge the gap between theoretical learning and real-world engineering applications while fostering awareness of the importance of standards in everyday life and the engineering profession.",
     prizePool: "10,000/-",
     organizer: "Nirmana",
     time: "5/8/26",
@@ -86,7 +86,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-6",
     title: "The Ghost Protocol",
     category: "Series of Rounds",
-    description: "Team-based, story-driven puzzle event where participants solve a sequence of interconnected clues to progress through a mission narrative toward a final challenge. Puzzles span cryptography (Atbash, Caesar cipher, and similar techniques), C programming tasks, and logic circuit-based challenges",
+    description: "The Ghost Protocol is a team-based puzzle-solving event in which participants work through a sequence of interconnected challenges. The event is designed around a story-based investigation, with each puzzle revealing a clue that leads to the next stage of the mission. Teams must solve the puzzles in succession in order to progress through the storyline and reach the final challenge. The puzzles will include a variety of encryption and decoding techniques such as Atbash cipher, Caesar cipher, and similar cryptographic formats, along with selected coding-based tasks in C along with a logic circuit based puzzles.",
     prizePool: "₹3000/-",
     organizer: "NDLI RSET",
     time: "5/8/26",
@@ -98,7 +98,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-7",
     title: "Traceback",
     category: "Competition",
-    description: "TRACEBACK is a narrative-driven technical escape room by the CSI Student Branch where 2-member teams act as digital forensic analysts, using OSINT, cipher decoding, steganography, and API-based challenges to solve a campus-wide mystery — no coding experience required.",
+    description: "TRACEBACK is a narrative-driven technical escape room organized by the CSI Student Branch where teams act as digital forensic analysts to solve a campus-wide mystery. The event requires zero prior coding knowledge, making it fully accessible to all engineering branches while introducing real-world technology concepts.",
     prizePool: "₹3500/-",
     organizer: "CSI-SB RSET",
     time: "5/8/26",
@@ -110,11 +110,12 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-8",
     title: "POST IT UP!",
     category: "Workshop",
-    description: "TBD",
+    description: "A 2-hour beginner-friendly Canva workshop by the Jesus Youth RSET Media Team, part of Techkshtra, covering design basics and a hands-on poster-making activity.",
     prizePool: "Nil",
     organizer: "Jesus Youth RSET",
     time: "3/8/26",
-    registrationFee: "NIL",
+    venue: "Zuse Lab",
+    registrationFee: "Free",
     imageUrl: imgPostItUp,
     date: "2026-08-03"
   },
@@ -122,7 +123,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-9",
     title: "BOTFORGE",
     category: "Ideathon",
-    description: "BotForge is a ideathon focused on technology-driven social impact, where teams tackle curated problem statements and pitch conceptual solutions to a judging panel.",
+    description: "An intensive Ideathon focusing on technology-driven social impact.",
     prizePool: "₹5000/-",
     organizer: "IEEE RAS x NSS",
     time: "5/8/26",
@@ -134,10 +135,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-10",
     title: "Circuit Safari",
     category: "Competition",
-    description: "This is a 3-round elimination technical competition for teams of 3, testing Electronics and Engineering knowledge through a technical crossword, K-map problem solving and a final circuit-building round using Boolean laws.",
+    description: "Test your engineering skills in this fast-paced, three-round elimination tournament for 15 teams. The competition begins with a 20-minute electronics crossword puzzle, narrowing the field to 10 teams. In the 30-minute second round, competitors tackle complex K-maps, with only the top five advancing. The 30-minute final challenges these elite teams to solve problems using Boolean laws and construct a live working circuit, where the fastest functional build claims the championship.",
     prizePool: "₹1600/-",
     organizer: "IEEE SPS SB RSET",
-    time: "4/8/26",
+    time: "4:30 PM - 6:00 PM",
+    venue: "Basic Electronics Lab ",
     registrationFee: "₹180/-",
     imageUrl: defaultEventImage,
     date: "2026-08-04"
@@ -146,10 +148,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-11",
     title: "Circuit Quest",
     category: "Debugging Event",
-    description: "Technical treasure hunt for teams of 2-4 members, testing electronics and instrumentation knowledge through challenge stations covering circuit debugging, component identification, logic puzzles, sensor recognition, and binary/hex decoding.",
+    description: "Circuit Quest is an exciting technical treasure hunt designed to test participants' electronics knowledge, problem-solving abilities, and teamwork.",
     prizePool: "₹2000/-",
     organizer: "Apptronics",
-    time: "4/8/26",
+    time: "4:30 PM - 6:00 PM",
+    venue: "VI Lab ",
     registrationFee: "₹300/-",
     imageUrl: defaultEventImage,
     date: "2026-08-04"
@@ -158,7 +161,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-12",
     title: "AMONG US 3.0",
     category: "Treasure Hunt",
-    description: "Among Us-inspired campus challenge combining coding, cybersecurity, debugging, and QR-based missions, where teams earn Crew Points while secret Impostor Teams mislead others until an Emergency Meeting vote reveals them.",
+    description: "Among Us 3.0 is a technology-driven campus challenge that combines coding, logical reasoning, cybersecurity, debugging, and QR-based interactive missions into an immersive competitive experience inspired by the popular multiplayer game Among Us.",
     prizePool: "₹3,500/-",
     organizer: "IEEE CS RSET SBC",
     time: "5/8/26",
@@ -170,7 +173,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-13",
     title: "REXTECH GAMELAB",
     category: "Workshop",
-    description: "4-hour beginner-friendly workshop in collaboration with Rextech Studios, Infopark Kochi, covering the game development industry, career paths, and a hands-on Unity session where participants build a simple 2D game using C# scripting, physics, and collision detection.",
+    description: "\"Introduction to Game Development with Hands-on Unity Session\" in collaboration with Rextech Studios, Infopark Kochi.The 4-hour workshop is designed to introduce students to the fundamentals of game development through a combination of industry insights and practical learning. The session will be conducted by Aravind Parakkat, Game Developer at Rextech Studios, and will provide participants with an overview of the game development industry, career opportunities, and the complete game development lifecycle. The workshop will also include a hands-on session using the Unity Game Engine, where participants will build a simple 2D game while learning concepts such as game objects, physics, collision detection, basic C# scripting, user interface design, and core game mechanics. Designed for beginners, the workshop requires no prior experience and focuses on developing creativity, logical thinking, and problem-solving skills. By the end of the session, participants will have created and tested their own playable game using industry-standard tools.",
     prizePool: "Nil",
     organizer: "Vikings",
     time: "5/8/26",
@@ -182,7 +185,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-14",
     title: "Project Shahi Dossier",
     category: "Technical Treasure Hunt",
-    description: "TBD",
+    description: "Project shahi dossier opens with a 90-minute cybersecurity talk by TCS, followed by a live, story-driven treasure hunt across 13 connected investigation stages, and closes with a courtroom finale where teams present their case for a ₹10,000 prize pool. It is open to all departments and no prior cybersecurity knowledge required.",
     prizePool: "₹10,000/-",
     organizer: "Mughals",
     time: "5/8/26",
@@ -194,7 +197,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-15",
     title: "Metro Rethink",
     category: "Problem Solving Challenge",
-    description: "TBD",
+    description: "Teams come up with a problem statement after field study and work on it for the solution. The judges panel will filter out and bring out 3-5 teams for the finale for which the teams will be asked to assemble at an assembly point and a KMRL feeder bus will pick them up and bring them to RSET campus where the bus will be parked and using the bus as background the team will present their presentation of their problems and solutions in front of the judges.",
     prizePool: "₹6000/-",
     organizer: "Rajputs",
     time: "5/8/26",
@@ -206,7 +209,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-16",
     title: "Lights Lens Action",
     category: "Cinematography Masterclass",
-    description: "TBD",
+    description: "Lights • Lens • Action is a 3-hour interactive cinematography workshop designed to introduce students to the art and technology of visual storytelling. Led by Mr. Naveen Najose, an RSET alumnus and professional cinematographer, the workshop begins with a 2-hour interactive session covering the fundamentals of cinematography, camera techniques, lens selection, composition, shot design, and the filmmaking process through real-world industry insights. This is followed by a hands-on practical session, where participants can apply the concepts they have learned, and concludes with an engaging Q&A session, providing students with the opportunity to interact directly with the speaker, clarify their doubts, and gain valuable insights into careers and opportunities in the film industry.",
     prizePool: "Nil",
     organizer: "ARYANS",
     time: "5/8/26",
@@ -216,9 +219,9 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
   },
   {
     id: "ev-17",
-    title: "CRUSHING DEPTHS",
+    title: "CRUSHING DEPTHS:CTF",
     category: "CTF",
-    description: "TBD",
+    description: "Cyberblitz CTF: Crushing Depths is a progressive cybersecurity competition where teams dive through layered challenges in cryptography, web exploitation, reverse engineering, and forensics , each solve unlocking the next, all the way to the final flag.",
     prizePool: "₹10,000/-",
     organizer: "CyberBlitz",
     time: "5/8/26",
@@ -226,23 +229,12 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     imageUrl: imgCrushingDepths,
     date: "2026-08-05"
   },
-  {
-    id: "ev-18",
-    title: "PROJECT BLACKBOX",
-    category: "Hackathon",
-    description: "TBD",
-    prizePool: "₹15000/-",
-    organizer: "Electronauts",
-    time: "4/8/26",
-    registrationFee: "TBD",
-    imageUrl: imgProjectBlackbox,
-    date: "2026-08-04"
-  },
+
   {
     id: "ev-19",
     title: "DRONIX",
     category: "Workshop",
-    description: "TBD",
+    description: "'DRONIX' is a drone workshop conducted by Airpix with the objective of providing participants with a foundational understanding of unmanned aerial vehicles (UAVs). The workshop covers the basic principles of drone operation, major hardware components, flight control systems, assembly, safety practices, and the applications of drones across various industries.",
     prizePool: "NA",
     organizer: "Eluxtra x IEEE RAS",
     time: "5/8/26",
@@ -254,7 +246,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-20",
     title: "Hello Friday: Build your own Jarvis",
     category: "Workshop",
-    description: "TBD",
+    description: "3 hour hands on Conversational AI assistant workshop",
     prizePool: "Nil",
     organizer: "Articon",
     time: "5/8/26",
@@ -266,7 +258,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-21",
     title: "Mercedes Workshop",
     category: "Workshop",
-    description: "TBD",
+    description: "A 3 hour interactive session where the experienced industry people from Mercedes talk about the latest and greatest tech",
     prizePool: "Nil",
     organizer: "Apptronics x SAE",
     time: "5/8/26",
@@ -278,7 +270,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-22",
     title: "CAPITAL CLASH",
     category: "Business Event",
-    description: "TBD",
+    description: "Capital Clash is a fast-paced business strategy event where teams compete to build the strongest business empire by acquiring assets, tackling business challenges, negotiating deals, and adapting to unexpected market twists. Success depends on strategic thinking, teamwork, and smart financial decisions.",
     prizePool: "₹3000/-",
     organizer: "GenSys",
     time: "5/8/26",
@@ -290,28 +282,41 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-23",
     title: "Standards exhibition",
     category: "Exhibition and awareness",
-    description: "TBD",
+    description: "Technical exhibition on Standards Awareness during Techkshethra 2026. The event aims to create awareness among students about the importance of Indian Standards (IS), the ISI mark, and quality certification in engineering and everyday consumer products.",
     prizePool: "Nil",
     organizer: "BIS CIRCUIT BRANCH",
     time: "31/7/26",
-    registrationFee: "TBD",
+    venue: "BIS corner-Library",
+    registrationFee: "Free",
     imageUrl: defaultEventImage,
     date: "2026-07-31"
+  },
+  {
+    id: "ev-24",
+    title: "Payload",
+    category: "Competition",
+    description: "TBD",
+    prizePool: "₹15,000/-",
+    organizer: "Electronauts",
+    time: "4/8/26-5/8/26",
+    registrationFee: "350 per member",
+    imageUrl: defaultEventImage,
+    date: "2026-08-05"
   }
 ];
 
 export function Events(): React.JSX.Element {
-  const [uiFilterType, setUiFilterType] = useState<"All" | "Pre Event" | "Main Event">("All");
-  const [activeFilter, setActiveFilter] = useState<"All" | "Pre Event" | "Main Event">("All");
+  const [uiFilterType, setUiFilterType] = useState<"Featured" | "Pre Event" | "Main Event">("Featured");
+  const [activeFilter, setActiveFilter] = useState<"Featured" | "Pre Event" | "Main Event">("Featured");
   const [isShuffling, setIsShuffling] = useState(false);
 
-  const handleFilterClick = (newFilter: "All" | "Pre Event" | "Main Event") => {
+  const handleFilterClick = (newFilter: "Featured" | "Pre Event" | "Main Event") => {
     if (newFilter === uiFilterType) return;
-    
+
     // Start exit animation (shuffle cards into a deck)
     setIsShuffling(true);
-    setUiFilterType(newFilter); 
-    
+    setUiFilterType(newFilter);
+
     // Wait for exit animation, swap content, then animate in
     setTimeout(() => {
       setActiveFilter(newFilter);
@@ -322,15 +327,24 @@ export function Events(): React.JSX.Element {
   };
 
   const filteredEvents = useMemo(() => ACTUAL_EVENTS.filter(event => {
-    if (activeFilter === "All") return true;
-    
+    if (activeFilter === "Featured") {
+      const featuredTitles = [
+        "ATV:Build & Race-RaceCraft RC",
+        "REXTECH GAMELAB",
+        "Project Shahi Dossier",
+        "Metro Rethink",
+        "Lights Lens Action"
+      ];
+      return featuredTitles.includes(event.title);
+    }
+
     let type = event.eventType;
     if (event.date) {
       const eventDate = new Date(event.date);
       const splitDate = new Date("2026-08-05");
       type = eventDate < splitDate ? "Pre Event" : "Main Event";
     }
-    
+
     return (type || "Main Event") === activeFilter;
   }), [activeFilter]);
 
@@ -342,23 +356,23 @@ export function Events(): React.JSX.Element {
 
       <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}>
         <div className={styles.pillContainer}>
-          <button 
-            onClick={() => handleFilterClick("All")}
-            className={`${styles.pillButton} ${uiFilterType === "All" ? styles.pillButtonActive : ""}`}
+          <button
+            onClick={() => handleFilterClick("Featured")}
+            className={`${styles.pillButton} ${uiFilterType === "Featured" ? styles.pillButtonActive : ""}`}
           >
-            All
+            Featured
           </button>
-          <button 
+          <button
             onClick={() => handleFilterClick("Pre Event")}
             className={`${styles.pillButton} ${uiFilterType === "Pre Event" ? styles.pillButtonActive : ""}`}
           >
             Pre Events
           </button>
-          <button 
+          <button
             onClick={() => handleFilterClick("Main Event")}
             className={`${styles.pillButton} ${uiFilterType === "Main Event" ? styles.pillButtonActive : ""}`}
           >
-            Main Events
+            Events
           </button>
         </div>
       </div>

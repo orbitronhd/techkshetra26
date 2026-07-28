@@ -5,7 +5,6 @@ import cardStyles from "./css/Tshirts.module.css";
 import tshirtImage from "../assets/TK26-shirt.png";
 
 export function Tshirts(): React.JSX.Element {
-  const [isFlipped, setIsFlipped] = useState(false);
   const [showWidget, setShowWidget] = useState(false);
 
   return (

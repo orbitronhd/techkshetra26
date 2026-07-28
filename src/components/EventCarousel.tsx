@@ -28,11 +28,13 @@ export function EventCarousel({
 }: EventCarouselProps): React.JSX.Element {
   const [activeIndex, setActiveIndex] = useState(0);
   const [expandedMap, setExpandedMap] = useState<Record<number, boolean>>({});
+  const [descExpandedMap, setDescExpandedMap] = useState<Record<number, boolean>>({});
 
   // Reset activeIndex when events array changes
   useEffect(() => {
     setActiveIndex(0);
     setExpandedMap({});
+    setDescExpandedMap({});
   }, [events]);
 
   // Touch swipe support
@@ -42,11 +44,13 @@ export function EventCarousel({
   const handleNext = () => {
     setActiveIndex((prev) => (prev + 1) % events.length);
     setExpandedMap({});
+    setDescExpandedMap({});
   };
 
   const handlePrev = () => {
     setActiveIndex((prev) => (prev - 1 + events.length) % events.length);
     setExpandedMap({});
+    setDescExpandedMap({});
   };
 
   const handleCardClick = (index: number) => {
@@ -58,6 +62,7 @@ export function EventCarousel({
     } else {
       setActiveIndex(index);
       setExpandedMap({});
+      setDescExpandedMap({});
     }
   };
 
@@ -144,6 +149,7 @@ export function EventCarousel({
                       <img 
                         src={event.imageUrl} 
                         alt={event.title}
+                        className={event.imageUrl.includes("TK26-logo-color") ? styles.defaultLogoImage : ""}
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';
                         }}
@@ -172,6 +178,19 @@ export function EventCarousel({
                         <div className={styles.venueTimeRow}>
                           <span className={styles.icon}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                              <line x1="16" y1="2" x2="16" y2="6"></line>
+                              <line x1="8" y1="2" x2="8" y2="6"></line>
+                              <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                          </span>
+                          <span className={styles.venueTimeText}>
+                            {event.date ? new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : "TBA"}
+                          </span>
+                        </div>
+                        <div className={styles.venueTimeRow}>
+                          <span className={styles.icon}>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                               <circle cx="12" cy="10" r="3"></circle>
                             </svg>
@@ -185,7 +204,7 @@ export function EventCarousel({
                               <polyline points="12 6 12 12 16 14"></polyline>
                             </svg>
                           </span>
-                          <span className={styles.venueTimeText}>TBH</span>
+                          <span className={styles.venueTimeText}>{event.time || "TBA"}</span>
                         </div>
                       </div>
                       <div className={styles.logoBox}>{event.organizer || "ORG"}</div>
@@ -193,6 +212,34 @@ export function EventCarousel({
 
                     <div className={`${styles.expandedSection} ${isExpanded ? styles.showExpanded : ""}`}>
                       <h3 className={styles.expandedCategory}>{event.category}</h3>
+
+                      {event.description && event.description !== "TBD" && (
+                        <div className={styles.descriptionSection}>
+                          <p className={`${styles.eventDescription} ${descExpandedMap[index] ? styles.descExpanded : styles.descCollapsed}`}>
+                            {event.description}
+                          </p>
+                          {event.description.length > 100 && (
+                            <button 
+                              type="button"
+                              className={styles.readMoreBtn} 
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                const isExpanding = !descExpandedMap[index];
+                                setDescExpandedMap(prev => ({...prev, [index]: isExpanding}));
+                                if (!isExpanding) {
+                                  const pElement = e.currentTarget.previousElementSibling as HTMLElement;
+                                  if (pElement) {
+                                    pElement.scrollTop = 0;
+                                  }
+                                }
+                              }}
+                            >
+                              {descExpandedMap[index] ? "▲" : "▼"}
+                            </button>
+                          )}
+                        </div>
+                      )}
+
                       {event.prizePool && event.prizePool !== "Nil" && event.prizePool !== "nil" && event.prizePool !== "NA" && event.prizePool !== "NA." && (
                         <div className={styles.prizePoolSection}>
                           <span className={styles.prizePoolLabel}>Prize Pool:</span>
