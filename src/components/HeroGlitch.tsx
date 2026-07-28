@@ -5,8 +5,26 @@ import styles from "./css/HeroGlitch.module.css";
 
 export function HeroGlitch(): React.JSX.Element {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
+    const checkTouch = () => {
+      const touchEnabled =
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0 ||
+        window.matchMedia("(pointer: coarse)").matches ||
+        window.matchMedia("(max-width: 768px)").matches;
+      setIsTouchDevice(touchEnabled);
+    };
+
+    checkTouch();
+    window.addEventListener("resize", checkTouch);
+    return () => window.removeEventListener("resize", checkTouch);
+  }, []);
+
+  useEffect(() => {
+    if (isTouchDevice) return;
+
     const handleMouseMove = (e: MouseEvent) => {
       const x = (e.clientX / window.innerWidth) * 2 - 1;
       const y = (e.clientY / window.innerHeight) * 2 - 1;
@@ -15,13 +33,13 @@ export function HeroGlitch(): React.JSX.Element {
 
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+  }, [isTouchDevice]);
 
-  const textX = mousePosition.x * 20;
-  const textY = mousePosition.y * 20;
+  const textX = isTouchDevice ? 0 : mousePosition.x * 20;
+  const textY = isTouchDevice ? 0 : mousePosition.y * 20;
 
-  const fgX = mousePosition.x * -40;
-  const fgY = mousePosition.y * -40;
+  const fgX = isTouchDevice ? 0 : mousePosition.x * -40;
+  const fgY = isTouchDevice ? 0 : mousePosition.y * -40;
 
   return (
     <div className={styles.heroContainer}>

@@ -102,6 +102,19 @@
   transform: scale(1.02);
 }
 
+:global(body.theme-negative) .angelImage,
+:global(body.theme-negative) .angelImage:hover {
+  -webkit-filter: invert(1) hue-rotate(180deg) drop-shadow(0 20px 30px rgba(0,0,0,0.5)) !important;
+  filter: invert(1) hue-rotate(180deg) drop-shadow(0 20px 30px rgba(0,0,0,0.5)) !important;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+:global(body.theme-negative) .angelImage:hover {
+  -webkit-transform: scale(1.02) translateZ(0);
+  transform: scale(1.02) translateZ(0);
+}
+
 @media (max-width: 768px) {
   .massiveText {
     font-size: min(10vw, 3.8rem);
@@ -113,6 +126,11 @@
   .angelImage {
     height: 65vh;
     max-width: 85vw;
+  }
+
+  .textLayer,
+  .foregroundLayer {
+    transform: translate(0, 0) !important;
   }
 }
 

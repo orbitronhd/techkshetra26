@@ -50,3 +50,9 @@
   background-color: white;
   border-color: transparent;
 }
+
+@media (max-width: 768px), (pointer: coarse) {
+  .cursorWrapper {
+    display: none !important;
+  }
+}

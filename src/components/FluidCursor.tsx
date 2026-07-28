@@ -15,8 +15,26 @@ export function FluidCursor(): React.JSX.Element | null {
     y: window.innerHeight / 2,
   });
 
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
   useEffect(() => {
-    if (window.matchMedia("(pointer: coarse)").matches) {
+    const checkTouch = () => {
+      const touch =
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0 ||
+        window.matchMedia("(pointer: coarse)").matches ||
+        window.matchMedia("(max-width: 768px)").matches ||
+        window.innerWidth <= 768;
+      setIsTouchDevice(touch);
+    };
+
+    checkTouch();
+    window.addEventListener("resize", checkTouch);
+    return () => window.removeEventListener("resize", checkTouch);
+  }, []);
+
+  useEffect(() => {
+    if (isTouchDevice) {
       return;
     }
 
@@ -76,9 +94,9 @@ export function FluidCursor(): React.JSX.Element | null {
       window.removeEventListener("mouseover", handleMouseOver);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [isVisible]);
+  }, [isVisible, isTouchDevice]);
 
-  if (window.matchMedia("(pointer: coarse)").matches) {
+  if (isTouchDevice) {
     return null;
   }
 
