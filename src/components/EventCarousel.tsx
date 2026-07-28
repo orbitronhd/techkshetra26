@@ -21,12 +21,14 @@ export interface CarouselEvent {
 interface EventCarouselProps {
   events: readonly CarouselEvent[];
   isShuffling?: boolean;
+  activeFilter?: string;
 }
 
-export function EventCarousel({
+export const EventCarousel: React.FC<EventCarouselProps> = ({
   events,
-  isShuffling,
-}: EventCarouselProps): React.JSX.Element {
+  isShuffling = false,
+  activeFilter,
+}) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [expandedMap, setExpandedMap] = useState<Record<number, boolean>>({});
   const [descExpandedMap, setDescExpandedMap] = useState<Record<number, boolean>>({});
@@ -133,7 +135,7 @@ export function EventCarousel({
           const isExpanded = !!expandedMap[index];
           const cardClass = getCardClass(index);
           const isActive = index === activeIndex;
-          const isComingSoon = !event.date || new Date(event.date) >= new Date("2026-08-05");
+          const isComingSoon = activeFilter === "Main Event";
 
           return (
             <div

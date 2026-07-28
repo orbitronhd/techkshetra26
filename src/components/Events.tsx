@@ -35,7 +35,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "All teams are given problem statements, which consists of failed startups.Participants have to find out why it failed and make an MVP within 12 hours",
     prizePool: "₹15000/-",
     organizer: "IEDC",
-    time: "4/8/26-5/8/26",
+    time: "5:00PM-10:00AM",
+    venue: "Gallery Hall",
     registrationFee: "₹249/-",
     imageUrl: imgReviveNight,
     date: "2026-08-05"
@@ -47,7 +48,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Welcome to the ultimate relay-style hackathon, where teams of 3 to 4 race to develop projects from core prompts, but with a massive twist: every two hours, they must hand off their codebase and inherit a completely unfamiliar project from another team. Their challenge is to quickly decipher the previous group's work, seamlessly add new features, and push their code before the two-hour clock strikes zero again. Instead of evaluating just the final product, dedicated panels continuously score teams based on the actual progress and value they added to the specific code they received. The team that adapts the fastest, collaborates the best, and builds the most effectively across these relentless sprints will claim the ultimate victory!",
     prizePool: "₹10000/-",
     organizer: "ITRAX",
-    time: "4/8/26-5/8/26",
+    time: "5:00PM-9:00AM",
+    venue: "Kleinrock Lab,Turing Lab,CODD Lab,Shannon Lab",
     registrationFee: "₹150/-",
     imageUrl: imgAdaptathon,
     date: "2026-08-05"
@@ -73,10 +75,12 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "RaceCraft RC is a team-based engineering competition where each team of four members designs and builds a Radio Controlled (RC) race car before the event, following the technical specifications provided by the organizers. On the event day, participants will first attend a technical session conducted by experts, covering RC vehicle design, race rules, safety guidelines, and performance optimization. Following the session and technical inspection, teams will compete in multiple challenge rounds on a specially designed track featuring different terrains and obstacles that test the vehicle's speed, stability, maneuverability, and durability. The event aims to provide hands-on experience in engineering design, problem-solving, and teamwork while fostering innovation through competitive racing.",
     prizePool: "₹8000/-",
     organizer: "Spartans",
-    time: "5/8/26",
-    registrationFee: "₹500/- (Per Team of 4)",
+    time: "1:00PM-3:00PM",
+    venue: "PG Tutorial Hall 3",
+    registrationFee: "500",
     imageUrl: imgATV,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/atvbuild-race-racecraft-rc"
   },
   {
     id: "ev-5",
@@ -85,7 +89,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Scenius 4.0 is a four-round technical competition organized in association with the Bureau of Indian Standards (BIS) to promote engineering knowledge, standardization, teamwork, and problem-solving skills. Through a combination of a BIS standards quiz, a standard creation challenge, a technical treasure hunt, and a bridge-building competition, participants are tested on their analytical thinking, creativity, and practical engineering abilities. The event aims to bridge the gap between theoretical learning and real-world engineering applications while fostering awareness of the importance of standards in everyday life and the engineering profession.",
     prizePool: "10,000/-",
     organizer: "Nirmana",
-    time: "5/8/26",
+    time: "9:00AM-3:00PM",
+    venue: "KE Seminar Hall,LH20,LH21 4TH FLOOR KE Building,Survey Lab",
     registrationFee: "₹100/-",
     imageUrl: imgScenius,
     date: "2026-08-05"
@@ -148,7 +153,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹1600/-",
     organizer: "IEEE SPS SB RSET",
     time: "4:30 PM-6:00 PM",
-    venue: "Basic Electronics Lab ",
+    venue: "LCD Lab ",
     registrationFee: "₹150/-",
     imageUrl: imgCircuitSafari,
     date: "2026-08-04",
@@ -187,10 +192,12 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "\"Introduction to Game Development with Hands-on Unity Session\" in collaboration with Rextech Studios, Infopark Kochi.The 4-hour workshop is designed to introduce students to the fundamentals of game development through a combination of industry insights and practical learning. The session will be conducted by Aravind Parakkat, Game Developer at Rextech Studios, and will provide participants with an overview of the game development industry, career opportunities, and the complete game development lifecycle. The workshop will also include a hands-on session using the Unity Game Engine, where participants will build a simple 2D game while learning concepts such as game objects, physics, collision detection, basic C# scripting, user interface design, and core game mechanics. Designed for beginners, the workshop requires no prior experience and focuses on developing creativity, logical thinking, and problem-solving skills. By the end of the session, participants will have created and tested their own playable game using industry-standard tools.",
     prizePool: "Nil",
     organizer: "Vikings",
-    time: "5/8/26",
-    registrationFee: "TBD",
+    time: "10:00AM-2:00PM",
+    venue: "Signal Processing Lab",
+    registrationFee: "150",
     imageUrl: imgRextech,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/rextech-gamelab"
   },
   {
     id: "ev-14",
@@ -199,10 +206,12 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Project shahi dossier opens with a 90-minute cybersecurity talk by TCS, followed by a live, story-driven treasure hunt across 13 connected investigation stages, and closes with a courtroom finale where teams present their case for a ₹10,000 prize pool. It is open to all departments and no prior cybersecurity knowledge required.",
     prizePool: "₹10,000/-",
     organizer: "Mughals",
-    time: "5/8/26",
-    registrationFee: "TBD",
+    time: "9:30AM-2:30PM",
+    venue: "Multimedia Hall",
+    registrationFee: "596",
     imageUrl: imgShahiDossier,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/project-shahi-dossier"
   },
   {
     id: "ev-15",
@@ -211,10 +220,12 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Teams come up with a problem statement after field study and work on it for the solution. The judges panel will filter out and bring out 3-5 teams for the finale for which the teams will be asked to assemble at an assembly point and a KMRL feeder bus will pick them up and bring them to RSET campus where the bus will be parked and using the bus as background the team will present their presentation of their problems and solutions in front of the judges.",
     prizePool: "₹6000/-",
     organizer: "Rajputs",
-    time: "5/8/26",
-    registrationFee: "TBD",
+    time: "1:00PM-3:00PM",
+    venue: "PG Porch",
+    registrationFee: "600",
     imageUrl: imgMetroRethink,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/metro-rethink"
   },
   {
     id: "ev-16",
@@ -223,10 +234,12 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Lights • Lens • Action is a 3-hour interactive cinematography workshop designed to introduce students to the art and technology of visual storytelling. Led by Mr. Naveen Najose, an RSET alumnus and professional cinematographer, the workshop begins with a 2-hour interactive session covering the fundamentals of cinematography, camera techniques, lens selection, composition, shot design, and the filmmaking process through real-world industry insights. This is followed by a hands-on practical session, where participants can apply the concepts they have learned, and concludes with an engaging Q&A session, providing students with the opportunity to interact directly with the speaker, clarify their doubts, and gain valuable insights into careers and opportunities in the film industry.",
     prizePool: "Nil",
     organizer: "ARYANS",
-    time: "5/8/26",
-    registrationFee: "TBD",
+    time: "11:00AM-2:00PM",
+    venue: "Multimedia Hall",
+    registrationFee: "150",
     imageUrl: imgLightsLensAction,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/lights-lens-action"
   },
   {
     id: "ev-17",
@@ -296,7 +309,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Technical exhibition on Standards Awareness during Techkshethra 2026. The event aims to create awareness among students about the importance of Indian Standards (IS), the ISI mark, and quality certification in engineering and everyday consumer products.",
     prizePool: "Nil",
     organizer: "BIS CIRCUIT BRANCH",
-    time: "11:30 AM-1:30 PM",
+    time: "11:30AM-1:30PM",
     venue: "BIS corner-Library",
     registrationFee: "Free",
     imageUrl: defaultEventImage,
@@ -398,7 +411,7 @@ export function Events(): React.JSX.Element {
           justifyContent: "center",
         }}
       >
-        <EventCarousel events={filteredEvents} isShuffling={isShuffling} />
+        <EventCarousel events={filteredEvents} isShuffling={isShuffling} activeFilter={activeFilter} />
       </div>
     </section>
   );
