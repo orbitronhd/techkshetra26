@@ -56,7 +56,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Chavara Hall",
     registrationFee: "₹400/-",
     imageUrl: imgEnduro,
-    date: "2026-07-31"
+    date: "2026-07-31",
+    registrationLink: "https://konfhub.com/enduro-edge"
   },
   {
     id: "ev-4",
@@ -117,7 +118,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Zuse Lab",
     registrationFee: "Free",
     imageUrl: imgPostItUp,
-    date: "2026-08-03"
+    date: "2026-08-03",
+    registrationLink: "https://konfhub.com/standards-exhibition"
   },
   {
     id: "ev-9",
@@ -142,7 +144,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Basic Electronics Lab ",
     registrationFee: "₹180/-",
     imageUrl: defaultEventImage,
-    date: "2026-08-04"
+    date: "2026-08-04",
+    registrationLink: "https://konfhub.com/circuit-safari"
   },
   {
     id: "ev-11",
@@ -155,7 +158,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "VI Lab ",
     registrationFee: "₹300/-",
     imageUrl: defaultEventImage,
-    date: "2026-08-04"
+    date: "2026-08-04",
+    registrationLink: "https://konfhub.com/circuit-quest"
   },
   {
     id: "ev-12",
@@ -289,7 +293,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "BIS corner-Library",
     registrationFee: "Free",
     imageUrl: defaultEventImage,
-    date: "2026-07-31"
+    date: "2026-07-31",
+    registrationLink: "https://konfhub.com/standards-exhibition"
   },
   {
     id: "ev-24",
