@@ -529,6 +529,18 @@
   transform: translateY(-2px);
 }
 
+.soldOutButton {
+  background: #444444 !important;
+  color: #ff2222 !important;
+  font-weight: 900;
+  cursor: not-allowed;
+}
+
+.soldOutButton:hover {
+  box-shadow: none !important;
+  transform: none !important;
+}
+
 @media (max-width: 768px) {
   .carouselContainer {
     height: 420px;

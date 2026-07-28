@@ -34,7 +34,6 @@ const OPEN_EVENT_TITLES = [
   "POST IT UP!",
   "Circuit Safari",
   "Circuit Quest",
-  "Standards exhibition",
 ];
 
 export const EventCarousel: React.FC<EventCarouselProps> = ({
@@ -275,7 +274,16 @@ export const EventCarousel: React.FC<EventCarouselProps> = ({
                         </div>
                       )}
 
-                      {event.registrationLink ? (
+                      {event.title === "REXTECH GAMELAB" ? (
+                        <button
+                          type="button"
+                          className={`${styles.actionButton} ${styles.soldOutButton}`}
+                          onClick={(e) => e.stopPropagation()}
+                          disabled
+                        >
+                          SOLD OUT
+                        </button>
+                      ) : event.registrationLink ? (
                         <a 
                           href={event.registrationLink} 
                           target="_blank" 

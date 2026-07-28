@@ -303,20 +303,6 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     date: "2026-08-05"
   },
   {
-    id: "ev-23",
-    title: "Standards exhibition",
-    category: "Exhibition and awareness",
-    description: "Technical exhibition on Standards Awareness during Techkshethra 2026. The event aims to create awareness among students about the importance of Indian Standards (IS), the ISI mark, and quality certification in engineering and everyday consumer products.",
-    prizePool: "Nil",
-    organizer: "BIS CIRCUIT BRANCH",
-    time: "11:30AM-1:30PM",
-    venue: "BIS corner-Library",
-    registrationFee: "Free",
-    imageUrl: defaultEventImage,
-    date: "2026-07-31",
-    registrationLink: "https://konfhub.com/standards-exhibition"
-  },
-  {
     id: "ev-24",
     title: "Payload",
     category: "Competition",

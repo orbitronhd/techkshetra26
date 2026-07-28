@@ -1,4 +1,4 @@
-<img src="src/assets/TK26-logo-white.png" width="500">
+<img src="src/assets/TK26-logo-white.webp" width="500">
 
 
 ### The biennial technical festival at Rajagiri School of Engineering & Technology
