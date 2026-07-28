@@ -4,6 +4,7 @@ import styles from "./css/Page.module.css";
 import { EventCarousel } from "./EventCarousel.tsx";
 import type { CarouselEvent } from "./EventCarousel.tsx";
 // import defaultEventImage from "../assets/TK26-logo-color.webp";
+// Default image of the event to the TK26-logo-color.webp
 
 // Import event images
 import imgAdaptathon from "../assets/events/ADAPTATHON.webp";
@@ -117,7 +118,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹3,500/-",
     organizer: "CSI-SB RSET",
     time: "5/8/26",
-    registrationFee: "TBD",
+    registrationFee: "₹100/- (CSI), ₹150/- (Non-CSI)",
     imageUrl: imgTraceback,
     date: "2026-08-05"
   },
