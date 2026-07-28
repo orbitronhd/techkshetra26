@@ -41,13 +41,19 @@ export const EventCarousel: React.FC<EventCarouselProps> = ({
   isShuffling = false,
   activeFilter,
 }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(() =>
+    events.length > 0 ? Math.floor(Math.random() * events.length) : 0
+  );
   const [expandedMap, setExpandedMap] = useState<Record<number, boolean>>({});
   const [descExpandedMap, setDescExpandedMap] = useState<Record<number, boolean>>({});
 
-  // Reset activeIndex when events array changes
+  // Pick a random starting index when events array changes
   useEffect(() => {
-    setActiveIndex(0);
+    if (events.length > 0) {
+      setActiveIndex(Math.floor(Math.random() * events.length));
+    } else {
+      setActiveIndex(0);
+    }
     setExpandedMap({});
     setDescExpandedMap({});
   }, [events]);
