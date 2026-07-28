@@ -2,8 +2,8 @@ import emailjs from "@emailjs/browser";
 import type React from "react";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import rsetJubileeLogo from "../assets/RSET-jubilee-bw.png";
-import tk26LogoWhite from "../assets/TK26-logo-white.png";
+import rsetJubileeLogo from "../assets/RSET-jubilee-bw.webp";
+import tk26LogoWhite from "../assets/TK26-logo-white.webp";
 import styles from "./css/Footer.module.css";
 
 const SERVICE_ID = "service_7amjm59";

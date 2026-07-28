@@ -3,22 +3,22 @@ import { useState, useMemo } from "react";
 import styles from "./css/Page.module.css";
 import { EventCarousel } from "./EventCarousel.tsx";
 import type { CarouselEvent } from "./EventCarousel.tsx";
-import defaultEventImage from "../assets/TK26-logo-color.png";
+import defaultEventImage from "../assets/TK26-logo-color.webp";
 
 // Import event images
-import imgAdaptathon from "../assets/events/ADAPTATHON.png";
-import imgEnduro from "../assets/events/ATV Build&Race.png";
-import imgBotforge from "../assets/events/botforge.jpg";
-import imgCrushingDepths from "../assets/events/Crushing Depths CTF.jpeg";
-import imgDronix from "../assets/events/DRONIX.jpg";
-import imgGhostProtocol from "../assets/events/Ghost_Protocol.png";
-import imgHelloFriday from "../assets/events/Hello Friday.jpg";
-import imgLightsLensAction from "../assets/events/LightLensAction.jpg";
-import imgMercedesWorkshop from "../assets/events/mercedes workshop.jpeg";
-import imgMetroRethink from "../assets/events/Metro Rethink.png";
-import imgPostItUp from "../assets/events/Post it up poster.jpg";
-import imgRextech from "../assets/events/Rextech.png";
-import imgScenius from "../assets/events/Scenious 4.0 .png";
+import imgAdaptathon from "../assets/events/ADAPTATHON.webp";
+import imgEnduro from "../assets/events/ATV Build&Race.webp";
+import imgBotforge from "../assets/events/botforge.webp";
+import imgCrushingDepths from "../assets/events/Crushing Depths CTF.webp";
+import imgDronix from "../assets/events/DRONIX.webp";
+import imgGhostProtocol from "../assets/events/Ghost_Protocol.webp";
+import imgHelloFriday from "../assets/events/Hello Friday.webp";
+import imgLightsLensAction from "../assets/events/LightLensAction.webp";
+import imgMercedesWorkshop from "../assets/events/mercedes workshop.webp";
+import imgMetroRethink from "../assets/events/Metro Rethink.webp";
+import imgPostItUp from "../assets/events/Post it up poster.webp";
+import imgRextech from "../assets/events/Rextech.webp";
+import imgScenius from "../assets/events/Scenious 4.0 .webp";
 
 const ACTUAL_EVENTS: CarouselEvent[] = [
   {

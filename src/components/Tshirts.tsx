@@ -2,7 +2,7 @@ import type React from "react";
 import { useState } from "react";
 import styles from "./css/Page.module.css";
 import cardStyles from "./css/Tshirts.module.css";
-import tshirtImage from "../assets/TK26-shirt.png";
+import tshirtImage from "../assets/TK26-shirt.webp";
 
 export function Tshirts(): React.JSX.Element {
   const [showWidget, setShowWidget] = useState(false);
