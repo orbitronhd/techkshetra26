@@ -118,6 +118,29 @@
   will-change: transform;
 }
 
+.comingSoonBlur {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.comingSoonOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff2222;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 20;
+  pointer-events: none;
+  font-family: var(--font-family-heading, sans-serif);
+  text-shadow: 0 0 24px rgba(255, 34, 34, 0.6), 0 2px 8px rgba(0,0,0,0.8);
+}
+
 .cardActive .cardFace {
   box-shadow:
     0 0 30px rgba(191, 88, 255, 0.3),
