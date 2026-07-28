@@ -24,6 +24,19 @@ interface EventCarouselProps {
   activeFilter?: string;
 }
 
+const OPEN_EVENT_TITLES = [
+  "ATV:Build & Race-RaceCraft RC",
+  "REXTECH GAMELAB",
+  "Project Shahi Dossier",
+  "Metro Rethink",
+  "Lights Lens Action",
+  "ENDURO EDGE",
+  "POST IT UP!",
+  "Circuit Safari",
+  "Circuit Quest",
+  "Standards exhibition",
+];
+
 export const EventCarousel: React.FC<EventCarouselProps> = ({
   events,
   isShuffling = false,
@@ -135,7 +148,9 @@ export const EventCarousel: React.FC<EventCarouselProps> = ({
           const isExpanded = !!expandedMap[index];
           const cardClass = getCardClass(index);
           const isActive = index === activeIndex;
-          const isComingSoon = activeFilter === "Main Event";
+          const isComingSoon =
+            activeFilter === "Main Event" &&
+            !OPEN_EVENT_TITLES.includes(event.title);
 
           return (
             <div
