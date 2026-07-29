@@ -110,7 +110,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "NDLI RSET",
     time: "10:00AM-2:00PM",
     venue: "Sycamore Lab 1",
-    registrationFee: "₹150/head",
+    registrationFee: "₹150/team",
     imageUrl: imgGhostProtocol,
     date: "2026-08-05",
     registrationLink: "https://konfhub.com/the-ghost-protocol"
@@ -194,7 +194,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "IEEE CS RSET SBC",
     time: "12:30PM-3:30PM",
     venue: "Feymann Lab",
-    registrationFee: "₹80/head",
+    registrationFee: "₹120/head",
     imageUrl: imgAmongUs,
     date: "2026-08-05",
     registrationLink: "https://konfhub.com/among-us-30"
@@ -356,11 +356,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
 ];
 
 export function Events(): React.JSX.Element {
-  const [uiFilterType, setUiFilterType] = useState<"Featured" | "Pre Event" | "Main Event">("Featured");
-  const [activeFilter, setActiveFilter] = useState<"Featured" | "Pre Event" | "Main Event">("Featured");
+  const [uiFilterType, setUiFilterType] = useState<"Pre Event" | "Main Event">("Pre Event");
+  const [activeFilter, setActiveFilter] = useState<"Pre Event" | "Main Event">("Pre Event");
   const [isShuffling, setIsShuffling] = useState(false);
 
-  const handleFilterClick = (newFilter: "Featured" | "Pre Event" | "Main Event") => {
+  const handleFilterClick = (newFilter: "Pre Event" | "Main Event") => {
     if (newFilter === uiFilterType) return;
 
     // Start exit animation (shuffle cards into a deck)
@@ -377,17 +377,6 @@ export function Events(): React.JSX.Element {
   };
 
   const filteredEvents = useMemo(() => ACTUAL_EVENTS.filter(event => {
-    if (activeFilter === "Featured") {
-      const featuredTitles = [
-        "ATV:Build & Race-RaceCraft RC",
-        "REXTECH GAMELAB",
-        "Project Shahi Dossier",
-        "Metro Rethink",
-        "Lights Lens Action"
-      ];
-      return featuredTitles.includes(event.title);
-    }
-
     let type = event.eventType;
     if (event.date) {
       const eventDate = new Date(event.date);
@@ -406,12 +395,6 @@ export function Events(): React.JSX.Element {
 
       <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}>
         <div className={styles.pillContainer}>
-          <button
-            onClick={() => handleFilterClick("Featured")}
-            className={`${styles.pillButton} ${uiFilterType === "Featured" ? styles.pillButtonActive : ""}`}
-          >
-            Featured
-          </button>
           <button
             onClick={() => handleFilterClick("Pre Event")}
             className={`${styles.pillButton} ${uiFilterType === "Pre Event" ? styles.pillButtonActive : ""}`}
