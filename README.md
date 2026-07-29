@@ -9,58 +9,15 @@
 
 ```
 techkshetra26/
-├── public/
-│   ├── favicon.png                  # Site favicon
-│   └── fonts/
-│       └── milker-regular.otf       # Custom display font
-│
+├── public/          # Static files served directly
 ├── src/
-│   ├── assets/                      # Static media assets
-│   │   ├── events/                  # ← Event posters (see below)
-│   │   ├── gallery/                 # ← Gallery photos (see below)
-│   │   ├── TK26-logo-white.webp     # Logo (white variant)
-│   │   ├── TK26-logo-color.webp     # Logo (color variant)
-│   │   ├── TK26-icon.webp           # App icon
-│   │   ├── TK26-icon-512.webp       # App icon (512px)
-│   │   ├── TK26-angel.webp          # Hero / promo image
-│   │   ├── TK26-genesis.webp        # Genesis promo image
-│   │   ├── TK26-shirt.webp          # Merchandise image
-│   │   ├── RSET-photo.webp          # College photo
-│   │   └── RSET-jubilee-bw.webp     # Jubilee B&W image
-│   │
-│   ├── components/                  # React components
-│   │   ├── css/                     # Component-level CSS modules
-│   │   ├── About.tsx
-│   │   ├── Countdown.tsx
-│   │   ├── EventCarousel.tsx
-│   │   ├── Events.tsx
-│   │   ├── FloatingBottomBar.tsx
-│   │   ├── FluidCursor.tsx
-│   │   ├── Footer.tsx
-│   │   ├── Gallery.tsx
-│   │   ├── HeroGlitch.tsx
-│   │   ├── HomePage.tsx
-│   │   ├── InitialLoader.tsx
-│   │   ├── LiquidBackground.tsx
-│   │   ├── Navigation.tsx
-│   │   ├── ScrollReveal.tsx
-│   │   └── Tshirts.tsx
-│   │
-│   ├── hooks/
-│   │   └── usePrefersReducedMotion.ts
-│   ├── styles/
-│   │   └── tokens.css               # Design tokens / CSS variables
-│   ├── types/
-│   │   └── sun.types.ts
-│   ├── App.tsx
-│   ├── App.module.css
-│   ├── index.css                    # Global styles
-│   └── main.tsx                     # App entry point
-│
+│   ├── assets/      # Images, fonts, and media (event posters, gallery, logos)
+│   ├── components/  # React UI components and their CSS modules
+│   ├── hooks/       # Custom React hooks
+│   ├── styles/      # Global design tokens and CSS variables
+│   └── types/       # TypeScript type definitions
 ├── index.html
-├── vite.config.ts
-├── package.json
-└── tsconfig.json
+└── vite.config.ts
 ```
 
 ---
