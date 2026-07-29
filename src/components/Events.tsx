@@ -153,7 +153,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "IEEE RAS x NSS",
     time: "9:00AM-3:00PM",
     venue: "PG Tutorial Hall 4",
-    registrationFee: "₹149/head",
+    registrationFee: "₹200/head",
     imageUrl: imgBotforge,
     date: "2026-08-05",
     registrationLink: "https://konfhub.com/botforge"
@@ -322,7 +322,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "GenSys",
     time: "10:00AM-2:00PM",
     venue: "LH18, LH19",
-    registrationFee: "₹150/-",
+    registrationFee: "₹600/-",
     imageUrl: imgCapitalClash,
     date: "2026-08-05",
     registrationLink: "https://konfhub.com/capital-clash"
