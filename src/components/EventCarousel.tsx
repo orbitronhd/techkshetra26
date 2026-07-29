@@ -16,6 +16,7 @@ export interface CarouselEvent {
   time?: string;
   eventType?: "Pre Event" | "Main Event";
   date?: string;
+  noRegisterButton?: boolean;
 }
 
 interface EventCarouselProps {
@@ -266,25 +267,27 @@ export const EventCarousel: React.FC<EventCarouselProps> = ({
                         </div>
                       )}
 
-                      {event.registrationLink ? (
-                        <a 
-                          href={event.registrationLink} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className={styles.actionButton}
-                          style={{ textDecoration: 'none', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          Register
-                        </a>
-                      ) : (
-                        <button 
-                          type="button" 
-                          className={styles.actionButton}
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          Register
-                        </button>
+                      {!event.noRegisterButton && (
+                        event.registrationLink ? (
+                          <a 
+                            href={event.registrationLink} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className={styles.actionButton}
+                            style={{ textDecoration: 'none', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            Register
+                          </a>
+                        ) : (
+                          <button 
+                            type="button" 
+                            className={styles.actionButton}
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            Register
+                          </button>
+                        )
                       )}
                     </div>
 

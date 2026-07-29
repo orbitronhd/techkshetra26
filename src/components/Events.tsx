@@ -3,7 +3,7 @@ import { useState, useMemo } from "react";
 import styles from "./css/Page.module.css";
 import { EventCarousel } from "./EventCarousel.tsx";
 import type { CarouselEvent } from "./EventCarousel.tsx";
-// import defaultEventImage from "../assets/TK26-logo-color.webp";
+import defaultEventImage from "../assets/TK26-logo-color.webp";
 // Default image of the event to the TK26-logo-color.webp
 
 // Import event images
@@ -339,6 +339,19 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     imageUrl: imgPayload,
     date: "2026-08-05",
     registrationLink: "https://konfhub.com/payload"
+  },
+  {
+    id: "ev-25",
+    title: "Auto Expo",
+    category: "Exhibition",
+    description: "",
+    prizePool: "NA",
+    organizer: "REAL MECHANICA/SAE",
+    time: "9:00AM-4:15PM",
+    venue: "KE Block",
+    imageUrl: defaultEventImage,
+    date: "2026-08-05",
+    noRegisterButton: true
   }
 ];
 
