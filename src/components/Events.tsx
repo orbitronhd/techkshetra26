@@ -42,7 +42,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Gallery Hall",
     registrationFee: "₹249/-",
     imageUrl: imgReviveNight,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/revive-night-dd4ff8f8"
   },
   {
     id: "ev-2",
@@ -52,10 +53,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹10,000/-",
     organizer: "ITRAX",
     time: "5:00PM-9:00AM",
-    venue: "Kleinrock Lab,Turing Lab,CODD Lab,Shannon Lab",
+    venue: "Kleinrock Lab, Turing Lab, CODD Lab, Shannon Lab",
     registrationFee: "₹150/-",
     imageUrl: imgAdaptathon,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/adaptathon"
   },
   {
     id: "ev-3",
@@ -93,10 +95,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "10,000/-",
     organizer: "Nirmana",
     time: "9:00AM-3:00PM",
-    venue: "KE Seminar Hall,LH20,LH21 4TH FLOOR KE Building,Survey Lab",
+    venue: "KE Seminar Hall, LH20, LH21 4TH FLOOR KE Building, Survey Lab",
     registrationFee: "₹100/-",
     imageUrl: imgScenius,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/scenius-40"
   },
   {
     id: "ev-6",
@@ -106,9 +109,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹3,000/-",
     organizer: "NDLI RSET",
     time: "5/8/26",
+    venue: "Sycamore Lab 1",
     registrationFee: "₹150/-",
     imageUrl: imgGhostProtocol,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/the-ghost-protocol"
   },
   {
     id: "ev-7",
@@ -118,9 +123,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹3,500/-",
     organizer: "CSI-SB RSET",
     time: "5/8/26",
+    venue: "Zuse Lab",
     registrationFee: "₹100/- (CSI), ₹150/- (Non-CSI)",
     imageUrl: imgTraceback,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/traceback"
   },
   {
     id: "ev-8",
@@ -141,12 +148,14 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     title: "BOTFORGE",
     category: "Ideathon",
     description: "An intensive Ideathon focusing on technology-driven social impact.",
-    prizePool: "₹5000/-",
+    prizePool: "₹5,000/-",
     organizer: "IEEE RAS x NSS",
     time: "5/8/26",
+    venue: "PG Tutorial Hall 4",
     registrationFee: "₹150/-",
     imageUrl: imgBotforge,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/botforge"
   },
   {
     id: "ev-10",
@@ -156,7 +165,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹1,600/-",
     organizer: "IEEE SPS SB RSET",
     time: "4:30 PM-6:00 PM",
-    venue: "LCD Lab ",
+    venue: "LCD Lab",
     registrationFee: "₹150/-",
     imageUrl: imgCircuitSafari,
     date: "2026-08-04",
@@ -170,7 +179,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹2,000/-",
     organizer: "Apptronics",
     time: "4:30 PM-6:00 PM",
-    venue: "VI Lab ",
+    venue: "VI Lab",
     registrationFee: "₹300/-",
     imageUrl: imgCircuitQuest,
     date: "2026-08-04",
@@ -184,16 +193,18 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹4,500/-",
     organizer: "IEEE CS RSET SBC",
     time: "5/8/26",
+    venue: "Feymann Lab",
     registrationFee: "₹120/-",
     imageUrl: imgAmongUs,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/among-us-30"
   },
   {
     id: "ev-13",
     title: "REXTECH GAMELAB",
     category: "Workshop",
     description: "\"Introduction to Game Development with Hands-on Unity Session\" in collaboration with Rextech Studios, Infopark Kochi.The 4-hour workshop is designed to introduce students to the fundamentals of game development through a combination of industry insights and practical learning. The session will be conducted by Aravind Parakkat, Game Developer at Rextech Studios, and will provide participants with an overview of the game development industry, career opportunities, and the complete game development lifecycle. The workshop will also include a hands-on session using the Unity Game Engine, where participants will build a simple 2D game while learning concepts such as game objects, physics, collision detection, basic C# scripting, user interface design, and core game mechanics. Designed for beginners, the workshop requires no prior experience and focuses on developing creativity, logical thinking, and problem-solving skills. By the end of the session, participants will have created and tested their own playable game using industry-standard tools.",
-    prizePool: "Nil",
+    prizePool: "NA",
     organizer: "Vikings",
     time: "10:00AM-2:00PM",
     venue: "Signal Processing Lab",
@@ -235,7 +246,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     title: "Lights Lens Action",
     category: "Cinematography Masterclass",
     description: "Lights • Lens • Action is a 3-hour interactive cinematography workshop designed to introduce students to the art and technology of visual storytelling. Led by Mr. Naveen Najose, an RSET alumnus and professional cinematographer, the workshop begins with a 2-hour interactive session covering the fundamentals of cinematography, camera techniques, lens selection, composition, shot design, and the filmmaking process through real-world industry insights. This is followed by a hands-on practical session, where participants can apply the concepts they have learned, and concludes with an engaging Q&A session, providing students with the opportunity to interact directly with the speaker, clarify their doubts, and gain valuable insights into careers and opportunities in the film industry.",
-    prizePool: "Nil",
+    prizePool: "NA",
     organizer: "ARYANS",
     time: "11:00AM-2:00PM",
     venue: "Multimedia Hall",
@@ -252,9 +263,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹10,000/-",
     organizer: "CyberBlitz",
     time: "5/8/26",
+    venue: "New Canteen",
     registrationFee: "₹150/head",
     imageUrl: imgCrushingDepths,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/crushing-depthsctf"
   },
 
   {
@@ -265,45 +278,53 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "NA",
     organizer: "Eluxtra x IEEE RAS",
     time: "5/8/26",
+    venue: "Electrical Machines Lab",
     registrationFee: "₹150/head",
     imageUrl: imgDronix,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/dronix"
   },
   {
     id: "ev-20",
     title: "Hello Friday: Build your own Jarvis",
     category: "Workshop",
     description: "3 hour hands on Conversational AI assistant workshop",
-    prizePool: "Nil",
+    prizePool: "NA",
     organizer: "Articon",
     time: "5/8/26",
+    venue: "Heisenberg Lab",
     registrationFee: "₹200/-",
     imageUrl: imgHelloFriday,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/hello-fridaybuild-your-own-jarvis"
   },
   {
     id: "ev-21",
     title: "Mercedes Workshop",
     category: "Workshop",
     description: "A 3 hour interactive session where the experienced industry people from Mercedes talk about the latest and greatest tech",
-    prizePool: "Nil",
+    prizePool: "NA",
     organizer: "Apptronics x SAE",
     time: "5/8/26",
+    venue: "Gallery Hall",
     registrationFee: "₹200/-",
     imageUrl: imgMercedesWorkshop,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/mercedes-workshop"
   },
   {
     id: "ev-22",
     title: "CAPITAL CLASH",
     category: "Business Event",
     description: "Capital Clash is a fast-paced business strategy event where teams compete to build the strongest business empire by acquiring assets, tackling business challenges, negotiating deals, and adapting to unexpected market twists. Success depends on strategic thinking, teamwork, and smart financial decisions.",
-    prizePool: "₹3000/-",
+    prizePool: "₹3,000/-",
     organizer: "GenSys",
     time: "5/8/26",
-    registrationFee: "₹150/team",
+    venue: "LH18, LH19",
+    registrationFee: "₹150/-",
     imageUrl: imgCapitalClash,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/capital-clash"
   },
   {
     id: "ev-24",
@@ -313,9 +334,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹15,000/-",
     organizer: "Electronauts",
     time: "4/8/26-5/8/26",
+    venue: "BIS Corner - Library",
     registrationFee: "₹350/head",
     imageUrl: imgPayload,
-    date: "2026-08-05"
+    date: "2026-08-05",
+    registrationLink: "https://konfhub.com/payload"
   }
 ];
 
