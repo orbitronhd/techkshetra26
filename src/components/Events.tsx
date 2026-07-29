@@ -330,7 +330,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     id: "ev-24",
     title: "Payload",
     category: "Competition",
-    description: "A closed-book, no-internet hardware hackathon. Participants design, build, and digitize a fundamental analog circuit using only the provided textbooks, raw components, and their engineering fundamentals.",
+    description: "PAYLOAD is a 15-hour hardware capture-the-flag and offline hardware hackathon. Test your skills and knowledge in electronics while doing fun challenges along the way to glory",
     prizePool: "₹15,000/-",
     organizer: "Electronauts",
     time: "5:00PM-9:00AM",
