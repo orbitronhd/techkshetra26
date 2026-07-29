@@ -57,7 +57,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Kleinrock Lab, Turing Lab, CODD Lab, Shannon Lab",
     registrationFee: "₹149/-",
     imageUrl: imgAdaptathon,
-    date: "2026-08-05",
+    date: "2026-08-04",
     registrationLink: "https://konfhub.com/adaptathon"
   },
   {
