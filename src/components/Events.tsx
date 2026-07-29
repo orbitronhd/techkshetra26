@@ -334,7 +334,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹15,000/-",
     organizer: "Electronauts",
     time: "5:00PM-9:00AM",
-    venue: "BIS Corner - Library",
+    venue: "Basic Electronics/Project Lab, LH2, LH3",
     registrationFee: "₹350/head",
     imageUrl: imgPayload,
     date: "2026-08-05",
