@@ -43,7 +43,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Gallery Hall",
     registrationFee: "₹249/-",
     imageUrl: imgReviveNight,
-    date: "2026-08-05",
+    date: "2026-08-04",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/revive-night-dd4ff8f8"
   },
   {
@@ -58,6 +59,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     registrationFee: "₹149/-",
     imageUrl: imgAdaptathon,
     date: "2026-08-04",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/adaptathon"
   },
   {
@@ -280,7 +282,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "Eluxtra x IEEE RAS",
     time: "11:30AM-3:30PM",
     venue: "Electrical Machines Lab",
-    registrationFee: "₹150/head",
+    registrationFee: "₹250/head",
     imageUrl: imgDronix,
     date: "2026-08-05",
     registrationLink: "https://konfhub.com/dronix"
@@ -379,7 +381,7 @@ export function Events(): React.JSX.Element {
 
   const filteredEvents = useMemo(() => ACTUAL_EVENTS.filter(event => {
     let type = event.eventType;
-    if (event.date) {
+    if (!type && event.date) {
       const eventDate = new Date(event.date);
       const splitDate = new Date("2026-08-05");
       type = eventDate < splitDate ? "Pre Event" : "Main Event";
