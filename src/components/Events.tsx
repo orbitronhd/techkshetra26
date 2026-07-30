@@ -69,11 +69,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "A motorsport workshop",
     prizePool: "NA",
     organizer: "REAL MECHANICA",
-    time: "11:30AM-1:30PM",
+    time: "4:00PM-6:00PM",
     venue: "Chavara Hall",
     registrationFee: "₹400/-",
     imageUrl: imgEnduro,
-    date: "2026-07-31",
+    date: "2026-08-03",
     registrationLink: "https://konfhub.com/enduro-edge"
   },
   {
