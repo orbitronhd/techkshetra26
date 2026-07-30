@@ -193,7 +193,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Among Us 3.0 is a technology-driven campus challenge that combines coding, logical reasoning, cybersecurity, debugging, and QR-based interactive missions into an immersive competitive experience inspired by the popular multiplayer game Among Us.",
     prizePool: "₹4,500/-",
     organizer: "IEEE CS RSET SBC",
-    time: "12:30PM-3:30PM",
+    time: "9:00AM-12:00PM",
     venue: "Feymann Lab",
     registrationFee: "₹120/head",
     imageUrl: imgAmongUs,
