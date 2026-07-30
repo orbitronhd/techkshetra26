@@ -280,7 +280,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "Eluxtra x IEEE RAS",
     time: "11:30AM-3:30PM",
     venue: "Electrical Machines Lab",
-    registrationFee: "₹150/head",
+    registrationFee: "₹250/head",
     imageUrl: imgDronix,
     date: "2026-08-05",
     registrationLink: "https://konfhub.com/dronix"
