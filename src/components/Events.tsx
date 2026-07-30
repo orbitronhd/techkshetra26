@@ -381,7 +381,7 @@ export function Events(): React.JSX.Element {
     let type = event.eventType;
     if (event.date) {
       const eventDate = new Date(event.date);
-      const splitDate = new Date("2026-08-05");
+      const splitDate = new Date("2026-08-04");
       type = eventDate < splitDate ? "Pre Event" : "Main Event";
     }
 
