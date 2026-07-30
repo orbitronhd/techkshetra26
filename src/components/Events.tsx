@@ -58,6 +58,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     registrationFee: "₹149/-",
     imageUrl: imgAdaptathon,
     date: "2026-08-04",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/adaptathon"
   },
   {
@@ -379,9 +380,9 @@ export function Events(): React.JSX.Element {
 
   const filteredEvents = useMemo(() => ACTUAL_EVENTS.filter(event => {
     let type = event.eventType;
-    if (event.date) {
+    if (!type && event.date) {
       const eventDate = new Date(event.date);
-      const splitDate = new Date("2026-08-04");
+      const splitDate = new Date("2026-08-05");
       type = eventDate < splitDate ? "Pre Event" : "Main Event";
     }
 
