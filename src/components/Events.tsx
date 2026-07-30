@@ -43,7 +43,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Gallery Hall",
     registrationFee: "₹249/-",
     imageUrl: imgReviveNight,
-    date: "2026-08-05",
+    date: "2026-08-04",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/revive-night-dd4ff8f8"
   },
   {
