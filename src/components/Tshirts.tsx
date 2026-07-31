@@ -40,7 +40,7 @@ export function Tshirts(): React.JSX.Element {
           style={{ marginTop: "0", position: "relative", zIndex: 1 }}
           onClick={() => window.open("https://konfhub.com/tshirt-dc85401a", "_blank", "noopener,noreferrer")}
         >
-          PRE-ORDER NOW
+          ORDER NOW
         </button>
       </div>
 
