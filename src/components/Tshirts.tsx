@@ -37,10 +37,10 @@ export function Tshirts(): React.JSX.Element {
         <button 
           type="button" 
           className={cardStyles.actionButton}
-          disabled
-          style={{ marginTop: "0" }}
+          style={{ marginTop: "0", position: "relative", zIndex: 1 }}
+          onClick={() => window.open("https://konfhub.com/tshirt-dc85401a", "_blank", "noopener,noreferrer")}
         >
-          PRE-ORDER SOON
+          ORDER NOW
         </button>
       </div>
 
