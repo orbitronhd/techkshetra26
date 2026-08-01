@@ -367,17 +367,18 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "LH 15 & LH16 (KE Block)",
     imageUrl: defaultEventImage,
     date: "2026-08-05",
+    eventType: "Non Tech",
     registrationFee: "₹110/-",
     noRegisterButton: true
   }
 ];
 
 export function Events(): React.JSX.Element {
-  const [uiFilterType, setUiFilterType] = useState<"Pre Event" | "Main Event">("Pre Event");
-  const [activeFilter, setActiveFilter] = useState<"Pre Event" | "Main Event">("Pre Event");
+  const [uiFilterType, setUiFilterType] = useState<"Pre Event" | "Main Event" | "Non Tech">("Pre Event");
+  const [activeFilter, setActiveFilter] = useState<"Pre Event" | "Main Event" | "Non Tech">("Pre Event");
   const [isShuffling, setIsShuffling] = useState(false);
 
-  const handleFilterClick = (newFilter: "Pre Event" | "Main Event") => {
+  const handleFilterClick = (newFilter: "Pre Event" | "Main Event" | "Non Tech") => {
     if (newFilter === uiFilterType) return;
 
     // Start exit animation (shuffle cards into a deck)
@@ -423,6 +424,12 @@ export function Events(): React.JSX.Element {
             className={`${styles.pillButton} ${uiFilterType === "Main Event" ? styles.pillButtonActive : ""}`}
           >
             Events
+          </button>
+          <button
+            onClick={() => handleFilterClick("Non Tech")}
+            className={`${styles.pillButton} ${uiFilterType === "Non Tech" ? styles.pillButtonActive : ""}`}
+          >
+            Non-Tech Events
           </button>
         </div>
       </div>
