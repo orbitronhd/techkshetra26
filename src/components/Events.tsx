@@ -354,6 +354,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "KE Block",
     imageUrl: defaultEventImage,
     date: "2026-08-05",
+    eventType: "Non Tech",
     noRegisterButton: true
   },
   {
