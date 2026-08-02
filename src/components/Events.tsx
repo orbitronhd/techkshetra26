@@ -354,16 +354,32 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "KE Block",
     imageUrl: defaultEventImage,
     date: "2026-08-05",
+    eventType: "Non Tech",
     noRegisterButton: true
+  },
+  {
+    id: "ev-26",
+    title: "FC 26 TOURNAMENT",
+    category: "Competition",
+    description: "Step up to the console and claim your cut of the cash prize pool. We are running a 32-player, single-elimination gauntlet managed to professional esports standards. Prove your tactical dominance, beat the bracket, and secure the championship title.",
+    prizePool: "₹1500/-",
+    organizer: "",
+    time: "10:00AM-3:00PM",
+    venue: "LH 15 & LH16 (KE Block)",
+    imageUrl: defaultEventImage,
+    date: "2026-08-05",
+    eventType: "Non Tech",
+    registrationFee: "₹110/-",
+    registrationLink: "https://konfhub.com/fc-26-tournament"
   }
 ];
 
 export function Events(): React.JSX.Element {
-  const [uiFilterType, setUiFilterType] = useState<"Pre Event" | "Main Event">("Pre Event");
-  const [activeFilter, setActiveFilter] = useState<"Pre Event" | "Main Event">("Pre Event");
+  const [uiFilterType, setUiFilterType] = useState<"Pre Event" | "Main Event" | "Non Tech">("Pre Event");
+  const [activeFilter, setActiveFilter] = useState<"Pre Event" | "Main Event" | "Non Tech">("Pre Event");
   const [isShuffling, setIsShuffling] = useState(false);
 
-  const handleFilterClick = (newFilter: "Pre Event" | "Main Event") => {
+  const handleFilterClick = (newFilter: "Pre Event" | "Main Event" | "Non Tech") => {
     if (newFilter === uiFilterType) return;
 
     // Start exit animation (shuffle cards into a deck)
@@ -409,6 +425,12 @@ export function Events(): React.JSX.Element {
             className={`${styles.pillButton} ${uiFilterType === "Main Event" ? styles.pillButtonActive : ""}`}
           >
             Events
+          </button>
+          <button
+            onClick={() => handleFilterClick("Non Tech")}
+            className={`${styles.pillButton} ${uiFilterType === "Non Tech" ? styles.pillButtonActive : ""}`}
+          >
+            Non-Tech Events
           </button>
         </div>
       </div>

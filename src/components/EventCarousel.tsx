@@ -14,7 +14,7 @@ export interface CarouselEvent {
   imageUrl?: string;
   venue?: string;
   time?: string;
-  eventType?: "Pre Event" | "Main Event";
+  eventType?: "Pre Event" | "Main Event" | "Non Tech";
   date?: string;
   noRegisterButton?: boolean;
 }
