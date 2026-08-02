@@ -370,7 +370,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     date: "2026-08-05",
     eventType: "Non Tech",
     registrationFee: "₹110/-",
-    noRegisterButton: true
+    registrationLink: "https://konfhub.com/fc-26-tournament"
   }
 ];
 
