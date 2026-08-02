@@ -363,7 +363,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     category: "Competition",
     description: "Step up to the console and claim your cut of the cash prize pool. We are running a 32-player, single-elimination gauntlet managed to professional esports standards. Prove your tactical dominance, beat the bracket, and secure the championship title.",
     prizePool: "₹1500/-",
-    organizer: "",
+    organizer: "GENSYS",
     time: "10:00AM-3:00PM",
     venue: "LH 15 & LH16 (KE Block)",
     imageUrl: defaultEventImage,
