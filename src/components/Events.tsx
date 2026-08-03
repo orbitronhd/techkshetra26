@@ -83,7 +83,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "RaceCraft RC is a team-based engineering competition where each team of four members designs and builds a Radio Controlled (RC) race car before the event, following the technical specifications provided by the organizers. On the event day, participants will first attend a technical session conducted by experts, covering RC vehicle design, race rules, safety guidelines, and performance optimization. Following the session and technical inspection, teams will compete in multiple challenge rounds on a specially designed track featuring different terrains and obstacles that test the vehicle's speed, stability, maneuverability, and durability. The event aims to provide hands-on experience in engineering design, problem-solving, and teamwork while fostering innovation through competitive racing.",
     prizePool: "₹8,000/-",
     organizer: "Spartans",
-    time: "1:00PM-3:00PM",
+    time: "1:00PM-3:30PM",
     venue: "PG Tutorial Hall 3",
     registrationFee: "₹500/-",
     imageUrl: imgATV,
