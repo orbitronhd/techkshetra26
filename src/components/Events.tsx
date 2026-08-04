@@ -73,7 +73,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Chavara Hall",
     registrationFee: "₹400/-",
     imageUrl: imgEnduro,
-    date: "2026-08-03",
+    date: "TBD",
+    eventType: "Pre Event",
     registrationLink: "https://konfhub.com/enduro-edge"
   },
   {
@@ -87,7 +88,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "PG Tutorial Hall 3",
     registrationFee: "₹500/-",
     imageUrl: imgATV,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/atvbuild-race-racecraft-rc"
   },
   {
@@ -101,7 +103,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "KE Seminar Hall, LH20, LH21 4TH FLOOR KE Building, Survey Lab",
     registrationFee: "₹100/head",
     imageUrl: imgScenius,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/scenius-40"
   },
   {
@@ -115,7 +118,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Sycamore Lab 1",
     registrationFee: "₹150/team",
     imageUrl: imgGhostProtocol,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/the-ghost-protocol"
   },
   {
@@ -129,7 +133,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Zuse Lab",
     registrationFee: "CSI: ₹100/-, Non-CSI: ₹150/-",
     imageUrl: imgTraceback,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/traceback"
   },
   {
@@ -143,7 +148,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Zuse Lab",
     registrationFee: "₹50/-",
     imageUrl: imgPostItUp,
-    date: "2026-08-03",
+    date: "TBD",
+    eventType: "Pre Event",
     registrationLink: "https://konfhub.com/post-it-up"
   },
   {
@@ -157,7 +163,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "PG Tutorial Hall 4",
     registrationFee: "₹450/-",
     imageUrl: imgBotforge,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/botforge"
   },
   {
@@ -171,7 +178,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "LCD Lab",
     registrationFee: "₹150/-",
     imageUrl: imgCircuitSafari,
-    date: "2026-08-04",
+    date: "TBD",
+    eventType: "Pre Event",
     registrationLink: "https://konfhub.com/circuit-safari"
   },
   {
@@ -185,7 +193,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "VI Lab",
     registrationFee: "₹300/-",
     imageUrl: imgCircuitQuest,
-    date: "2026-08-04",
+    date: "TBD",
+    eventType: "Pre Event",
     registrationLink: "https://konfhub.com/circuit-quest"
   },
   {
@@ -199,7 +208,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Feymann Lab",
     registrationFee: "₹120/head",
     imageUrl: imgAmongUs,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/among-us-30"
   },
   {
@@ -213,7 +223,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Signal Processing Lab",
     registrationFee: "₹150/-",
     imageUrl: imgRextech,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/rextech-gamelab"
   },
   {
@@ -227,7 +238,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Multimedia Hall",
     registrationFee: "₹149/head",
     imageUrl: imgShahiDossier,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/project-shahi-dossier"
   },
   {
@@ -241,7 +253,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "PG Porch",
     registrationFee: "₹600/-",
     imageUrl: imgMetroRethink,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/metro-rethink"
   },
   {
@@ -255,7 +268,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Multimedia Hall",
     registrationFee: "₹150/-",
     imageUrl: imgLightsLensAction,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/lights-lens-action"
   },
   {
@@ -269,7 +283,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "New Canteen",
     registrationFee: "₹150/head",
     imageUrl: imgCrushingDepths,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/crushing-depthsctf"
   },
 
@@ -284,7 +299,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Electrical Machines Lab",
     registrationFee: "₹250/head",
     imageUrl: imgDronix,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/dronix"
   },
   {
@@ -298,7 +314,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Heisenberg Lab",
     registrationFee: "₹200/-",
     imageUrl: imgHelloFriday,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/hello-fridaybuild-your-own-jarvis"
   },
   {
@@ -312,7 +329,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Gallery Hall",
     registrationFee: "₹200/-",
     imageUrl: imgMercedesWorkshop,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/mercedes-workshop"
   },
   {
@@ -326,7 +344,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "LH18, LH19",
     registrationFee: "₹600/-",
     imageUrl: imgCapitalClash,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/capital-clash"
   },
   {
@@ -340,7 +359,8 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Basic Electronics/Project Lab, LH2, LH3",
     registrationFee: "₹350/head",
     imageUrl: imgPayload,
-    date: "2026-08-05",
+    date: "TBD",
+    eventType: "Main Event",
     registrationLink: "https://konfhub.com/payload"
   },
   {
@@ -353,7 +373,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     time: "9:00AM-4:15PM",
     venue: "KE Block",
     imageUrl: defaultEventImage,
-    date: "2026-08-05",
+    date: "TBD",
     eventType: "Non Tech",
     noRegisterButton: true
   },
@@ -367,7 +387,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     time: "10:00AM-3:00PM",
     venue: "LH 15 & LH16 (KE Block)",
     imageUrl: defaultEventImage,
-    date: "2026-08-05",
+    date: "TBD",
     eventType: "Non Tech",
     registrationFee: "₹110/-",
     registrationLink: "https://konfhub.com/fc-26-tournament"

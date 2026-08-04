@@ -198,7 +198,7 @@ export const EventCarousel: React.FC<EventCarouselProps> = ({
                             </svg>
                           </span>
                           <span className={styles.venueTimeText}>
-                            {event.date === "TBD" ? "Will be notified later" : event.date ? new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : "TBA"}
+                            {event.date === "TBD" ? "TBD" : event.date ? new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : "TBD"}
                           </span>
                         </div>
                         <div className={styles.venueTimeRow}>
@@ -217,7 +217,7 @@ export const EventCarousel: React.FC<EventCarouselProps> = ({
                               <polyline points="12 6 12 12 16 14"></polyline>
                             </svg>
                           </span>
-                          <span className={styles.venueTimeText}>{event.time || "TBA"}</span>
+                          <span className={styles.venueTimeText}>{event.time || "TBD"}</span>
                         </div>
                       </div>
                       <div className={styles.logoBox}>{event.organizer || "ORG"}</div>

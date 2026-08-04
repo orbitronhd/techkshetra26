@@ -1,5 +1,5 @@
 import type React from "react";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 
 function DigitBlock({ digit }: { digit: string }) {
@@ -43,6 +43,8 @@ function DigitBlock({ digit }: { digit: string }) {
   );
 }
 
+/*
+// Existing countdown logic kept in comments:
 function Separator() {
   return (
     <span
@@ -62,8 +64,11 @@ function Separator() {
     </span>
   );
 }
+*/
 
 export function Countdown(): React.JSX.Element {
+  /*
+  // Existing countdown logic kept in comments:
   const [timeLeft, setTimeLeft] = useState({
     days: "00",
     hours: "00",
@@ -106,6 +111,7 @@ export function Countdown(): React.JSX.Element {
 
     return () => clearInterval(interval);
   }, []);
+  */
 
   return (
     <div
@@ -151,6 +157,8 @@ export function Countdown(): React.JSX.Element {
           margin: "0 auto",
         }}
       >
+        {/*
+        // Existing countdown logic kept in comments:
         {timeLeft.days.split("").map((d, i) => (
           <DigitBlock key={`d-${i}`} digit={d} />
         ))}
@@ -165,6 +173,12 @@ export function Countdown(): React.JSX.Element {
         <Separator />
         {timeLeft.seconds.split("").map((d, i) => (
           <DigitBlock key={`s-${i}`} digit={d} />
+        ))}
+        */}
+
+        {/* New section to say TBD */}
+        {"TBD".split("").map((d, i) => (
+          <DigitBlock key={`tbd-${i}`} digit={d} />
         ))}
       </div>
     </div>
