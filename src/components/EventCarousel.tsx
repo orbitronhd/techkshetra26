@@ -198,7 +198,7 @@ export const EventCarousel: React.FC<EventCarouselProps> = ({
                             </svg>
                           </span>
                           <span className={styles.venueTimeText}>
-                            {event.date ? new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : "TBA"}
+                            {event.date === "TBD" ? "Will be notified later" : event.date ? new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : "TBA"}
                           </span>
                         </div>
                         <div className={styles.venueTimeRow}>
