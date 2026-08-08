@@ -34,6 +34,8 @@ export function RainEffect(): React.JSX.Element | null {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const isPausedRef = useRef(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const isDisabled = true; // Effect is temporarily disabled
+
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -41,7 +43,7 @@ export function RainEffect(): React.JSX.Element | null {
   }, []);
 
   useEffect(() => {
-    if (prefersReducedMotion) return;
+    if (prefersReducedMotion || isDisabled) return;
 
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -129,7 +131,7 @@ export function RainEffect(): React.JSX.Element | null {
     };
   }, [prefersReducedMotion]);
 
-  if (prefersReducedMotion) {
+  if (prefersReducedMotion || isDisabled) {
     return null;
   }
 
