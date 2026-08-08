@@ -6,6 +6,7 @@ import { HomePage } from "./components/HomePage.tsx";
 import { FluidCursor } from "./components/FluidCursor.tsx";
 import { InitialLoader } from "./components/InitialLoader.tsx";
 import { RainEffect } from "./components/RainEffect.tsx";
+import { Analytics } from "@vercel/analytics/react";
 import styles from "./App.module.css";
 
 function ScrollToTop(): React.JSX.Element | null {
@@ -40,6 +41,7 @@ function App(): React.JSX.Element {
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>
+      <Analytics />
     </div>
   );
 }
