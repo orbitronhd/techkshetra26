@@ -39,11 +39,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "All teams are given problem statements, which consists of failed startups.Participants have to find out why it failed and make an MVP within 12 hours",
     prizePool: "₹20,000/-",
     organizer: "IEDC",
-    time: "TBD",
+    time: "5:00PM-9:00AM",
     venue: "Gallery Hall",
     registrationFee: "₹249/-",
     imageUrl: imgReviveNight,
-    date: "TBD",
+    date: "2026-09-14",
     eventType: "Main Event",
     registrationLink: "https://konfhub.com/revive-night-dd4ff8f8"
   },
@@ -54,11 +54,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Welcome to the ultimate relay-style hackathon, where teams of 3 to 4 race to develop projects from core prompts, but with a massive twist: every two hours, they must hand off their codebase and inherit a completely unfamiliar project from another team. Their challenge is to quickly decipher the previous group's work, seamlessly add new features, and push their code before the two-hour clock strikes zero again. Instead of evaluating just the final product, dedicated panels continuously score teams based on the actual progress and value they added to the specific code they received. The team that adapts the fastest, collaborates the best, and builds the most effectively across these relentless sprints will claim the ultimate victory!",
     prizePool: "₹10,000/-",
     organizer: "ITRAX",
-    time: "TBD",
+    time: "5:00PM-9:00AM",
     venue: "Kleinrock Lab, Turing Lab, CODD Lab, Shannon Lab",
     registrationFee: "₹149/-",
     imageUrl: imgAdaptathon,
-    date: "TBD",
+    date: "2026-09-14",
     eventType: "Main Event",
     registrationLink: "https://konfhub.com/adaptathon"
   },
@@ -69,11 +69,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "A motorsport workshop",
     prizePool: "NA",
     organizer: "REAL MECHANICA",
-    time: "4:00PM-6:00PM",
+    time: "11:30AM-1:30PM",
     venue: "Chavara Hall",
     registrationFee: "₹400/-",
     imageUrl: imgEnduro,
-    date: "TBD",
+    date: "2026-09-11",
     eventType: "Pre Event",
     registrationLink: "https://konfhub.com/enduro-edge"
   },
@@ -148,7 +148,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Zuse Lab",
     registrationFee: "₹50/-",
     imageUrl: imgPostItUp,
-    date: "TBD",
+    date: "2026-09-10",
     eventType: "Pre Event",
     registrationLink: "https://konfhub.com/post-it-up"
   },
@@ -174,11 +174,11 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     description: "Test your engineering skills in this fast-paced, three-round elimination tournament for 15 teams. The competition begins with a 20-minute electronics crossword puzzle, narrowing the field to 10 teams. In the 30-minute second round, competitors tackle complex K-maps, with only the top five advancing. The 30-minute final challenges these elite teams to solve problems using Boolean laws and construct a live working circuit, where the fastest functional build claims the championship.",
     prizePool: "₹1,600/-",
     organizer: "IEEE SPS SB RSET",
-    time: "4:30PM-6:30PM",
+    time: "4:30PCircuitM-6:30PM",
     venue: "LCD Lab",
     registrationFee: "₹150/-",
     imageUrl: imgCircuitSafari,
-    date: "TBD",
+    date: "2026-09-14",
     eventType: "Pre Event",
     registrationLink: "https://konfhub.com/circuit-safari"
   },
@@ -193,7 +193,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "VI Lab",
     registrationFee: "₹300/-",
     imageUrl: imgCircuitQuest,
-    date: "TBD",
+    date: "2026-09-14",
     eventType: "Pre Event",
     registrationLink: "https://konfhub.com/circuit-quest"
   },
@@ -208,7 +208,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Feymann Lab",
     registrationFee: "₹120/head",
     imageUrl: imgAmongUs,
-    date: "TBD",
+    date: "2026-09-15",
     eventType: "Main Event",
     registrationLink: "https://konfhub.com/among-us-30"
   },
@@ -223,7 +223,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Signal Processing Lab",
     registrationFee: "₹150/-",
     imageUrl: imgRextech,
-    date: "TBD",
+    date: "2026-09-15",
     eventType: "Main Event",
     registrationLink: "https://konfhub.com/rextech-gamelab"
   },
@@ -238,7 +238,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Multimedia Hall",
     registrationFee: "₹149/head",
     imageUrl: imgShahiDossier,
-    date: "TBD",
+    date: "2026-09-15",
     eventType: "Main Event",
     registrationLink: "https://konfhub.com/project-shahi-dossier"
   },
@@ -253,7 +253,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "PG Porch",
     registrationFee: "₹600/-",
     imageUrl: imgMetroRethink,
-    date: "TBD",
+    date: "2026-09-15",
     eventType: "Main Event",
     registrationLink: "https://konfhub.com/metro-rethink"
   },
@@ -268,7 +268,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Multimedia Hall",
     registrationFee: "₹150/-",
     imageUrl: imgLightsLensAction,
-    date: "TBD",
+    date: "2026-09-15",
     eventType: "Main Event",
     registrationLink: "https://konfhub.com/lights-lens-action"
   },
@@ -283,7 +283,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "New Canteen",
     registrationFee: "₹150/head",
     imageUrl: imgCrushingDepths,
-    date: "TBD",
+    date: "2026-09-15",
     eventType: "Main Event",
     registrationLink: "https://konfhub.com/crushing-depthsctf"
   },
@@ -299,7 +299,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Electrical Machines Lab",
     registrationFee: "₹250/head",
     imageUrl: imgDronix,
-    date: "TBD",
+    date: "2026-09-15",
     eventType: "Main Event",
     registrationLink: "https://konfhub.com/dronix"
   },
@@ -314,7 +314,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Heisenberg Lab",
     registrationFee: "₹200/-",
     imageUrl: imgHelloFriday,
-    date: "TBD",
+    date: "2026-09-15",
     eventType: "Main Event",
     registrationLink: "https://konfhub.com/hello-fridaybuild-your-own-jarvis"
   },
@@ -329,7 +329,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Gallery Hall",
     registrationFee: "₹200/-",
     imageUrl: imgMercedesWorkshop,
-    date: "TBD",
+    date: "2026-09-15",
     eventType: "Main Event",
     registrationLink: "https://konfhub.com/mercedes-workshop"
   },
@@ -344,7 +344,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "LH18, LH19",
     registrationFee: "₹600/-",
     imageUrl: imgCapitalClash,
-    date: "TBD",
+    date: "2026-09-15",
     eventType: "Main Event",
     registrationLink: "https://konfhub.com/capital-clash"
   },
@@ -359,7 +359,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Basic Electronics/Project Lab, LH2, LH3",
     registrationFee: "₹350/head",
     imageUrl: imgPayload,
-    date: "TBD",
+    date: "2026-09-15",
     eventType: "Main Event",
     registrationLink: "https://konfhub.com/payload"
   },
@@ -373,7 +373,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     time: "9:00AM-4:15PM",
     venue: "KE Block",
     imageUrl: defaultEventImage,
-    date: "TBD",
+    date: "2026-09-15",
     eventType: "Non Tech",
     noRegisterButton: true
   },
@@ -387,7 +387,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     time: "10:00AM-3:00PM",
     venue: "LH 15 & LH16 (KE Block)",
     imageUrl: defaultEventImage,
-    date: "TBD",
+    date: "2026-09-15",
     eventType: "Non Tech",
     registrationFee: "₹110/-",
     registrationLink: "https://konfhub.com/fc-26-tournament"
