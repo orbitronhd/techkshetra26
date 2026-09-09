@@ -56,7 +56,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     organizer: "ITRAX",
     time: "5:00PM-9:00AM",
     venue: "Kleinrock Lab, Turing Lab, CODD Lab, Shannon Lab",
-    registrationFee: "₹149/-",
+    registrationFee: "₹199/-",
     imageUrl: imgAdaptathon,
     date: "2026-09-14",
     eventType: "Main Event",
