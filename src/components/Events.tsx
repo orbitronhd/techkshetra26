@@ -73,7 +73,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     venue: "Chavara Hall",
     registrationFee: "₹400/-",
     imageUrl: imgEnduro,
-    date: "2026-09-11",
+    date: "2026-09-14",
     eventType: "Pre Event",
     registrationLink: "https://konfhub.com/enduro-edge"
   },
