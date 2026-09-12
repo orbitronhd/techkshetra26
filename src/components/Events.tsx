@@ -30,6 +30,7 @@ import imgCircuitQuest from "../assets/events/circuit_quest.webp";
 import imgShahiDossier from "../assets/events/shahi dossier.webp";
 import imgAmongUs from "../assets/events/amongus.webp";
 import imgEnduro from "../assets/events/enduro.webp";
+import imgBhavam from "../assets/events/BHAVAM.webp";
 
 const ACTUAL_EVENTS: CarouselEvent[] = [
   {
@@ -391,6 +392,21 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     eventType: "Non Tech",
     registrationFee: "₹110/-",
     registrationLink: "https://konfhub.com/fc-26-tournament"
+  },
+  {
+    id: "ev-27",
+    title: "BHAVAM",
+    category: "Workshop",
+    description: "An Interactive Acting & Self-Discovery Session. Step beyond your comfort zone and discover the emotions, expressions, and stories within you. Bhavam is an immersive experience designed to break inhibitions, build confidence, and bring out the performer in you through interactive activities, spontaneity, and self-discovery.",
+    prizePool: "NA",
+    organizer: "RSET FILM SOCIETY",
+    time: "9:30AM-1:00PM",
+    venue: "Lecture Auditorium",
+    imageUrl: imgBhavam,
+    date: "2026-09-15",
+    eventType: "Non Tech",
+    registrationFee: "₹350/-",
+    registrationLink: "https://konfhub.com/bhavam"
   }
 ];
 
