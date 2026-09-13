@@ -191,7 +191,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹2,000/-",
     organizer: "Apptronics",
     time: "4:30PM-6:30PM",
-    venue: "VI Lab",
+    venue: "VI Lab, Amphitheater",
     registrationFee: "₹300/-",
     imageUrl: imgCircuitQuest,
     date: "2026-09-14",
