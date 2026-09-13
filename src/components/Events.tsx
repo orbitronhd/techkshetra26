@@ -251,7 +251,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹10,000/-",
     organizer: "Rajputs",
     time: "11:00AM-3:00PM",
-    venue: "PG Porch",
+    venue: "CODD Lab",
     registrationFee: "₹600/-",
     imageUrl: imgMetroRethink,
     date: "2026-09-15",
