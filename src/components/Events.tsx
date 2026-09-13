@@ -86,7 +86,7 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     prizePool: "₹8,000/-",
     organizer: "Spartans",
     time: "1:00PM-3:30PM",
-    venue: "PG Tutorial Hall 3",
+    venue: "PG Tutorial Hall 5",
     registrationFee: "₹500/-",
     imageUrl: imgATV,
     date: "TBD",
