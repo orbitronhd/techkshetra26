@@ -31,6 +31,7 @@ import imgShahiDossier from "../assets/events/shahi dossier.webp";
 import imgAmongUs from "../assets/events/amongus.webp";
 import imgEnduro from "../assets/events/enduro.webp";
 import imgBhavam from "../assets/events/BHAVAM.webp";
+import imgEcoVillage from "../assets/events/Eco-Vilage Challenge.webp";
 
 const ACTUAL_EVENTS: CarouselEvent[] = [
   {
@@ -407,6 +408,21 @@ const ACTUAL_EVENTS: CarouselEvent[] = [
     eventType: "Non Tech",
     registrationFee: "₹350/-",
     registrationLink: "https://konfhub.com/bhavam"
+  },
+  {
+    id: "ev-28",
+    title: "ECO-VILLAGE CHALLENGE",
+    category: "Sustainability Design Challenge",
+    description: "Take on the role of a future community designer and transform a real or imagined settlement into a self-reliant, sustainable and climate-resilient Eco Village. Identify real challenges and craft innovative solutions for energy, water, waste, housing, food, mobility and community development. Work as a team of 5 to build an integrated village model where every resource works together — from renewable energy and rainwater harvesting to zero-waste systems, green spaces, sustainable livelihoods and disaster resilience. Turn your ideas into a practical, future-ready community and present your vision to the judges.",
+    prizePool: "₹3,000/-",
+    organizer: "ITRAX",
+    time: "10:00AM-12:00PM",
+    venue: "Lecture Auditorium 2",
+    imageUrl: imgEcoVillage,
+    date: "2026-09-15",
+    eventType: "Main Event",
+    registrationFee: "Free",
+    registrationLink: "https://konfhub.com/eco-village-challenge"
   }
 ];
 
