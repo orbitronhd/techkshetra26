@@ -172,7 +172,7 @@ export function Countdown(): React.JSX.Element {
     };
 
     const isFinished = updateCountdown();
-    let interval: NodeJS.Timeout | undefined;
+    let interval: ReturnType<typeof setInterval> | undefined;
     
     if (!isFinished) {
       interval = setInterval(() => {
