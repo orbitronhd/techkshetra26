@@ -1,5 +1,6 @@
 import type React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import confetti from "canvas-confetti";
 
 function DigitBlock({ digit }: { digit: string }) {
   return (
@@ -103,32 +104,92 @@ export function Countdown(): React.JSX.Element {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(() =>
     calculateTimeLeft(TARGET_DATE),
   );
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const hasFiredConfettiRef = useRef(false);
 
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const triggerConfetti = () => {
+      if (hasFiredConfettiRef.current) return;
+      hasFiredConfettiRef.current = true;
+      
+      const duration = 3000;
+      const end = Date.now() + duration;
+
+      const frame = () => {
+        confetti({
+          particleCount: 5,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a']
+        });
+        confetti({
+          particleCount: 5,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a']
+        });
+
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      };
+      frame();
+    };
+
     const updateCountdown = () => {
       const remaining = calculateTimeLeft(TARGET_DATE);
       setTimeLeft(remaining);
-      return (
+      const isFinished = 
         remaining.days === "00" &&
         remaining.hours === "00" &&
         remaining.minutes === "00" &&
         remaining.seconds === "00" &&
-        Date.now() >= TARGET_DATE
-      );
+        Date.now() >= TARGET_DATE;
+        
+      if (isFinished && isVisible) {
+        triggerConfetti();
+      }
+      return isFinished;
     };
 
-    const interval = setInterval(() => {
-      const isFinished = updateCountdown();
-      if (isFinished) {
-        clearInterval(interval);
-      }
-    }, 1000);
+    const isFinished = updateCountdown();
+    let interval: NodeJS.Timeout | undefined;
+    
+    if (!isFinished) {
+      interval = setInterval(() => {
+        if (updateCountdown()) {
+          clearInterval(interval);
+        }
+      }, 1000);
+    }
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [isVisible]);
 
   return (
     <div
+      ref={containerRef}
       style={{
         width: "100%",
         maxWidth: "100vw",

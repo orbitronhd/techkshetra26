@@ -268,26 +268,15 @@ export const EventCarousel: React.FC<EventCarouselProps> = ({
                       )}
 
                       {!event.noRegisterButton && (
-                        event.registrationLink ? (
-                          <a 
-                            href={event.registrationLink} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className={styles.actionButton}
-                            style={{ textDecoration: 'none', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            Register
-                          </a>
-                        ) : (
-                          <button 
-                            type="button" 
-                            className={styles.actionButton}
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            Register
-                          </button>
-                        )
+                        <button 
+                          type="button" 
+                          className={styles.actionButton}
+                          style={{ background: '#555', color: '#aaa', cursor: 'not-allowed', pointerEvents: 'none', opacity: 0.7 }}
+                          disabled
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          SOLD OUT
+                        </button>
                       )}
                     </div>
 
